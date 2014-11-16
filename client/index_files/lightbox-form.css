@@ -1,0 +1,287 @@
+#filter
+{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 1500px;
+	background-color: #000;
+	z-index:9999;
+	opacity:0.5;
+	filter: alpha(opacity=50);
+}
+
+
+#box 
+{
+	display: none;
+	position:fixed;
+	top: 10%;
+	left: 20%;
+	width: 796px;
+	height: 310px;
+	padding: 48px;
+	margin:0;
+	border: 1px solid black;
+	background-color: white;
+	z-index:9999;
+	overflow: none;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+#boxtitle
+{
+	position:absolute;
+	float:center;
+	top:0;
+	left:0;
+	width:836px;
+	height:24px;
+	padding:0;
+	padding-top:4px;
+	left-padding:8px;
+	margin:0;
+	border-bottom:4px solid #3CF;
+	background-color: #09c;
+	color:white;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+}
+
+
+#filter-popup
+{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 1500px;
+	background-color: #CCA;
+	z-index:9999;
+	opacity:0.5;
+	filter: alpha(opacity=50);
+}
+
+
+#box-popup 
+{
+	display: none;
+	position:fixed;
+	top: 30%;
+	left: 40%;
+	width: 250px;
+	padding: 48px;
+	margin:0;
+	z-index:9999;
+	overflow: none;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+#boxtitle-popup
+{
+	position:absolute;
+	float:center;
+	top:24px;
+	left:30px;
+	width:290px;
+	height:24px;
+	padding:0;
+	font-size:18px;
+	color:#0b87c6;
+	font-weight:bold;
+	}
+#boxtitle-popup-next
+{
+	position:absolute;
+	float:center;
+	top:24px;
+	left:30px;
+	width:290px;
+	height:24px;
+	padding:0;
+	font-size:18px;
+	color:#0b87c6;
+	font-weight:bold;
+	}
+#box-popup
+	{
+	width:390px;
+	padding:10px;	
+	}
+
+.popupboxtop
+	{
+	background:url(../images/lmc-popup-box-top.gif) no-repeat;
+	width:390px;
+	height:10px;	
+	}
+.popupboxcenter
+	{
+	border-left:1px solid #d7d7d7;
+	border-right:1px solid #d7d7d7;
+	width:348px;
+	padding:11px 20px;
+	background-color:#fff;
+	}
+#boxtitle-popup h4
+	{
+	font-size:18px;
+	color:#0b87c6;
+	padding-bottom:10px;
+	overflow:hidden;	
+	}
+#popupform label
+	{
+	width:300px;
+	margin-bottom:5px;	
+	overflow:hidden;
+	display:block;
+	float:left;
+	clear:both;
+	margin-top:30px;
+	text-align:left;
+	}
+#popupform textarea
+	{
+	width:344px;
+	padding-bottom:5px;
+	margin-bottom:10px;
+	clear:both;
+	}
+#sendMassage
+	{
+	background:url(../images/send-button.gif) no-repeat;	
+	width:64px;
+	height:25px;
+	border:none;
+	margin-left:145px;
+	cursor:pointer;
+	
+	}
+#closeMassage
+	{
+	background:url(../images/close-button.gif) no-repeat;	
+	width:64px;
+	height:25px;
+	border:none;
+	
+	cursor:pointer;
+	margin-right:10px;
+	}
+.buttonsbottom
+	{
+	float:right;	
+	}
+.popupboxbottom
+	{
+	background:url(../images/lmc-popup-box-bottom.gif) no-repeat;
+	width:390px;
+	height:10px;	
+	}
+.popupboxbottom-report
+	{
+	background:url(../images/contact-us-box-bottom.gif) no-repeat;
+	width:641px;
+	height:12px;	
+	}
+	
+	
+	
+/* start to alert design */	
+#filter-popup-alert
+{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 1500px;
+	background-color: #333;
+	z-index:10;
+	opacity:0.5;
+	filter: alpha(opacity=50);
+}
+
+
+#box-popup-alert 
+{
+	display: none;
+	position:fixed;
+	top: 30%;
+	left: 40%;
+	width: 322px;
+	padding: 48px;
+	margin:0;
+	background-color: white;
+	z-index:101;
+	overflow: none;
+	padding-left:20px;
+	padding-right:20px;
+	border:2px solid #CCC;
+}
+
+#boxtitle-popup-alert
+{
+	position:absolute;
+	float:center;
+	top:0;
+	left:0;
+	width:522px;
+	height:24px;
+	padding:20px 20px 0 20px;
+	margin:0;
+	color:#005784;
+	font-size:20px;
+}
+/* start to quote design */	
+#filter-popup-quote
+{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 1500px;
+	background-color: #000;
+	z-index:10;
+	opacity:0.5;
+	filter: alpha(opacity=50);
+}
+
+
+#box-popup-quote
+{
+	display: none;
+	position:fixed;
+	top: 20%;
+	left: 30%;
+	width: 519px;
+	min-height: 305px;
+	padding: 48px 20px 24px 20px;
+	margin:0;
+	background-color: white;
+	z-index:9999;
+	overflow: none;
+	border:2px solid #CCC;
+	}
+
+#boxtitle-popup-quote
+{
+	position:absolute;
+	float:center;
+	top:0;
+	left:0;
+	width:522px;
+	height:24px;
+	padding:20px 10px 0 20px;
+	margin:0;
+	font-size:20px;
+	z-index:9999;
+	color:#005784;
+	b
+}

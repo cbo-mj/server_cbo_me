@@ -1,0 +1,38 @@
+[12-Aug-2014 17:39:13 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Google_AuthException' with message 'Could not json decode the token' in /home/cbocpanel/public_html/analytics/src/auth/Google_OAuth2.php:162
+Stack trace:
+#0 /home/cbocpanel/public_html/analytics/src/Google_Client.php(170): Google_OAuth2->setAccessToken(NULL)
+#1 /home/cbocpanel/public_html/analytics/authHelper.php(59): Google_Client->setAccessToken(true)
+#2 /home/cbocpanel/public_html/analytics/index.php(74): AuthHelper->setTokenFromStorage()
+#3 {main}
+  thrown in /home/cbocpanel/public_html/analytics/src/auth/Google_OAuth2.php on line 162
+[12-Aug-2014 17:39:30 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Google_AuthException' with message 'Could not json decode the token' in /home/cbocpanel/public_html/analytics/src/auth/Google_OAuth2.php:162
+Stack trace:
+#0 /home/cbocpanel/public_html/analytics/src/Google_Client.php(170): Google_OAuth2->setAccessToken(NULL)
+#1 /home/cbocpanel/public_html/analytics/authHelper.php(59): Google_Client->setAccessToken(true)
+#2 /home/cbocpanel/public_html/analytics/index.php(74): AuthHelper->setTokenFromStorage()
+#3 {main}
+  thrown in /home/cbocpanel/public_html/analytics/src/auth/Google_OAuth2.php on line 162
+[12-Aug-2014 19:31:00 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Google_ServiceException' with message 'Error calling GET https://www.googleapis.com/analytics/v3/management/accounts//webproperties: (404) Not Found' in /home/cbocpanel/public_html/analytics/src/io/Google_REST.php:66
+Stack trace:
+#0 /home/cbocpanel/public_html/analytics/src/io/Google_REST.php(36): Google_REST::decodeHttpResponse(Object(Google_HttpRequest))
+#1 /home/cbocpanel/public_html/analytics/src/service/Google_ServiceResource.php(186): Google_REST::execute(Object(Google_HttpRequest))
+#2 /home/cbocpanel/public_html/analytics/src/contrib/Google_AnalyticsService.php(1010): Google_ServiceResource->__call('list', Array)
+#3 /home/cbocpanel/public_html/analytics/ajax_property.php(108): Google_ManagementWebpropertiesServiceResource->listManagementWebproperties('')
+#4 {main}
+  thrown in /home/cbocpanel/public_html/analytics/src/io/Google_REST.php on line 66
+[12-Aug-2014 19:34:13 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Google_ServiceException' with message 'Error calling GET https://www.googleapis.com/analytics/v3/management/accounts//webproperties: (404) Not Found' in /home/cbocpanel/public_html/analytics/src/io/Google_REST.php:66
+Stack trace:
+#0 /home/cbocpanel/public_html/analytics/src/io/Google_REST.php(36): Google_REST::decodeHttpResponse(Object(Google_HttpRequest))
+#1 /home/cbocpanel/public_html/analytics/src/service/Google_ServiceResource.php(186): Google_REST::execute(Object(Google_HttpRequest))
+#2 /home/cbocpanel/public_html/analytics/src/contrib/Google_AnalyticsService.php(1010): Google_ServiceResource->__call('list', Array)
+#3 /home/cbocpanel/public_html/analytics/ajax_property.php(108): Google_ManagementWebpropertiesServiceResource->listManagementWebproperties('')
+#4 {main}
+  thrown in /home/cbocpanel/public_html/analytics/src/io/Google_REST.php on line 66
+[13-Aug-2014 07:03:39 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Google_ServiceException' with message 'Error calling GET https://www.googleapis.com/analytics/v3/management/accounts/~all/webproperties: (403) User does not have any Google Analytics account.' in /home/cbocpanel/public_html/analytics/src/io/Google_REST.php:66
+Stack trace:
+#0 /home/cbocpanel/public_html/analytics/src/io/Google_REST.php(36): Google_REST::decodeHttpResponse(Object(Google_HttpRequest))
+#1 /home/cbocpanel/public_html/analytics/src/service/Google_ServiceResource.php(186): Google_REST::execute(Object(Google_HttpRequest))
+#2 /home/cbocpanel/public_html/analytics/src/contrib/Google_AnalyticsService.php(1010): Google_ServiceResource->__call('list', Array)
+#3 /home/cbocpanel/public_html/analytics/index.php(77): Google_ManagementWebpropertiesServiceResource->listManagementWebproperties('~all')
+#4 {main}
+  thrown in /home/cbocpanel/public_html/analytics/src/io/Google_REST.php on line 66

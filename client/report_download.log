@@ -1,0 +1,39 @@
+[Oct 08 2014 18:05:16.000000 - ERROR] POST /api/adwords/reportdownload/v201406 HTTP/1.1
+User-Agent: curl, gzip
+Host: adwords.google.com
+Accept: */*
+Accept-Encoding: gzip
+Authorization: Bearer ya29.mABJlh9kfwRM_mhRK9sgq5d2PWloyaQGeoZhQ84mZckUVxyxXKqEW8kw
+developerToken: A80FRi_SHXIrCGKYVOxf2g
+clientCustomerId: 4504605085
+Content-Length: 376
+Expect: 100-continue
+Content-Type: multipart/form-data; boundary=------------------------5cb7a7755ec84ce4
+
+Parameters:
+__rdquery: SELECT CampaignId, CampaignName, CampaignStatus,Impressions, Clicks,AverageCpc,Ctr FROM CAMPAIGN_PERFORMANCE_REPORT DURING LAST_30_DAYS
+__fmt: CSV
+
+Response Code: 502
+Error Message: Report download failed.
+
+[Oct 18 2014 18:01:09.000000 - ERROR] POST /api/adwords/reportdownload/v201406 HTTP/1.1
+User-Agent: curl, gzip
+Host: adwords.google.com
+Accept: */*
+Accept-Encoding: gzip
+Authorization: Bearer ya29.ogBOoBl8GJIyHsoGbiSy0GOHiPOpw7btHZmH_H4Y7CEf_KlNhFXJ3cHp
+developerToken: A80FRi_SHXIrCGKYVOxf2g
+clientCustomerId: 1461258534
+Content-Length: 376
+Expect: 100-continue
+Content-Type: multipart/form-data; boundary=------------------------cec12edae3963a46
+
+Parameters:
+__rdquery: SELECT CampaignId, CampaignName, CampaignStatus,Impressions, Clicks,AverageCpc,Ctr FROM CAMPAIGN_PERFORMANCE_REPORT DURING LAST_30_DAYS
+__fmt: CSV
+
+Response Code: 500
+Error Message: Report download failed. Underlying errors are 
+Type = 'ReportDownloadError.INTERNAL_SERVER_ERROR', Trigger = 'Unexpected Internal Server Error', FieldPath = ''. 
+

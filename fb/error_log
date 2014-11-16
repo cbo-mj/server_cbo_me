@@ -1,0 +1,142 @@
+[13-Sep-2014 22:36:38 Australia/Melbourne] OAuthException: An active access token must be used to query information about the current user.
+[13-Sep-2014 22:36:45 Australia/Melbourne] OAuthException: An active access token must be used to query information about the current user.
+[13-Sep-2014 22:37:08 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:38:16 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:42:06 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:42:07 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:43:32 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:43:33 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:45:59 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:46:15 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:48:03 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:48:26 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:49:23 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:49:24 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:56:05 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:56:14 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:56:25 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 22:58:46 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 23:01:22 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 23:01:23 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 23:01:36 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 23:01:37 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 23:04:35 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 23:04:36 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 23:05:03 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 23:08:03 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 23:27:43 Australia/Melbourne] CSRF state token does not match one provided.
+[13-Sep-2014 23:27:44 Australia/Melbourne] OAuthException: Error validating access token: Session does not match current stored session. This may be because the user changed the password since the time the session was created or Facebook has changed the session for security reasons.
+[13-Sep-2014 23:27:48 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 00:21:21 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 00:21:22 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 00:21:26 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 00:21:27 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 02:23:02 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 02:23:19 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 02:24:13 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 02:25:11 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 13:38:58 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 13:39:54 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 13:39:55 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 13:45:12 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 14:49:27 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 14:51:53 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 14:51:54 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 14:52:33 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 14:52:34 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 14:57:02 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 14:57:02 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:13:05 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:13:06 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:13:35 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:13:36 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:13:57 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:13:59 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:15:37 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:15:38 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:18:29 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:18:30 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:18:36 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:18:44 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:19:18 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:19:26 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:20:08 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:20:09 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:21:05 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:21:06 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:21:50 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:21:51 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:22:39 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:22:40 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:23:53 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:23:55 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:24:00 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:24:28 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:24:30 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:24:54 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:29:26 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:29:27 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:29:32 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:30:05 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:30:06 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:30:29 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:30:30 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:30:35 Australia/Melbourne] GraphMethodException: Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[14-Sep-2014 17:31:03 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:31:43 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:32:19 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:33:05 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:33:25 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:34:33 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:35:34 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:37:17 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:37:27 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:43:27 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:44:21 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:44:29 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:45:05 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 17:45:12 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 18:11:19 Australia/Melbourne] CSRF state token does not match one provided.
+[14-Sep-2014 18:11:27 Australia/Melbourne] CSRF state token does not match one provided.
+[15-Sep-2014 18:32:40 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 17:28:15 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 17:28:37 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:25:19 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:26:39 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:27:37 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:31:10 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:32:25 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:32:33 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:33:30 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:33:38 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:34:01 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:34:09 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:37:30 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:37:38 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:38:54 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 21:39:02 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:29:46 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:29:55 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:37:15 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:37:25 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:40:51 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:41:00 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:43:42 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:43:52 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:46:27 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:46:36 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:58:48 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:58:58 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:59:10 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:59:19 Australia/Melbourne] CSRF state token does not match one provided.
+[17-Sep-2014 23:59:21 Australia/Melbourne] CSRF state token does not match one provided.
+[18-Sep-2014 01:41:55 Australia/Melbourne] CSRF state token does not match one provided.
+[18-Sep-2014 12:54:49 Australia/Melbourne] CSRF state token does not match one provided.
+[18-Sep-2014 12:54:58 Australia/Melbourne] CSRF state token does not match one provided.
+[18-Sep-2014 17:29:05 Australia/Melbourne] CSRF state token does not match one provided.
+[18-Sep-2014 17:37:56 Australia/Melbourne] CSRF state token does not match one provided.
+[18-Sep-2014 18:44:26 Australia/Melbourne] CSRF state token does not match one provided.
+[23-Sep-2014 01:58:48 Australia/Melbourne] CSRF state token does not match one provided.
+[23-Sep-2014 02:00:39 Australia/Melbourne] CSRF state token does not match one provided.
+[23-Sep-2014 02:03:17 Australia/Melbourne] CSRF state token does not match one provided.
+[23-Sep-2014 02:04:50 Australia/Melbourne] CSRF state token does not match one provided.

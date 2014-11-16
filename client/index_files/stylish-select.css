@@ -1,0 +1,86 @@
+.stylish-select .SSContainerDivWrapper {
+	left:-9999px;
+}
+
+.stylish-select .SSContainerDivWrapper {
+	margin:0;
+	padding:0;
+	width:290px;
+	position:absolute;
+	top:22px;
+	left:0;
+	z-index:999;
+	margin-top:4px;
+}
+
+.stylish-select ul.newList {
+	margin:0;
+	padding:0;
+	list-style:none;
+	color:#000;
+	background:#fff;
+	border:1px solid #ccc;
+	overflow:auto;
+}
+
+.stylish-select ul.newList * {
+	margin:0;
+	padding:0;
+}
+
+.stylish-select ul.newList li{line-height:15px;}
+
+
+.stylish-select ul.newList a {
+	color: #000;
+	text-decoration:none;
+	display:block;
+	padding:1px 8px;
+	line-height:normal;
+}
+
+.stylish-select .newListSelected {
+	width:187px;
+	color:#000;
+	height:19px;
+	padding:3px 0 0 0px;
+	float:left;
+	z-index:9;
+
+}
+
+
+.stylish-select .selectedTxt {
+	width:181px;
+	overflow:hidden;
+	height:16px;
+	padding:2px 3px 2px 6px;
+	background:url(../images/select.jpg) no-repeat 171px 2px #fff;
+	font-size:14px;
+	margin-bottom:5px;
+}
+
+.stylish-select .hiLite {
+	background:#none!important;
+}
+
+.stylish-select .newListHover {
+	background:#0a246a!important;
+	color:#fff!important;
+	cursor:default;
+}
+
+.stylish-select .newListSelHover,
+.stylish-select .newListSelFocus {
+	background-position:0 -22px;
+	cursor:default;
+}
+
+.stylish-select .newListOptionTitle ul {
+	margin:3px 0 0;
+}
+
+.stylish-select .newListOptionTitle li {
+
+	border-left:1px solid #ccc;
+}

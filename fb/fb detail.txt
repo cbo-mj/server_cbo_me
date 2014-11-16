@@ -1,0 +1,128 @@
+socialmedia@cbo.me
+
+BpB6CGOf
+
+
+
+http://screencast.com/t/BDSzn69qarY
+
+http://screencast.com/t/BDSzn69qarY
+
+http://screencast.com/t/uPO1ZHB7lhQ
+
+===============================================================================================
+Site2 : 
+
+App ID   1555599244670756
+
+App Secret   d2b9d3faaaa07f898ed3214d4b7f0aaf
+
+http://server.cbo.me/fb/index.php
+
+
+
+
+==============================================================================================
+
+http://server.cbo.me/fb/index.php
+
+https://developers.facebook.com/docs/facebook-login/access-tokens
+
+http://stackoverflow.com/questions/17437531/facebook-token-with-offline-access-that-doesnt-expire
+
+
+
+
+https://developers.facebook.com/apps/779670422043996/dashboard/
+
+Hold­e­n­_­W­e­b­site
+
+
+App ID : 779670422043996
+
+App Secret : 2dbc9a9537b88e0b5ba0054cdf246a48
+
+
+Canvas URL : http://779670422043996.iframehost.com/
+
+
+Secure Canvas URL :  https://779670422043996.iframehost.com/
+
+
+Canvas Page : https://apps.facebook.com/779670422043996
+
+
+Site URL : http://779670422043996.iframehost.com/
+
+Page Tab Name : https://779670422043996.iframehost.com/tab/
+
+Page Tab URL : http://779670422043996.iframehost.com/tab/
+
+Secure Page Tab URL : https://779670422043996.iframehost.com/tab/
+
+
+
+==============================================================================================
+
+https://developers.facebook.com/quickstarts/337079909801475/?platform=web
+
+livesite
+
+App ID    337079909801475
+
+
+App Secret    08b941a6ba0e20ee43d397046e0083e0
+
+
+http://server.cbo.me/fb/index.php
+
+
+
+
+js login api : 
+
+https://developers.facebook.com/docs/facebook-login/login-flow-for-web/v2.1
+
+
+
+https://github.com/facebook/facebook-php-sdk
+
+https://github.com/facebook/facebook-android-sdk/tree/master/samples
+
+
+
+
+
+
+
+
+================================================================================================
+
+
+https://graph.facebook.com/kamalchoudhary2011
+
+http://api-portal.anypoint.mulesoft.com/facebook/api/facebook-graph-api/docs/code
+
+
+
+https://developers.facebook.com/tools/explorer/
+
+
+https://developers.facebook.com/docs/ads-api
+
+
+
+
+https://developers.facebook.com/blog/post/2011/05/13/how-to--handle-expired-access-tokens/
+
+
+https://developers.facebook.com/tools/debug/
+
+
+https://graph.facebook.com/239319006081415/albums
+
+
+https://www.facebook.com/shannon.howe.92/about
+
+https://www.facebook.com/dale.mcgeorge/about
+

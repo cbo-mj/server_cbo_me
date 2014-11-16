@@ -1,0 +1,2441 @@
+[Sep 03 2014 16:51:59.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService?access_token=ya29.dQDlGLYrZuyUzSEAAACccPXVsvlHGxcbi9lBb0FNtK_1mKIUd1dSZDKU0oV0eU5QyZsn_viw299cP4E-diw HTTP/1.0
+Host: adwords.google.com
+Connection: close
+User-Agent: PHP-SOAP/5.3.1, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.3.1)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.0 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Wed, 03 Sep 2014 11:21:54 GMT
+Expires: Wed, 03 Sep 2014 11:21:54 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 640
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>0005022771759e380abc3a11f1002efa</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>326</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>6</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Sep 03 2014 21:41:54.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.31, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.dQCMtCtZMv4RWSEAAAAvxYliT4ibFF0-vxiDeq860hCrrpJ3JvaJIsi137ZDuHqVy6ZrRn4tM_JZ_ecLqH4
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.31)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Wed, 03 Sep 2014 11:41:54 GMT
+Expires: Wed, 03 Sep 2014 11:41:54 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 640
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>00050227b9000e500ae0b654470079e9</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>220</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>6</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Sep 08 2014 22:03:33.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.31, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.egBGUCTiRWFt8xwAAACDMYKRoT277C5poZn-oC-DCCrF-2eC16HmVlHF7V9pTg
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.31)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Mon, 08 Sep 2014 12:03:33 GMT
+Expires: Mon, 08 Sep 2014 12:03:33 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 678
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>0005028c9ba5a7380ae5280786001877</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>240</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>7</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Oracle FX Plus</name>
+          <login>oraclefxplus@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>1461258534</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1461258534</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Sep 08 2014 22:55:07.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.31, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.egDhFRqZkt_hrxwAAADLwBO_Rm3wnYCFgFymKa3vbukSpckUWMGi2bv8vNCKmQ
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.31)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Mon, 08 Sep 2014 12:55:07 GMT
+Expires: Mon, 08 Sep 2014 12:55:07 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 678
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>0005028d540c16e00ae5280786001877</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>251</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>7</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Oracle FX Plus</name>
+          <login>oraclefxplus@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>1461258534</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1461258534</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Sep 11 2014 17:47:04.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.31, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.fQCUvVFg-7vS95GpQaKnzMueY3RKszGGRcJAoBzaUSmeELLB3527kUwc
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.31)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Thu, 11 Sep 2014 07:47:04 GMT
+Expires: Thu, 11 Sep 2014 07:47:04 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 723
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>000502c55feb1cd00ae0b6855700065f</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>302</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>8</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ANO</name>
+          <login>gareth@ano.net.au</login>
+          <companyName>ANO PTY LTD</companyName>
+          <customerId>5779886012</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Oracle FX Plus</name>
+          <login>oraclefxplus@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>1461258534</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1461258534</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5779886012</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Sep 14 2014 16:00:17.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.31, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.gAB0Yzjm9w_QfUBUJPFbnV7IsdwCs3n_AxoAb99x7ghNRMwxfLHiEjV4
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.31)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Sun, 14 Sep 2014 06:00:17 GMT
+Expires: Sun, 14 Sep 2014 06:00:17 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 722
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>000503003b8134c00ac4d58891000917</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>276</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>8</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ANO</name>
+          <login>gareth@ano.net.au</login>
+          <companyName>ANO PTY LTD</companyName>
+          <customerId>5779886012</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Oracle FX Plus</name>
+          <login>oraclefxplus@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>1461258534</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1461258534</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5779886012</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Sep 15 2014 16:53:34.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.31, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.gQB4NxXD570CTdLLTIBAUyr3ZV55GTvOpK-YGi7xQV55H_lVKpNucugI
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.31)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Mon, 15 Sep 2014 06:53:34 GMT
+Expires: Mon, 15 Sep 2014 06:53:34 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 728
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>0005031517ebef400ac4bde8c80053fa</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>477</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>8</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login>jti@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ANO</name>
+          <login>gareth@ano.net.au</login>
+          <companyName>ANO PTY LTD</companyName>
+          <customerId>5779886012</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Oracle FX Plus</name>
+          <login>oraclefxplus@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>1461258534</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1461258534</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5779886012</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Sep 15 2014 17:09:59.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.31, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.gQAevVOoYfClqn89X8sz9-deUP_1W2rp0UyNecUCPl5YVWedF-VcmHtR
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.31)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Mon, 15 Sep 2014 07:09:59 GMT
+Expires: Mon, 15 Sep 2014 07:09:59 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 728
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>0005031552a12ba10ac4bde8c80053fa</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>237</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>8</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login>jti@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ANO</name>
+          <login>gareth@ano.net.au</login>
+          <companyName>ANO PTY LTD</companyName>
+          <customerId>5779886012</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Oracle FX Plus</name>
+          <login>oraclefxplus@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>1461258534</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1461258534</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5779886012</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Sep 15 2014 17:16:35.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.31, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.gQDYLI5ake3fiwHDCPRhoNuTuDcXhRaRLR76lFSiCCYMEb3CAH4ZbMOt
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.31)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Mon, 15 Sep 2014 07:16:35 GMT
+Expires: Mon, 15 Sep 2014 07:16:35 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 728
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>000503156a4176e80ac4d58891000917</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>343</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>8</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login>jti@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ANO</name>
+          <login>gareth@ano.net.au</login>
+          <companyName>ANO PTY LTD</companyName>
+          <customerId>5779886012</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Oracle FX Plus</name>
+          <login>oraclefxplus@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>1461258534</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1461258534</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5779886012</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Sep 23 2014 12:25:15.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.31, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.iAC94zTgD6yKaqxUxTTgh9qa-x-1XBu00FiMWCw6Gu2CQfGUHiQwqsQC
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.31)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Tue, 23 Sep 2014 02:25:15 GMT
+Expires: Tue, 23 Sep 2014 02:25:15 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 728
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>000503b2471575a00ac4bde857004890</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>394</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>8</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login>jti@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ANO</name>
+          <login>gareth@ano.net.au</login>
+          <companyName>ANO PTY LTD</companyName>
+          <customerId>5779886012</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Oracle FX Plus</name>
+          <login>oraclefxplus@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>1461258534</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1461258534</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5779886012</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Sep 23 2014 17:02:20.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.31, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.iAC7UtLhj_nBLnszrsuZBEJFuKgSG1jnhyxMryJAH2wxWfAX7uaRWfYI
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.31)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Tue, 23 Sep 2014 07:02:20 GMT
+Expires: Tue, 23 Sep 2014 07:02:20 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 728
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>000503b625fd5d700ac4bde857004890</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>383</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>8</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login>jti@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ANO</name>
+          <login>gareth@ano.net.au</login>
+          <companyName>ANO PTY LTD</companyName>
+          <customerId>5779886012</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Oracle FX Plus</name>
+          <login>oraclefxplus@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>1461258534</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1461258534</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5779886012</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Sep 25 2014 13:38:31.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.31, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.iwD5Sf5h6DNWzDRDsDFlbQZxdpI_osD0plFMkeiTLo4b8f-j7zyC9EFt
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.31)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Thu, 25 Sep 2014 03:38:31 GMT
+Expires: Thu, 25 Sep 2014 03:38:31 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 727
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>000503db88c2fad00ac4c56882005582</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>382</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>8</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login>jti@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ANO</name>
+          <login>gareth@ano.net.au</login>
+          <companyName>ANO PTY LTD</companyName>
+          <customerId>5779886012</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Oracle FX Plus</name>
+          <login>oraclefxplus@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>1461258534</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1461258534</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5779886012</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Oct 20 2014 21:51:30.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.31, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.pAAO5rspuI7VEVKceU3T2JnfH0JI-h48CpO9CMSbEJz8-OKWZyci-FR_dYvS-5vMMkvViA8Rx3bsYw
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.31)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Mon, 20 Oct 2014 10:51:30 GMT
+Expires: Mon, 20 Oct 2014 10:51:30 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 813
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>000505d87f432d280ab6eca5c0004e39</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>424</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>10</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login>jti@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>A&amp;O Mail, Print &amp;Fulfilment</name>
+          <login>gareth@ano.net.au</login>
+          <companyName>ANO PTY LTD</companyName>
+          <customerId>5779886012</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Dollar Curtains</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>9800740620</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>South Yarra BMW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>3142682810</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Oracle FX Plus</name>
+          <login>oraclefxplus@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>1461258534</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1461258534</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>3142682810</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>9800740620</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5779886012</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Nov 09 2014 18:25:44.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.31, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.uQDioGwPfc8_NFLcpO5M1znxHHYBFXTKMDSpIefaFzTpF05_9pbKOKcdu-J1qDe2gWJ64rst6Uyp7Q
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.31)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Sun, 09 Nov 2014 07:25:44 GMT
+Expires: Sun, 09 Nov 2014 07:25:44 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 864
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>00050767f43f53500ab6d5a99f005734</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>514</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>12</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login>jti@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>A&amp;O Mail Print &amp; Fulfilment</name>
+          <login>gareth@ano.net.au</login>
+          <companyName>ANO PTY LTD</companyName>
+          <customerId>5779886012</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Dollar Curtain &amp; Blinds</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>9800740620</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Dermapen</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>3998878428</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>South Yarra BMW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>3142682810</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Oracle FX Plus</name>
+          <login>oraclefxplus@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>1461258534</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>deArch</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>7059733626</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>7059733626</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1461258534</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>3142682810</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>9800740620</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>3998878428</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5779886012</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+
+[Nov 14 2014 13:52:22.000000 - INFO] POST /api/adwords/mcm/v201406/ManagedCustomerService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.4.34, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 386
+Authorization: Bearer ya29.vgCEx6zrKklKGl1Z9cjRhp6fmIPyXSFwv_xi_yE1iNyX7eQk79xpUPnzmb8_T5pPni9KUKOFP3N7aw
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/mcm/v201406">
+  <SOAP-ENV:Header>
+    <ns2:RequestHeader>
+      <ns1:developerToken>A80FRi_SHXIrCGKYVOxf2g</ns1:developerToken>
+      <ns1:userAgent>Adwords (AwApi-PHP/5.4.0, Common-PHP/5.4.0, PHP/5.4.34)</ns1:userAgent>
+    </ns2:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns2:get>
+      <ns2:serviceSelector>
+        <ns1:fields>Login</ns1:fields>
+        <ns1:fields>CustomerId</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:fields>CanManageClients</ns1:fields>
+        <ns1:fields>CompanyName</ns1:fields>
+        <ns1:fields>CurrencyCode</ns1:fields>
+      </ns2:serviceSelector>
+    </ns2:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Fri, 14 Nov 2014 02:52:22 GMT
+Expires: Fri, 14 Nov 2014 02:52:22 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 962
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406" xmlns="https://adwords.google.com/api/adwords/mcm/v201406">
+      <ns2:requestId>000507c8b7ca76500abfac03d0007caa</ns2:requestId>
+      <ns2:serviceName>ManagedCustomerService</ns2:serviceName>
+      <ns2:methodName>get</ns2:methodName>
+      <ns2:operations>1</ns2:operations>
+      <ns2:responseTime>404</ns2:responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201406" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201406">
+      <rval>
+        <ns2:totalNumEntries>14</ns2:totalNumEntries>
+        <ns2:Page.Type>ManagedCustomerPage</ns2:Page.Type>
+        <entries>
+          <name>Totally Outdoors</name>
+          <login>rseddon@projectcentre.com.au</login>
+          <companyName>The Project Centre - Narre Warren</companyName>
+          <customerId>8065107876</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Complete Business Online</name>
+          <login>google@cbo.me</login>
+          <companyName>CBO</companyName>
+          <customerId>4247906206</customerId>
+          <canManageClients>true</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Colbycool</name>
+          <login>colbycool@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4504605085</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Barloworld VW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>2384163932</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Job Training Institute</name>
+          <login>jti@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>5710745802</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>CBO</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>4733192251</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>A&amp;O Mail Print &amp; Fulfilment</name>
+          <login>gareth@ano.net.au</login>
+          <companyName>ANO PTY LTD</companyName>
+          <customerId>5779886012</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>ABR Relocations</name>
+          <login>abrrelocationsau@gmail.com</login>
+          <companyName>Complete Business Onlin</companyName>
+          <customerId>1600872324</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Dollar Curtain &amp; Blinds</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>9800740620</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Dermapen</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>3998878428</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>South Yarra BMW</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>3142682810</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Oracle FX Plus</name>
+          <login>oraclefxplus@cbo.me</login>
+          <companyName>Complete Business Online</companyName>
+          <customerId>1461258534</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>deArch</name>
+          <login/>
+          <companyName>Complete Business Online</companyName>
+          <customerId>7059733626</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <entries>
+          <name>Clean Investor</name>
+          <login/>
+          <companyName/>
+          <customerId>3754452673</customerId>
+          <canManageClients>false</canManageClients>
+          <currencyCode>AUD</currencyCode>
+        </entries>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>7059733626</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1461258534</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>2384163932</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4733192251</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>3754452673</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>8065107876</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5779886012</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>5710745802</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>3142682810</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>4504605085</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>1600872324</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>9800740620</clientCustomerId>
+        </links>
+        <links>
+          <managerCustomerId>4247906206</managerCustomerId>
+          <clientCustomerId>3998878428</clientCustomerId>
+        </links>
+      </rval>
+    </getResponse>
+  </soap:Body>
+</soap:Envelope>
+

@@ -1,0 +1,5 @@
+[05-Sep-2014 02:25:12 Australia/Melbourne] PHP Fatal error:  Unsupported operand types in /home/cbocpanel/public_html/sem/dashboard.php on line 414
+[15-Oct-2014 14:31:29 Australia/Melbourne] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 130968 bytes) in /home/cbocpanel/public_html/sem/dashboard_event_error.php on line 86
+[01-Nov-2014 13:35:59 Australia/Melbourne] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/cbocpanel/public_html/sem/dashboard_trends.php on line 409
+[01-Nov-2014 13:38:25 Australia/Melbourne] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/cbocpanel/public_html/sem/dashboard_trends.php on line 409
+[01-Nov-2014 13:38:59 Australia/Melbourne] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/cbocpanel/public_html/sem/dashboard_trends.php on line 409
