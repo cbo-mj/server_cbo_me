@@ -1,6 +1,9 @@
 <?php // Report all errors
-error_reporting(E_ALL);
+error_reporting(0);
 
+ini_set('memory_limit', '2000M');
+ini_set('post_max_size', '2000M');
+ini_set('upload_max_filesize', '2000M');
 /**
  * Define database parameters here
  */
@@ -124,8 +127,9 @@ class Backup_Database {
                         $sql .= 'INSERT INTO '.$table.' VALUES(';
                         for($j=0; $j<$numFields; $j++) 
                         {
-                            $row[$j] = addslashes($row[$j]);
-                            $row[$j] = ereg_replace("\n","\\n",$row[$j]);
+                            $row[$j] = addslashes($row[$j]); 
+                            $row[$j] = preg_replace('/\n/','/\\n/',$row[$j]);
+							//echo "row $j"; die;
                             if (isset($row[$j]))
                             {
                                 $sql .= '"'.$row[$j].'"' ;
@@ -147,8 +151,7 @@ class Backup_Database {
 
                 $sql.="\n\n\n";
 
-                echo " OK" . "
-";
+                echo " OK" ."</br>" ;
             }
         }
         catch (Exception $e)
@@ -156,7 +159,7 @@ class Backup_Database {
             var_dump($e->getMessage());
             return false;
         }
-
+        // echo "Calling save file" ;
         return $this->saveFile($sql, $outputDir);
     }
 
@@ -170,7 +173,8 @@ class Backup_Database {
 
         try
         {
-            $handle = fopen($outputDir.'/db-backup-'.$this->dbName.'-'.date("Ymd-His", time()).'.sql','w+');
+						
+            $handle = fopen('db-backup-'.$this->dbName.'-'.date("Ymd", time()).'.sql','w+');
             fwrite($handle, $sql);
             fclose($handle);
         }
