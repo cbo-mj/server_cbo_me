@@ -1,0 +1,248 @@
+<html>
+<head>
+<title>Support Requests</title>
+
+
+
+		 <!-- CCC V1.5 -->
+
+
+</head>
+<body>
+
+<div class="replace"></div>
+    
+<div class="case">
+    <div class="container">
+        <div class="row case">
+            <h2 class="case-request-number"><!-- Request # --></h2>
+        </div>
+        <div class="row">
+            <div class="col-md-9 case-content">
+                <h3 class="case-title"><!-- Title --></h3>
+                <div class="case-stamp">
+                    <p><span class="case-name"><!-- Name --></span><br>
+                    <span class="case-date"><!-- DATE --></span></p>
+                </div>
+        
+                <div class="case-description">
+                    <!-- Request Body -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- Comments -->
+    <div class="container">
+    
+        <div class="row">
+            <h2>Comments</h2>
+            
+            
+        </div>
+        <div class="row case-comments">
+            <div class="col-md-9 case-comments-content">
+            	
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Reply -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+               <div class="row">
+                    <div id="reply-error" class="alert alert-danger hide">Please type a your reply below.</div>
+               </div>
+                <form class="reply-form" name="catwebformform73180" role="form" method="post" onsubmit="return checkWholeForm73180(this)" enctype="multipart/form-data" action="/Default.aspx?A=Form&Subject=[OBNW{module_url,num}]&EmailFrom={module_emailaddress}&PageID=/ccc/support?message=show&Email=">
+                    <div class="form-group" id="reply-message">
+                        <label for="Message"><b>Type your reply</b></label>
+                        <textarea name="Message" id="Message" cols="10" rows="4" class="form-control" onkeydown="if(this.value.length>=1024)this.value=this.value.substring(0,1023);"></textarea>
+                	  </div>
+                      
+                    <button type="submit" class="btn btn-large btn-success pull-right" id="catwebformbutton">Send My Reply</button>
+                    
+						<script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+                            <script type="text/javascript">
+                                //<![CDATA[
+                                var submitcount73180 = 0;
+                                
+                                function checkWholeForm73180(theForm) {
+                                    var why = "";
+                                    if (theForm.Message) why += isEmpty(theForm.Message.value, "your reply.");
+                                    if (why != "") {
+                                        alert(why);
+                                        return false;
+                                    }
+                                    if (submitcount73180 == 0) {
+                                        submitcount73180++;
+                                        theForm.submit();
+                                        return false;
+                                    } else {
+                                        alert("Form submission is in progress.");
+                                        return false;
+                                    }
+                                }
+                                //]]>
+                            </script>
+              		</form>
+                
+            </div><!-- /col -->
+        </div><!-- /row -->
+    </div><!-- /container -->
+    
+</div><!-- /case -->
+
+
+<ol class="hide">
+    <li id="case-email">{module_webapps,0,i template="/ccc/_assets/Layouts/WebApps/Solutions Configuration Settings/templates/email.tpl",2936711}</li>
+    <li id="case-date">{module_webapps,0,i template="/ccc/_assets/Layouts/WebApps/Solutions Configuration Settings/templates/date-format.tpl",2936711}</li>
+    <li id="case-profile">{module_webapps,0,i template="/ccc/_assets/Layouts/WebApps/Solutions Configuration Settings/templates/profile-image.tpl",2936711}</li>
+</ol>
+	
+	<script>
+	    $(document).ready(function(){
+            // module tags
+			var caseEmail = $("#case-email").html();
+			var caseDateFormat = $("#case-date").text();
+			var caseProfileImage = $("#case-profile").html();
+			var caseCustomerProfileImage = $("#customer-profile-image").html();
+			
+            // Append the action url with the email
+			$(".reply-form").attr("action", $(".reply-form").attr("action") + caseEmail);
+			
+            // Bring in the case information
+            $(".replace").load('/CaseRetrieve.aspx?id=' + {module_url,num} + '&E=1 a:contains("Date:")', function() {
+				
+                // Add all replies into the replies array
+				var replies = new Array();
+                replies = $('a:contains("Date:")').toArray();
+				
+                // Put the original request in its own variable
+				var originalSupportRequest = replies[replies.length - 1];
+				
+				/* Main Request */
+				var caseNumber = {module_url,num};
+				var caseTitle = $('.replace .tabledefault tbody tr #customfields .tabledefault tbody tr:eq(0)').text().replace("Title","");
+				var caseDescription = $('.replace .tabledefault tbody tr #customfields .tabledefault tbody tr:eq(1)').text().replace("Issue Description","");
+				
+				var caseClientName = $(originalSupportRequest).find('b').text();
+				var caseTable = $(originalSupportRequest).find('table').empty();
+				var caseDetails = $(originalSupportRequest).html();
+                
+                
+                // Remove the original support request from the page
+				$(originalSupportRequest).remove();
+                // Remove it from the array too
+				replies.pop();
+				
+				var caseParts = caseDetails.split('<br>');
+				
+				if (!caseParts[1]){
+					var caseParts = caseDetails.split('<BR>');
+				}
+				
+				var caseDate = caseParts[1];
+				caseDate = caseDate.split("Date: ")[1];
+				/* Convert date to North American format if selected in webapp (also done for each code comment) */
+				if (caseDateFormat == "Month Day Year") {
+					var caseDateParts = caseDate.split("-");
+					caseDate = caseDateParts[1] + " " + caseDateParts[0] + " " + caseDateParts[2];
+				} else {
+					var caseDateParts = caseDate.split("-");
+					caseDate = caseDateParts[0] + " " + caseDateParts[1] + " " + caseDateParts[2];
+				}
+				
+				caseClientName = caseClientName.split("From: ")[1];
+				
+				$(".case-request-number").text("Request #" + caseNumber);
+				$(".case-title").text(caseTitle);
+				$(".case-name").text(caseClientName);
+				$(".case-date").text(caseDate);
+				$(".case-description").text(caseDescription);
+				
+				$.each(replies, function(){
+					/* Get the user's name */
+					var caseClientName = $(this).find('b:first').text().replace("From: ", "");
+					/* Is this the client? */
+					if (caseClientName == '{module_fullname}') {
+						var profileSource = $("#customer-profile-image img").attr("src");
+						if (profileSource == "") {
+							var caseCommentImage = '<img src="/ccc/_assets/img/support/profile.png">';
+						} else {
+							var caseCommentImage = caseCustomerProfileImage;
+						}
+					/* If not the client then use the company default image */
+					} else {
+						if (caseProfileImage == "\n") {
+							var caseCommentImage = '<img src="/ccc/_assets/img/support/profile.png">';
+						} else {
+							var caseCommentImage = caseProfileImage;
+						}
+					}
+					
+					/* Remove the other nested divs */
+					$(this).find('div').remove();
+					
+					var caseCommentParts = $(this).html().split('<br>');
+				
+					if (!caseCommentParts[1]){
+						var caseCommentParts = $(this).html().split('<BR>');
+					}
+					
+					var caseCommentDate = caseCommentParts[1];
+					
+					caseCommentDate = caseCommentDate.replace("Date: ", "");
+					
+					/* Convert date to North American format if selected in webapp  (also done in original ticket submission)*/
+					if (caseDateFormat == "Month Day Year") {
+						var caseCommentDateParts = caseCommentDate.split("-");
+						caseCommentDate = caseCommentDateParts[1] + " " + caseCommentDateParts[0] + " " + caseCommentDateParts[2];
+					} else {
+						var caseCommentDateParts = caseCommentDate.split("-");
+						caseCommentDate = caseCommentDateParts[0] + " " + caseCommentDateParts[1] + " " + caseCommentDateParts[2];
+					}
+					
+					caseCommentParts.splice(0,3);
+					var caseComment = caseCommentParts.join("<br>");
+					caseComment = caseComment.replace("Form Value Message","");
+					caseComment = caseComment.replace("Form\nValue\nMessage","");
+					var caseCommentClean = caseComment.split("<br><br><br><A name=");
+					if (!caseCommentClean[1]){
+						caseCommentClean = caseComment.split("<br><br><br></a>");
+					}
+					caseComment = caseCommentClean[0];
+					
+					$(".case-comments-content").prepend('<div class="row case-comment"><div class="col-sm-3"><div class="case-comment-user">' + caseCommentImage + '<p class="case-comment-name">' + caseClientName + '</p></div></div><div class="col-sm-9"><div class="case-comment-date">' + caseCommentDate + '</div><div class="case-description">' + caseComment + '</div></div></div>');
+					
+					
+				});
+				
+				/* Remove the original content */
+                $('.replace').remove();
+				
+			});
+			
+			
+				 window.alert = function(message) {
+					$("#reply-message").addClass("error");
+					$("#reply-error").addClass("show").removeClass("hide");
+               }
+				
+			});
+			
+			
+			
+        </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

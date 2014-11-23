@@ -125,7 +125,22 @@ if(isset($_POST["submit"]))
 							
 							
 							";
+							
+			$sql_update_zendesk = "update zendesk_info set
+							
+							Support_purchased = '$Support_purchased'
+							 
+							where 
+							
+								
+							Zendesk_company_ID = '$Zendesk_company_ID'
+								
+							
+							
+							";
 			mysql_query($sql_update) or die ( mysql_error() );	
+			
+			mysql_query($sql_update_zendesk) or die ( mysql_error() );	
 			
 			
 			$sql_update = "update client set

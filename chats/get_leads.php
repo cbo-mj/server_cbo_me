@@ -17,7 +17,7 @@ function convertmsjsondate($str)
 		// "companyKeys" => array("COMPANY KEY HERE"), // you can add this line to filter down to specific companies
 		"endDate" => $api->getMSTime(time()), // 1 day ago is the end; reports lag by a day
 		"endOffsetMinutes" => $edt,
-		"startDate" => $api->getMSTime(time() - (2 * 24 * 60 * 60)), // 2 days ago is the start
+		"startDate" => $api->getMSTime(time() - (80 * 24 * 60 * 60)), // 2 days ago is the start
 		"startOffsetMinutes" => $edt,
 		"timezone" => "EDT"
 	));
@@ -41,6 +41,7 @@ function convertmsjsondate($str)
 						$referrer = mysql_escape_string($result_lead_location["data"][$i]['referrer']) ;
 						$phone = mysql_escape_string($result_lead_location["data"][$i]['leadPhone']) ;
 						$createdOn = $result_lead_location["data"][$i]['createdOn'] ;
+						$leadTypeName = $result_lead_location["data"][$i]['leadTypeName'] ;
 						$createdOn = date("Y-m-d H:i:s",strtotime(convertmsjsondate($createdOn)));
 								
 									$sql_check = "
@@ -63,6 +64,7 @@ function convertmsjsondate($str)
 								location = '$location',
 								referrer = '$referrer',
 								phone = '$phone',
+								leadTypeName = '$leadTypeName',
 								createdOn = '$createdOn'
 								where chatId = '$chatId' ";	
 						

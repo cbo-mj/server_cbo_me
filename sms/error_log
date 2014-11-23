@@ -1,0 +1,202 @@
+[19-May-2014 10:32:03 UTC] PHP Warning:  require(APIclient.php): failed to open stream: No such file or directory in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 18
+[19-May-2014 10:32:03 UTC] PHP Fatal error:  require(): Failed opening required 'APIclient.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 18
+[19-May-2014 12:47:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 50
+[19-May-2014 12:49:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 50
+[19-May-2014 13:06:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 50
+[20-May-2014 05:11:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 59
+[20-May-2014 06:42:13 UTC] PHP Parse error:  syntax error, unexpected '0' (T_LNUMBER), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 45
+[20-May-2014 09:28:55 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 28
+[20-May-2014 09:29:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 28
+[20-May-2014 09:30:11 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 28
+[20-May-2014 09:30:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 28
+[20-May-2014 09:30:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 28
+[20-May-2014 09:31:20 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 28
+[20-May-2014 09:31:24 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 28
+[20-May-2014 09:31:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 28
+[20-May-2014 09:31:53 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 28
+[20-May-2014 10:55:39 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 41
+[20-May-2014 10:55:39 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 41
+[20-May-2014 10:55:39 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 41
+[20-May-2014 10:55:39 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 41
+[20-May-2014 10:58:41 UTC] PHP Parse error:  syntax error, unexpected '$status' (T_VARIABLE) in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 43
+[20-May-2014 10:59:22 UTC] PHP Parse error:  syntax error, unexpected '$status' (T_VARIABLE) in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 43
+[20-May-2014 10:59:25 UTC] PHP Parse error:  syntax error, unexpected '$status' (T_VARIABLE) in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 43
+[20-May-2014 10:59:28 UTC] PHP Parse error:  syntax error, unexpected '$status' (T_VARIABLE) in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 43
+[20-May-2014 10:59:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 41
+[20-May-2014 10:59:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 41
+[20-May-2014 10:59:52 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 41
+[20-May-2014 10:59:52 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 41
+[20-May-2014 11:01:06 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 40
+[20-May-2014 11:01:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 40
+[20-May-2014 11:01:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 40
+[20-May-2014 11:01:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 40
+[20-May-2014 11:02:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 40
+[20-May-2014 11:04:13 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 40
+[20-May-2014 11:04:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 40
+[20-May-2014 11:04:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 40
+[20-May-2014 11:04:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 40
+[20-May-2014 12:58:36 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/numbers.php on line 22
+[22-May-2014 12:24:50 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 211
+[22-May-2014 12:27:11 UTC] PHP Parse error:  syntax error, unexpected '$msg' (T_VARIABLE), expecting ',' or ';' in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 75
+[22-May-2014 12:27:15 UTC] PHP Parse error:  syntax error, unexpected '$msg' (T_VARIABLE), expecting ',' or ';' in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 75
+[22-May-2014 12:59:54 UTC] PHP Fatal error:  Call to undefined function ValidateABN() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 49
+[23-May-2014 05:08:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:09:29 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:09:35 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:09:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:11:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:11:36 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:22:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:22:52 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:24:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:26:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:26:05 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:26:08 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:26:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:26:39 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:26:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:26:49 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:26:54 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:27:10 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:27:13 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 16
+[23-May-2014 05:59:42 UTC] PHP Fatal error:  Call to undefined function enum() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 10
+[23-May-2014 06:10:37 UTC] PHP Fatal error:  Call to undefined function enum() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 10
+[23-May-2014 10:15:16 UTC] PHP Parse error:  syntax error, unexpected 'y' (T_STRING) in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 64
+[23-May-2014 11:01:21 UTC] PHP Warning:  preg_match(): Compilation failed: missing terminating ] for character class at offset 7 in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 55
+[23-May-2014 11:01:59 UTC] PHP Warning:  preg_match(): Compilation failed: nothing to repeat at offset 9 in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 55
+[23-May-2014 11:07:10 UTC] PHP Fatal error:  Call to a member function getContactLists() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 91
+[23-May-2014 11:38:12 UTC] PHP Fatal error:  Can't use function return value in write context in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/newcontactlist.php on line 8
+[23-May-2014 12:17:20 UTC] PHP Fatal error:  Call to undefined method transmitsmsAPI::deleteRecipient() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/deletecontact.php on line 8
+[23-May-2014 12:18:59 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php:70) in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/deletecontact.php on line 18
+[23-May-2014 12:21:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php:70) in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/deletecontact.php on line 18
+[27-May-2014 05:06:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/addnumber.php on line 41
+[27-May-2014 05:10:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/addnumber.php on line 41
+[27-May-2014 06:15:05 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/unsubscribed.php on line 26
+[27-May-2014 10:46:16 UTC] PHP Fatal error:  Cannot redeclare pagination() (previously declared in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php:183) in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php on line 137
+[27-May-2014 10:46:18 UTC] PHP Fatal error:  Cannot redeclare pagination() (previously declared in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php:183) in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php on line 137
+[27-May-2014 10:46:43 UTC] PHP Fatal error:  Cannot redeclare pagination() (previously declared in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php:183) in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php on line 138
+[27-May-2014 11:48:51 UTC] PHP Warning:  Division by zero in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 142
+[27-May-2014 11:48:51 UTC] PHP Warning:  Division by zero in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 185
+[27-May-2014 11:48:51 UTC] PHP Warning:  Division by zero in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 228
+[28-May-2014 05:03:17 UTC] PHP Fatal error:  Call to a member function getContactListRecipientsDelivery() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 31
+[28-May-2014 07:16:58 UTC] PHP Warning:  require(APIclient2.php): failed to open stream: No such file or directory in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php on line 116
+[28-May-2014 07:16:58 UTC] PHP Warning:  require(APIclient2.php): failed to open stream: No such file or directory in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php on line 116
+[28-May-2014 07:16:58 UTC] PHP Fatal error:  require(): Failed opening required 'APIclient2.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php on line 116
+[28-May-2014 07:17:21 UTC] PHP Warning:  require(APIclient2.php): failed to open stream: No such file or directory in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php on line 116
+[28-May-2014 07:17:21 UTC] PHP Warning:  require(APIclient2.php): failed to open stream: No such file or directory in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php on line 116
+[28-May-2014 07:17:21 UTC] PHP Fatal error:  require(): Failed opening required 'APIclient2.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php on line 116
+[28-May-2014 07:17:24 UTC] PHP Warning:  require(APIclient2.php): failed to open stream: No such file or directory in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php on line 116
+[28-May-2014 07:17:24 UTC] PHP Warning:  require(APIclient2.php): failed to open stream: No such file or directory in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php on line 116
+[28-May-2014 07:17:24 UTC] PHP Fatal error:  require(): Failed opening required 'APIclient2.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php on line 116
+[28-May-2014 07:17:41 UTC] PHP Fatal error:  Cannot redeclare class transmitsmsAPI in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/APIClient2.php on line 3
+[28-May-2014 07:18:09 UTC] PHP Fatal error:  Cannot redeclare class transmitsmsAPI in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/APIClient2.php on line 3
+[28-May-2014 07:18:13 UTC] PHP Fatal error:  Cannot redeclare class transmitsmsAPI in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/APIClient2.php on line 3
+[28-May-2014 07:35:18 UTC] PHP Fatal error:  Call to undefined method transmitsmsAPI::getMessages() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 16
+[28-May-2014 07:35:22 UTC] PHP Fatal error:  Call to undefined method transmitsmsAPI::getContactLists() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 73
+[28-May-2014 07:35:24 UTC] PHP Fatal error:  Call to undefined method transmitsmsAPI::getMessages() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 16
+[28-May-2014 07:35:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/numbers.php on line 12
+[28-May-2014 07:35:29 UTC] PHP Fatal error:  Call to undefined method transmitsmsAPI::getContactLists() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 16
+[28-May-2014 09:17:59 UTC] PHP Fatal error:  Call to undefined method transmitsmsAPI::getAvailableNumbers() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/addnumber.php on line 32
+[28-May-2014 10:07:57 UTC] PHP Fatal error:  Call to a member function getNumbers() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/addnumber.php on line 35
+[28-May-2014 10:08:05 UTC] PHP Fatal error:  Call to a member function getNumbers() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/addnumber.php on line 35
+[28-May-2014 10:09:18 UTC] PHP Fatal error:  Call to a member function getNumbers() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/addnumber.php on line 35
+[28-May-2014 10:09:50 UTC] PHP Fatal error:  Call to a member function getNumbers() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/addnumber.php on line 35
+[28-May-2014 10:10:03 UTC] PHP Fatal error:  Call to a member function getNumbers() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/addnumber.php on line 35
+[28-May-2014 10:10:06 UTC] PHP Fatal error:  Call to a member function getNumbers() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/addnumber.php on line 35
+[28-May-2014 10:23:00 UTC] PHP Fatal error:  Call to a member function getContactLists() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 16
+[28-May-2014 10:31:10 UTC] PHP Fatal error:  Call to a member function getContactLists() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 41
+[28-May-2014 11:18:25 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 43
+[28-May-2014 11:19:54 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 44
+[28-May-2014 11:27:54 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 11:30:04 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 11:30:47 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 158
+[28-May-2014 11:30:48 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 158
+[28-May-2014 11:31:16 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 11:31:44 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 47
+[28-May-2014 11:32:23 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 11:33:08 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 11:34:21 UTC] PHP Warning:  set_error_handler() expects the argument (myErrorHandler) to be a valid callback in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 31
+[28-May-2014 11:34:21 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 11:35:24 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 11:36:54 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 11:37:02 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 12:28:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 12:28:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 12:28:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 12:28:43 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 12:28:43 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 12:28:43 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 12:28:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 12:28:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 12:28:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[28-May-2014 12:28:46 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 54
+[29-May-2014 04:53:12 UTC] PHP Fatal error:  Call to a member function getMessages() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 16
+[29-May-2014 05:28:05 UTC] PHP Fatal error:  Call to a member function getContactListRecipients() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/viewcontacts.php on line 18
+[29-May-2014 05:42:57 UTC] PHP Fatal error:  Call to a member function deleteRecipientGlobal() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/deletecontact.php on line 10
+[29-May-2014 06:06:51 UTC] PHP Fatal error:  Call to a member function getMessages() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 16
+[29-May-2014 06:14:25 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/viewcontacts.php on line 103
+[29-May-2014 06:35:01 UTC] PHP Fatal error:  Call to a member function deleteContactList() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/deletecontactlist.php on line 7
+[29-May-2014 06:51:09 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/deletecontact.php on line 23
+[29-May-2014 06:54:39 UTC] PHP Fatal error:  Call to a member function getTransactions() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/billing.php on line 19
+[29-May-2014 06:59:48 UTC] PHP Fatal error:  Call to a member function getTransactions() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/billing.php on line 45
+[29-May-2014 07:00:22 UTC] PHP Fatal error:  Call to a member function getTransactions() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/billing.php on line 45
+[29-May-2014 07:36:00 UTC] PHP Fatal error:  Call to a member function getTransactions() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/billing.php on line 64
+[29-May-2014 09:18:38 UTC] PHP Fatal error:  Call to a member function getTransactions() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/billing.php on line 64
+[29-May-2014 09:36:39 UTC] PHP Fatal error:  Cannot redeclare class transmitsmsAPI in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/APIclient.php on line 978
+[29-May-2014 09:36:41 UTC] PHP Fatal error:  Cannot redeclare class transmitsmsAPI in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/APIclient.php on line 978
+[29-May-2014 09:37:14 UTC] PHP Fatal error:  Cannot redeclare class transmitsmsAPI in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/APIclient.php on line 978
+[29-May-2014 09:40:19 UTC] PHP Fatal error:  Call to a member function getMessages() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 16
+[29-May-2014 09:45:00 UTC] PHP Fatal error:  Call to a member function getMessages() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 16
+[29-May-2014 09:46:34 UTC] PHP Fatal error:  Call to a member function getContactLists() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 73
+[29-May-2014 10:00:07 UTC] PHP Fatal error:  Call to a member function getContactLists() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 109
+[29-May-2014 10:00:31 UTC] PHP Fatal error:  Call to a member function getNumbers() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 104
+[29-May-2014 12:37:37 UTC] PHP Fatal error:  Call to a member function getMessages() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 16
+[29-May-2014 12:49:13 UTC] PHP Fatal error:  Cannot redeclare date_diff() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/ajaxDate.php on line 20
+[29-May-2014 12:50:01 UTC] PHP Fatal error:  Cannot redeclare date_diff() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/ajaxDate.php on line 20
+[29-May-2014 13:00:21 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/ajaxDate.php on line 10
+[29-May-2014 13:01:20 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/ajaxDate.php on line 11
+[29-May-2014 13:05:42 UTC] PHP Fatal error:  Call to a member function getTransactions() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/billing.php on line 19
+[30-May-2014 04:22:09 UTC] PHP Fatal error:  Call to a member function getMessages() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 16
+[30-May-2014 04:42:23 UTC] PHP Fatal error:  Cannot redeclare class transmitsmsAPI in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/APIclient.php on line 978
+[30-May-2014 04:42:26 UTC] PHP Fatal error:  Call to a member function getMessageDelivery() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/index.php on line 33
+[30-May-2014 04:46:23 UTC] PHP Fatal error:  Call to a member function getLists() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 79
+[30-May-2014 04:51:18 UTC] PHP Fatal error:  Cannot redeclare pagination() (previously declared in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/ajaxReport.php:5) in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/header.php on line 142
+[30-May-2014 04:53:49 UTC] PHP Fatal error:  Call to a member function getContactListRecipientsDelivery() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/ajaxReport.php on line 64
+[30-May-2014 04:55:18 UTC] PHP Fatal error:  Call to a member function getLists() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/contacts.php on line 16
+[30-May-2014 05:24:17 UTC] PHP Fatal error:  Call to a member function getLists() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/sendmessage.php on line 79
+[30-May-2014 05:37:57 UTC] PHP Fatal error:  Call to a member function getNumbers() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/numbers.php on line 14
+[30-May-2014 05:39:12 UTC] PHP Fatal error:  Call to a member function getNumbers() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/addnumber.php on line 34
+[02-Jun-2014 09:40:19 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/ajaxReport.php on line 324
+[02-Jun-2014 09:40:23 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/ajaxReport.php on line 324
+[03-Jun-2014 12:24:10 UTC] PHP Fatal error:  Call to undefined method transmitsmsAPI::getSmsSent() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 7
+[03-Jun-2014 12:26:10 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/report.php on line 22
+[04-Jun-2014 07:24:46 UTC] PHP Warning:  require(APIclient2.php): failed to open stream: No such file or directory in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/ajaxReport.php on line 19
+[04-Jun-2014 07:24:46 UTC] PHP Warning:  require(APIclient2.php): failed to open stream: No such file or directory in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/ajaxReport.php on line 19
+[04-Jun-2014 07:24:46 UTC] PHP Fatal error:  require(): Failed opening required 'APIclient2.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/ajaxReport.php on line 19
+[04-Jun-2014 07:25:19 UTC] PHP Fatal error:  Call to a member function getSmsSent() on a non-object in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/ajaxReport.php on line 69
+[04-Jun-2014 10:59:08 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/trigmaus/public_html/subdomains/dev114/dev6/api_shane/new/ajaxReport.php on line 124
+[06-Jun-2014 23:15:24 Australia/Sydney] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (6-June-2014 13:20:00 pm) at position 21 (p): The timezone could not be found in the database' in /home/cbocpanel/public_html/smsmarketing/ajaxDate.php:7
+Stack trace:
+#0 /home/cbocpanel/public_html/smsmarketing/ajaxDate.php(7): DateTime->__construct('6-June-2014 13:...')
+#1 {main}
+  thrown in /home/cbocpanel/public_html/smsmarketing/ajaxDate.php on line 7
+[06-Jun-2014 23:15:39 Australia/Sydney] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (6-June-2014 19:20:00 pm) at position 21 (p): The timezone could not be found in the database' in /home/cbocpanel/public_html/smsmarketing/ajaxDate.php:7
+Stack trace:
+#0 /home/cbocpanel/public_html/smsmarketing/ajaxDate.php(7): DateTime->__construct('6-June-2014 19:...')
+#1 {main}
+  thrown in /home/cbocpanel/public_html/smsmarketing/ajaxDate.php on line 7
+[06-Jun-2014 23:38:14 Australia/Sydney] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (6-June-2014 14:42:00 pm) at position 21 (p): The timezone could not be found in the database' in /home/cbocpanel/public_html/smsmarketing/ajaxDate.php:7
+Stack trace:
+#0 /home/cbocpanel/public_html/smsmarketing/ajaxDate.php(7): DateTime->__construct('6-June-2014 14:...')
+#1 {main}
+  thrown in /home/cbocpanel/public_html/smsmarketing/ajaxDate.php on line 7
+[06-Jun-2014 23:38:18 Australia/Sydney] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (6-June-2014 14:42:00 am) at position 21 (a): The timezone could not be found in the database' in /home/cbocpanel/public_html/smsmarketing/ajaxDate.php:7
+Stack trace:
+#0 /home/cbocpanel/public_html/smsmarketing/ajaxDate.php(7): DateTime->__construct('6-June-2014 14:...')
+#1 {main}
+  thrown in /home/cbocpanel/public_html/smsmarketing/ajaxDate.php on line 7
+[06-Jun-2014 23:38:23 Australia/Sydney] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (6-June-2014 17:42:00 am) at position 21 (a): The timezone could not be found in the database' in /home/cbocpanel/public_html/smsmarketing/ajaxDate.php:7
+Stack trace:
+#0 /home/cbocpanel/public_html/smsmarketing/ajaxDate.php(7): DateTime->__construct('6-June-2014 17:...')
+#1 {main}
+  thrown in /home/cbocpanel/public_html/smsmarketing/ajaxDate.php on line 7

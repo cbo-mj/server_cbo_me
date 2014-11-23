@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Solution: Support</title>
+    <!-- CCC V1.5 -->
+    <link rel="stylesheet" href="/ccc/_assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/ccc/_assets/css/ui.css" />
+    <link rel="stylesheet" href="/ccc/_assets/css/custom.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        body {
+            padding-top: 0;
+        }
+
+        #settings-form {
+            padding-left: 1.75em;
+        }
+
+        .radio {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container hide" id="ccc-secure">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>Solution: Support Ticketing <small>v1.5</small></h2>
+                <p>This Solution is integrated with the <a href="/ccc/a/index.htm">Client Communication Center</a> giving your clients an easy way to reach out to you, and for you to keep track of customer cases.</p>
+                <hr>
+                <h3>Contains:</h3>
+                <ul>
+                    <li>Web Form:<a href="/Admin/WebFormsV2_Detail.aspx?WebFormID=43751">Customer Support Ticket (CCC)</a></li>
+                    <li>CST:<a href="/Admin/CSF_Details.aspx?CSFID=177">[CCC] Customer Support Account</a></li>
+                    <li>Files: <a href="/Admin/WebPagesv3.aspx">/ccc/support/</a></li>
+                </ul>
+                <h3>Cases <small>(add or append a case for your client)</small></h3>
+                <ul>
+                    <li><a href="/ccc/support/a/create.htm">Create New Case</a></li>
+                    <li><a href="/ccc/support/a/append.htm">Append Existing Case</a></li>
+                </ul>
+                <h3>Settings <small>(configure this solution)</small></h3>
+                <div id="settings-browser" class="alert alert-danger" style="display:none;"><p>To edit this BC Solution, your browser may require you to log in securely. Log in securely by <a href="https://completebusinessonline.worldsecuresystems.com/AdminConsole/#!/ccc/support/a/" target="_top">clicking here</a>.</p></div>
+                <form id="settings-form"></form>
+            </div><!-- /col -->
+        </div><!-- /row -->
+    </div><!-- /container -->
+    <script src="/ccc/_assets/js/settings.js"></script>
+    <script>setUpForm("[Support]");</script>
+</body>
+</html>

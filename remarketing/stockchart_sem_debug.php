@@ -104,7 +104,10 @@ AmCharts.makeChart("StockChart", {
             position: "right",
             offset: 0
         }],
-
+		categoryAxesSettings: {
+				minPeriod: "DD",
+				maxSeries: 0
+		},	
         stockLegend: {
             position: "bottom",
             align: "right",

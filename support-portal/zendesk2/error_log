@@ -1,0 +1,4 @@
+[31-Oct-2014 14:06:44 Australia/Melbourne] PHP Fatal error:  Class 'Zendesk\API\Client' not found in /home/cbocpanel/public_html/support-portal/zendesk2/index.php on line 11
+[31-Oct-2014 14:40:29 Australia/Melbourne] PHP Fatal error:  Class 'Zendesk\API\Client' not found in /home/cbocpanel/public_html/support-portal/zendesk2/index.php on line 11
+[31-Oct-2014 14:41:02 Australia/Melbourne] PHP Fatal error:  Class 'Zendesk\API\Client' not found in /home/cbocpanel/public_html/support-portal/zendesk2/index.php on line 11
+[31-Oct-2014 14:42:33 Australia/Melbourne] PHP Fatal error:  Class 'Zendesk\API\Client' not found in /home/cbocpanel/public_html/support-portal/zendesk2/index.php on line 11

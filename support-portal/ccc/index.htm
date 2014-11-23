@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>Client Communication Center Login</title>
+
+
+
+		 <!-- CCC V1.5 -->
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            .navbar-collapse ul,.breadcrumb, .navbar button {
+                display: none;
+            }
+        </style>
+		<script type="text/javascript">
+			 $.ajax({
+				url: 'http://www.cbo.me/ccc/main.htm',
+				type: 'get',
+				dataType: 'html',
+				async: false,
+				success: function(data) {
+					if(data.indexOf("ccc-secure") > -1)
+						window.location = "http://www.cbo.me/ccc/main.htm";
+					   else {
+							if(document.location.protocol == "http:")
+								window.location = "https://completebusinessonline.worldsecuresystems.com/ccc";
+					   }
+				}
+			 });
+        </script>
+
+
+</head>
+<body>
+        		<h2>Login</h2>
+        		<p class="lead">Login to the {module_webapps,17890,i,2936711 template="/ccc/_assets/Layouts/WebApps/Solutions Configuration Settings/templates/title.tpl"}.</p>
+           
+           <div class="alert-messages">
+        		<div id="logout-success" class="alert alert-success hide {module_url,message}">You were successfully logged out.</div>
+        		<div id="password-login" class="alert alert-success hide {module_url,message-login}">Login with your new user/pass.</div>
+        		<div id="password-recovery" class="alert alert-success hide {module_url,message-password}">A password recovery link has been sent to your email address.</div>
+        		<div id="login-error" class="alert alert-danger hide">Invalid username and/or password.</div>
+           </div>
+           
+           <div class="row">
+            <div class="col-md-6">
+            
+                <form name="catseczoneform53428" id="login-form" onsubmit="return checkWholeForm53428(this)" method="post" action="https://completebusinessonline.worldsecuresystems.com/ZoneProcess.aspx?ZoneID=6431&amp;Referrer=http://www.cbo.me&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;PageID=http://www.cbo.me/ccc/main.htm" role="form">
+
+                    <div class="form-group">
+                        <label for="SZUsername">Username <small>(<a href="/ccc/register.htm">create</a>)</small></label>
+                        <input class="form-control" type="text" name="Username" id="SZUsername" tabindex="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="SZPassword">Password <small>(<a href="/ccc/lost-password.htm">retrieve</a>)</small></label>
+                        <input class="form-control" type="password" name="Password" id="SZPassword" autocomplete="off" tabindex="2">
+                    </div>
+
+                    <div class="checkbox hidden">
+                        <label>
+                            <input type="checkbox" name="RememberMe" id="RememberMe" checked="checked"> Remember Me
+                        </label>
+                    </div>
+                    <input class="btn btn-large btn-success" type="submit" value="Log Me In" tabindex="3">
+
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        function checkWholeForm53428(theForm) {
+                            var action = $(theForm).attr("action");
+                            var opts = {
+                                url: action,
+                                data: {
+                                    Username: $("#SZUsername").val(),
+                                    Password: $("#SZPassword").val(),
+                                    RememberMe: "on"
+                                },
+                                type: "POST",
+                                // We successfully found the systems page
+                                success: function (data, txt, jqXHR) {
+                                    var goodString = "ccc-secure";
+                                    var goodIdx = data.indexOf(goodString);
+                                    if (goodIdx > -1) {
+                                        document.location.href = "http://www.cbo.me/ccc/main.htm";
+                                    }
+                                        // If login is incorrect
+                                    else {
+                                        $("#logout-success").addClass("hide").removeClass("show");
+                                        $("#password-recovery").addClass("hide").removeClass("show");
+                                        $("#login-error").removeClass("hide").hide();
+                                        $("#login-error").fadeIn("slow");
+
+                                    }
+                                },
+                                // No systems page found - submit form without ajax
+                                error: function (jqXHR, txt, error) {
+                                    theForm.submit();
+                                    return false;
+                                }
+                            };
+                            $.ajax(opts);
+                            return false;
+                        }
+                        //]]>
+                    </script>
+                </form>
+        	</div><!-- /col -->
+          </div><!-- /row -->
+
+
+
+
+
+</body>
+</html>

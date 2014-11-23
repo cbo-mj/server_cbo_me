@@ -1,0 +1,246 @@
+<html lang="en" class="no-js">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Foundation | Welcome</title>
+        <link href="/support-portal/css/foundation.css" rel="stylesheet"
+        />
+        <link href="/support-portal/css/style.css" rel="stylesheet" />
+        <link href="/support-portal/table-sorter/css/style.css" rel="stylesheet" />
+        <link href="/support-portal/colorbox/colorbox.css" rel="stylesheet" />
+        <link href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+			.msg { 
+				border: 1px solid #aaa; 
+				padding: 10px; 
+				background-color: #FFF6D9;
+				border: 1px solid #EFDAA3;
+				border-radius: 5px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				-ms-border-radius: 5px;
+				-o-border-radius: 5px;
+			}
+			
+			.msg p { margin-bottom: 10px; }
+			.msg-hr { border-bottom: 1px dotted #aaa; padding-top: 15px; margin-bottom: 15px; }
+			#message-board .author { font-size: 18px; }
+			.attachments a { margin-right: 5px; }
+		</style>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/support-portal/colorbox/jquery.colorbox.js"></script>
+        <script type="text/javascript">
+			var globalTickets = "";
+            $(document).ready(function() {
+                $(".inline").colorbox({
+                    inline: true,
+                    width: "50%"
+                });
+                $(".iframe").colorbox({
+                    iframe: true,
+                    width: "50%",
+                    height: "90%"
+                });
+                $(".iframe2").colorbox({
+                    iframe: true,
+                    width: "50%",
+                    height: "70%",
+                    scrolling: false
+                });
+            });
+        </script>
+        <script src="/support-portal/js/vendor/modernizr.js"></script>
+    </head>
+    
+    <body>
+    	<div id="cover"><img src="/support-portal/images/loading.gif" class="loading" /></div>
+        <div class="wrap">
+            <div id="main-menu">
+            	<ul id="nav_1365262">
+                    <li><a href="#" id="dashboard-link">Dashboard</a></li>
+                    <li><a href="/support-portal/support-packages.htm">Support Packages</a></li>
+                 </ul>
+            </div>
+            <div class="columns large-12">
+            	<!--DASHBOARD CONTENT START HERE-->
+                 <div id="message" style="display: none;"></div>
+                    <div class="multi-frm-wrap">
+                        <h1 class="item-title modal_head" id="ticketTitle" style="padding-left: 0;"></h1>
+                        <div class="msg-hr"></div>
+                        <!--/support-portal/zendesk/general-support.php-->
+                        <form action="commentTicket.php" onsubmit="return checkWebform(this)" enctype="multipart/form-data" method="post" name="FormGeneralSupport" id="FormGeneralSupport">
+                            <input type="hidden" id="userid" name="userid" value=""/>
+                            <input type="hidden" id="ticketid" name="ticketid" value=""/>
+
+                            <table class="webform" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                    
+                                    <tr>
+                                        <td valign="top" class="lbl-desc" style="width: 110px;"><label class="right" for="description">Comments</label></td>
+                                        <td>
+                                            <textarea onkeydown="if(this.value.length&gt;=4000)this.value=this.value.substring(0,3999);" class="cat_listbox" rows="4" cols="10" id="Description" name="commentText"></textarea></td>
+                                    </tr>
+                                    <tr style="display: none;">
+                                        <td colspan="2"><label for="FileAttachment" style="width: 100%;"><strong>Attachments (max 5mb):</strong></label></td>
+                                    </tr>
+                                    <tr style="display: none;">
+                                        <td style="width: 110px;"><label class="right" for="FileAttachment">&nbsp;</label></td>
+                                        <td><input type="file" name="FileAttachment" id="FileAttachment" class="cat_textbox" /></td>
+                                    </tr>
+                                     <tr style="display: none;">
+                                        <td style="width: 110px;"><label class="right" for="FileAttachment">&nbsp;</label></td>
+                                        <td><input type="file" name="FileAttachment1" id="FileAttachment" class="cat_textbox" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><input type="submit" class="button blue-button right" value="Submit Reply" id="btnSubmit" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                        
+                        <br /><br />
+                        <h1 class="item-title modal_head" style="padding-left: 0;">Events</h1>
+                        <div class="msg-hr"></div>
+                        <div id="message-board">
+            
+                        </div> 
+                    </div>               
+                <!--DASHBOARD CONTENT ENDS HERE-->
+            </div>
+        </div>
+        
+        <div id="cboxOverlay" style="display: none;"></div>
+        <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
+            <div id="cboxWrapper">
+                <div>
+                    <div id="cboxTopLeft" style="float: left;"></div>
+                    <div id="cboxTopCenter" style="float: left;"></div>
+                    <div id="cboxTopRight" style="float: left;"></div>
+                </div>
+                <div style="clear: left;">
+                    <div id="cboxMiddleLeft" style="float: left;"></div>
+                    <div id="cboxContent" style="float: left;">
+                        <div id="cboxTitle" style="float: left;"></div>
+                        <div id="cboxCurrent" style="float: left;"></div>
+                        <button type="button" id="cboxPrevious"></button>
+                        <button type="button" id="cboxNext"></button>
+                        <button id="cboxSlideshow"></button>
+                        <div id="cboxLoadingOverlay" style="float: left;"></div>
+                        <div id="cboxLoadingGraphic" style="float: left;"></div>
+                    </div>
+                    <div id="cboxMiddleRight" style="float: left;"></div>
+                </div>
+                <div style="clear: left;">
+                    <div id="cboxBottomLeft" style="float: left;"></div>
+                    <div id="cboxBottomCenter" style="float: left;"></div>
+                    <div id="cboxBottomRight" style="float: left;"></div>
+                </div>
+            </div>
+            <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+        </div>
+        <script src="/support-portal/charts/amcharts.js" type="text/javascript"></script>
+    <script src="/support-portal/charts/themes/light.js" type="text/javascript"></script>
+    <script src="/support-portal/charts/pie.js" type="text/javascript"></script>
+    <script src="/support-portal/charts/serial.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.js"></script>
+    <script src="/support-portal/js/custom-scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+			getTicketDetail(getParameter('ticketid'));	
+			getTicketAudits(getParameter('ticketid'));
+		});
+		
+		function getTicketDetail(ticketid) {
+			$.getJSON("/support-portal/ticket-details.php?ticketid="+ticketid,function(result) {
+			  $('#ticketTitle').html(result.audits[0].events[1].value);
+			});
+		}
+		
+		function getTicketAudits(ticketid) {
+			$.when(
+				$.getJSON("/support-portal/ticket-details.php?ticketid="+ticketid,function(result) {
+				  var msgcounter = result.count;
+				  for(i=msgcounter-1;i>=0;i--) {
+					//$('#message-board').append(result.audits[i].events[0].html_body);   
+					var attachments = "";
+					$('#userid').attr('value', result.audits[0].events[0].author_id);
+					$('#ticketid').attr('value', result.audits[0].ticket_id);
+					if(result.audits[i].events[0].html_body != null) {
+						if(result.audits[i].events[0].attachments.length > 0) {
+							for(i2=0;i2<result.audits[i].events[0].attachments.length;i2++) {
+								attachments += "<a target=\"_blank\" href=\"" + result.audits[i].events[0].attachments[i2].content_url  + "\"><img src=\"" + result.audits[i].events[0].attachments[i2].thumbnails[0].content_url + "\" border=\"0\" /></a>";
+							}
+						}
+						var photo_thumb = "";
+						if(result.audits[i].events[0]['author_info'].photo != null) {
+							photo_thumb = result.audits[i].events[0]['author_info'].photo.thumbnails[0].content_url;	
+						}
+						
+						addMessage(result.audits[i].events[0].author_info.name, result.audits[i].events[0].html_body, attachments, photo_thumb);
+					} 
+				  }
+				})
+			).done(function() {
+				$('#cover').addClass('disable');
+			});
+			
+			
+		}
+		
+		function addMessage(author_name, body_message, attachments, author_photo) {
+			if (attachments != "") {
+				attachments = "<h3>Attachments</h3><div class=\"attachments\">" + attachments + "</div>";	
+			}
+			if(author_photo != "") {
+				$('#message-board').append("<h3 class=\"author\"><img src=\"" + author_photo + "\" />" + author_name + "</h3><div class=\"msg\">" + body_message + attachments + "</div><div class=\"msg-hr\"></div>");	
+			} else {
+				$('#message-board').append("<h3 class=\"author\">" + author_name + "</h3><div class=\"msg\">" + body_message + attachments + "</div><div class=\"msg-hr\"></div>");
+			}
+		}
+		
+		function checkWebform(theForm) {
+            var why = "";
+            
+            why += isFieldEmpty(theForm.Description.value, 'Description');
+            
+            if(why += "") {
+                alert(why);
+                return false;	
+            } else {
+                //alert('zendesk action');	
+                //return false;
+                theForm.submit();
+            }
+        }
+		
+		function getUrlParameter(sParam)
+		{
+		    var sPageURL = window.location.search.substring(1);
+		    var sURLVariables = sPageURL.split('&');
+		    for (var i = 0; i < sURLVariables.length; i++) 
+		    {
+		        var sParameterName = sURLVariables[i].split('=');
+		        if (sParameterName[0] == sParam) 
+		        {
+		            return sParameterName[1];
+		        }
+		    }
+		} 
+
+		$(document).ready(function(){
+			var userid = getUrlParameter('userid');
+			var ticketid = getUrlParameter('ticketid');
+			$("#userid").val(userid);
+			$("#ticketid").val(ticketid);
+		});
+		
+		
+    </script>
+    <script type="text/javascript">
+		$('#dashboard-link').attr('href', sessionStorage.getItem("dashboard"));
+		</script>
+    </body>
+
+</html>

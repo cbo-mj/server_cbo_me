@@ -17,13 +17,14 @@ $target_number = $_GET["id"];
 	}
 
 	
-	$sql_event_detail = "select a.* from ga_event_category_data_30_days a  inner join 
+	 $sql_event_detail = "select a.* from ga_event_category_data_30_days a  inner join 
 	group_campaign_link c on a.adwordsCampaignID = c.campaign_id inner join group_campaign b on
 	b.group_campaign_id = c.group_campaign_id
 	where a.account_id LIKE '%$account_id%' and b.client_id = $target_number and b.campaign_type = 4 and
-	a.profile_id like '%$profile_id%' and a.medium = 'cpc' ";
+	a.profile_id like '%$profile_id%'  and (a.medium like '%organic%' or a.medium like '%referral%' or
+	a.medium like '%none%')   ";
 	$where ='';
-	$order = " order by date desc" ;
+	$order = " order by date desc , hour desc , minute desc" ;
 if($_GET["search"])
 {
 	if(isset($_GET["type"]) and $_GET["type"]!="")
@@ -32,7 +33,8 @@ if($_GET["search"])
 	group_campaign_link c on a.adwordsCampaignID = c.campaign_id inner join group_campaign b on
 	b.group_campaign_id = c.group_campaign_id
 	where a.account_id LIKE '%$account_id%' and b.client_id = $target_number and b.campaign_type = 4 and
-	a.profile_id like '%$profile_id%' and a.medium = 'cpc' ";
+	a.profile_id like '%$profile_id%'  and (a.medium like '%organic%' or a.medium like '%referral%' or
+	a.medium like '%none%')  ";
 		$type = $_GET["type"];
 		// today day
 		if($type=="today"){
@@ -134,7 +136,13 @@ $rs_event_detail = mysql_query($sql_event_detail) or die ( mysql_error() );
     max-width: 1185px !important;
 	margin:0 auto;
 }
-
+.date_peiord {
+  background: none repeat scroll 0 0 #f0f0f0;
+  display: inline-block;
+  font-size: 13px;
+  padding: 5px;
+}
+#label_date{ text-transform:capitalize;}
 </style>
 <?php include('head_include.php');?>
 </head>
@@ -175,6 +183,7 @@ function reset_do()
                                     <div class="bg-white">
                                         <a href="javascript:void(0)" id="show-filter-form">Filters <div class="arrow-down1"></div></a>
                                     </div>
+                                    <div class="date_peiord"><b>Date Period:</b> <span id="label_date">Last 30 days</span></div>
                                     <div class="line"></div>
                                 </div>
                                 <div id="filter-form" class="filter-form item-hide">
@@ -216,8 +225,49 @@ function reset_do()
                                                     </div>
                                                 </div>
                                                 
-                                                
+                                                <script type="text/javascript">
+												$(document).ready(function(){
+													<?php 
+														$n = strtotime($from_date);
+														$m = strtotime($to_date);
+													?>
+													var from = '<?php echo date('d-m-Y', $n); ?>';
+													var to = '<?php echo date('d-m-Y', $m); ?>';
+													var label = '<?php echo $type; ?>';
+													label = label.replace(/[\. ,:-_]+/g, " ");
+													
+													if(label == ''){
+														label = 'Last 30 days';
+														$("#label_date").text(label);
+													}else{
+														if(label == 'date range'){
+															$("#label_date").text('Date Range (' + from + ' - ' + to + ')');
+														}else{
+															$("#label_date").text(label);
+														}
+													}
+												});
+												</script>  
                                                 <style>
+												<?php if($type == "date_range"): ?>
+													.filter-form-wrap .filter-text .line {
+													  background: none repeat scroll 0 0 #d4d4d4;
+													  float: right;
+													  height: 1px;
+													  margin-left: 15px;
+													  margin-top: 10px;
+													  width: 61% !important;
+													}
+												<?php else: ?>
+													.filter-form-wrap .filter-text .line {
+													  background: none repeat scroll 0 0 #d4d4d4;
+													  float: right;
+													  height: 1px;
+													  margin-left: 15px;
+													  margin-top: 10px;
+													  width: 73% !important;
+													}	
+												<?php endif; ?>
 													.filter-form{ width:365px;}
 													#custom_drop_form{ width:352px;}
 													.menu_container{ position:absolute; width:220px; margin: -26px 0 0 165px; background:#FFFFFF; z-index:1; border:1px solid #d3d3d3; display:none; padding-top:5px;}

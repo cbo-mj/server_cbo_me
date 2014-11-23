@@ -1,0 +1,225 @@
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Support Request | Landing Page</title>
+        <link href="/support-portal/css/foundation.css" rel="stylesheet" />
+        <link href="/support-portal/css/style.css" rel="stylesheet" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="wrap modal_content">
+            <h1 class="item-title modal_head">Landing Page</h1>
+            <div class="head_line"></div>
+            <div id="main-menu">
+                <ul id="landing_menu">
+                    <li id="stp1" class="selected"><a href="javascript:void(0);">Step 1: Campaign Details</a></li>
+                    <li id="stp2"><a href="javascript:void(0);">Step 2: Page Design</a></li>
+                    <li id="stp3"><a href="javascript:void(0);">Step 3: Notifications</a></li>
+                </ul>
+            </div>
+            <div class="columns large-12">
+                <div id="message" style="display: none;"></div>
+                <div class="multi-frm-wrap">
+                    <form id="catwebformform7943" name="catwebformform7943" method="post" onsubmit="" enctype="multipart/form-data" action="/Default.aspx?A=Form&Email=support@cbo.me&Subject=Test General Support&EmailFrom=mj@cbo.me&PageID=/support-portal/app-pages/request-confirmation.htm">
+                        <div class="hide">
+                            <input type="text" maxlength="255" class="cat_textbox" id="FirstName" value="{module_firstname}" name="FirstName" />
+                            <input type="text" maxlength="255" class="cat_textbox" id="LastName" value="{module_lastname}" name="LastName" />
+                            <input type="text" maxlength="255" class="cat_textbox" id="EmailAddress" value="{module_emailaddress}" name="EmailAddress" />
+                            {module_ccsecurity}
+                        </div>
+                        <div id="step1" rel="stp1" class="multi-frm">
+                            <h2>Campaign Details</h2>
+                            <input type="text" maxlength="4000" name="CAT_Custom_285289" id="CAT_Custom_285289" class="cat_textbox" style="display: none;" />
+                            <textarea name="CAT_Custom_285290" id="CAT_Custom_285290" cols="10" rows="4" class="cat_listbox" onkeydown="if(this.value.length&gt;=4000)this.value=this.value.substring(0,3999);" style="display: none;"></textarea>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="lbl"><label for="CAT_Custom_19943998">Campaign Name</label></td>
+                                        <td><input type="text" maxlength="4000" name="CAT_Custom_284470" id="CAT_Custom_284470" class="cat_textbox" /></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lbl"><label for="CAT_Custom_19943999">Start Date</label></td>
+                                        <td><input type="text" name="CAT_Custom_284471" id="CAT_Custom_284471" class="cat_textbox" style="background-color: #f0f0f0;" onfocus="displayDatePicker('CAT_Custom_284471');return false;" /></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lbl"><label for="CAT_Custom_19944000">Finish Date</label></td>
+                                        <td><input type="text" name="CAT_Custom_284472" id="CAT_Custom_284472" class="cat_textbox" style="background-color: #f0f0f0;" onfocus="displayDatePicker('CAT_Custom_284472');return false;" /></td>
+                                        <td class="optnal">Optional</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lbl"><label>Advertising Channels</label></td>
+                                        <td>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input type="checkbox" name="CAT_Custom_284473" id="CAT_Custom_284473_0" value="EDM" />EDM</td>
+                                                        <td><input type="checkbox" name="CAT_Custom_284473" id="CAT_Custom_284473_1" value="SMS" />SMS</td>
+                                                        <td><input type="checkbox" name="CAT_Custom_284473" id="CAT_Custom_284473_2" value="QR Code" />QR Code</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox" name="CAT_Custom_284473" id="CAT_Custom_284473_3" value="Facebook" />Facebook</td>
+                                                        <td><input type="checkbox" name="CAT_Custom_284473" id="CAT_Custom_284473_4" value="Display" />Display</td>
+                                                        <td><input type="checkbox" name="CAT_Custom_284473" id="CAT_Custom_284473_5" value="Remarketing" />Remarketing</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox" name="CAT_Custom_284473" id="CAT_Custom_284473_6" value="Radio" />Radio</td>
+                                                        <td><input type="checkbox" name="CAT_Custom_284473" id="CAT_Custom_284473_7" value="Print" />Print</td>
+                                                        <td><input type="checkbox" name="CAT_Custom_284473" id="CAT_Custom_284473_8" value="Other" />Other</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lbl"><label for="CAT_Custom_19944003">Notes</label></td>
+                                        <td><textarea name="CAT_Custom_284474" id="CAT_Custom_284474" cols="10" rows="4" class="cat_listbox" onkeydown="if(this.value.length&gt;=4000)this.value=this.value.substring(0,3999);"></textarea></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="multi-buttons">
+                                <a href="javascript:void(0);" class="button btn-cancel">Cancel</a>&nbsp;<a href="javascript:void(0);" class="btn-nxt button blue-button">Next</a>
+                            </div>
+                        </div>
+                        <div id="step2" rel="stp2" class="multi-frm hide">
+                            <h2>Page Design</h2>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="lbl"><label for="CAT_Custom_19944004">Registered URL</label></td>
+                                        <td><input type="text" maxlength="4000" name="CAT_Custom_284475" id="CAT_Custom_284475" class="cat_textbox" /></td>
+                                        <td class="optnal">Optional</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lbl"><label for="WorkPhone">Phone Number </label></td>
+                                        <td><input type="text" maxlength="255" class="cat_textbox" id="WorkPhone" name="WorkPhone" /></td>
+                                        <td class="optnal">Optional</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lbl"><label for="CAT_Custom_19944005">Design Notes</label></td>
+                                        <td><textarea name="CAT_Custom_284476" id="CAT_Custom_284476" cols="10" rows="4" class="cat_listbox" onkeydown="if(this.value.length&gt;=4000)this.value=this.value.substring(0,3999);"></textarea></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lbl"><label for="FileAttachment">File Attachment</label></td>
+                                        <td><input type="file" class="cat_textbox" id="FileAttachment" name="FileAttachment" /></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="multi-buttons">
+                                <a href="javascript:void(0);" class="button btn-cancel">Cancel</a>&nbsp;
+                                <a href="javascript:void(0);" class="btn-nxt button blue-button">Next</a>
+                            </div>
+                        </div>
+                        <div id="step3" rel="stp3" class="multi-frm hide">
+                            <h2>Notifications</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Mobile (SMS)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" maxlength="4000" name="CAT_Custom_284477" id="CAT_Custom_284477" class="cat_textbox" /></td>
+                                        <td><input type="text" maxlength="4000" name="CAT_Custom_284480" id="CAT_Custom_284480" class="cat_textbox" /></td>
+                                        <td><input type="text" maxlength="4000" name="CAT_Custom_284483" id="CAT_Custom_284483" class="cat_textbox" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" maxlength="4000" name="CAT_Custom_284478" id="CAT_Custom_284478" class="cat_textbox" /></td>
+                                        <td><input type="text" maxlength="4000" name="CAT_Custom_284481" id="CAT_Custom_284481" class="cat_textbox" /></td>
+                                        <td><input type="text" maxlength="4000" name="CAT_Custom_284484" id="CAT_Custom_284484" class="cat_textbox" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" maxlength="4000" name="CAT_Custom_284479" id="CAT_Custom_284479" class="cat_textbox" /></td>
+                                        <td><input type="text" maxlength="4000" name="CAT_Custom_284482" id="CAT_Custom_284482" class="cat_textbox" /></td>
+                                        <td><input type="text" maxlength="4000" name="CAT_Custom_284485" id="CAT_Custom_284485" class="cat_textbox" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="multi-buttons">
+                                <a href="javascript:void(0);" class="button btn-cancel">Cancel</a>&nbsp;
+                                <input type="submit" id="catwebformbutton" value="Submit" class="button blue-button" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+
+        <script type="application/javascript">
+        $(document).ready(function(){
+                $('#CAT_Custom_284470').keyup(function() {
+                    var x = $(this).val();
+                    $('#CAT_Custom_285289').val(x);
+                });
+                
+                $('#CAT_Custom_284474').keyup(function() {
+                    var y = $(this).val();
+                    $('#CAT_Custom_285290').val(y);
+                });
+                
+                jQuery("#landing_menu li a").click(function(){
+                    jQuery(".multi-frm").each(function(){
+                        if(!jQuery(this).hasClass("hide")){
+                            jQuery(this).addClass("hide");
+                        }
+                    });
+                    if(jQuery(this).parent().attr("id") == "stp1"){
+                        jQuery("#step1").removeClass("hide");
+                    }
+                    else if(jQuery(this).parent().attr("id") == "stp2"){
+                        jQuery("#step2").removeClass("hide");
+                    }
+                        else if(jQuery(this).parent().attr("id") == "stp3"){
+                            jQuery("#step3").removeClass("hide");
+                        }
+                    jQuery("#landing_menu li").each(function(){
+                        jQuery(this).removeClass("selected");
+                    });
+                    jQuery(this).parent().addClass("selected");
+                });
+                jQuery(".multi-frm .multi-buttons a.btn-nxt").click(function(){
+                    jQuery(this).parent().parent().addClass("hide").removeClass("actv");
+                    jQuery(this).parent().parent().next().removeClass("hide").addClass("actv");
+                    var mnID = "#" + jQuery(this).parent().parent().next().attr("rel");
+                    jQuery("#landing_menu li").each(function(){
+                        if(jQuery(this).hasClass("selected")){
+                            jQuery(this).removeClass("selected");
+                        }
+                    });
+                    jQuery(mnID).addClass("selected");
+                });
+                jQuery(".multi-frm .btn-cancel").click(function(){
+                    jQuery("#cboxClose").click();
+                });
+                var UN =  $("#case-n").text();
+                var sp = 0;
+                var sa = 0;
+                var ncs = 0;
+                var ot = 0;
+                jQuery("#customer-support-data .support-items").each(function(){
+                    if(jQuery(this).attr("rel") == UN){
+                        sp = jQuery(this).find(".support-provided").text();
+                        sa = jQuery(this).find(".support-available").text();
+                        ncs = jQuery(this).find(".no-charge").text();
+                        ot = jQuery(this).find(".open-ticket").text();
+                    }
+                });
+                jQuery("#add_ticket #CAT_Custom_2 option").each(function(){
+                    if(jQuery(this).text() == UN){
+                        jQuery(this).attr("selected", "selected");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

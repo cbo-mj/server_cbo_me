@@ -1,0 +1,155 @@
+<html lang="en" class="no-js">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Support Portal | Details</title>
+        <link href="/support-portal/css/foundation.css" rel="stylesheet" />
+        <link href="/support-portal/css/style.css" rel="stylesheet" />
+        <link href="/support-portal/table-sorter/css/style.css" rel="stylesheet" />
+        <link href="/support-portal/colorbox/colorbox.css" rel="stylesheet" />
+        <style type="text/css">
+			.msg { 
+				border: 1px solid #aaa; 
+				padding: 10px; 
+				background-color: #FFF6D9;
+				border: 1px solid #EFDAA3;
+				border-radius: 5px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				-ms-border-radius: 5px;
+				-o-border-radius: 5px;
+			}
+			
+			.msg p { margin-bottom: 10px; }
+			.msg-hr { border-bottom: 1px dotted #aaa; padding-top: 15px; margin-bottom: 15px; }
+		</style>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/support-portal/colorbox/jquery.colorbox.js"></script>
+        <script src="/support-portal/js/vendor/modernizr.js"></script>
+    </head>
+    
+    <body>
+    <div class="wrap modal_content">
+        <h1 class="item-title modal_head" id="ticketTitle"></h1>
+        <div class="head_line"></div>
+        <div class="columns large-12">
+        	<div class="columns large-12">
+                    <div id="message" style="display: none;"></div>
+                    <div class="multi-frm-wrap">
+                        <br /><br />
+                        <!--/support-portal/zendesk/general-support.php-->
+                        <form action="commentTicket.php" onsubmit="return checkWebform(this)" enctype="multipart/form-data" method="post" name="FormGeneralSupport" id="FormGeneralSupport">
+                            <input type="hidden" id="userid" name="userid" value=""/>
+                            <input type="hidden" id="ticketid" name="ticketid" value=""/>
+
+                            <table class="webform" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                    
+                                    <tr>
+                                        <td valign="top" class="lbl-desc" style="width: 110px;"><label class="right" for="description">Comments</label></td>
+                                        <td>
+                                            <textarea onkeydown="if(this.value.length&gt;=4000)this.value=this.value.substring(0,3999);" class="cat_listbox" rows="4" cols="10" id="Description" name="commentText"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><label for="FileAttachment" style="width: 100%;"><strong>Attachments (max 5mb):</strong></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 110px;"><label class="right" for="FileAttachment">&nbsp;</label></td>
+                                        <td><input type="file" name="FileAttachment" id="FileAttachment" class="cat_textbox" /></td>
+                                    </tr>
+                                     <tr>
+                                        <td style="width: 110px;"><label class="right" for="FileAttachment">&nbsp;</label></td>
+                                        <td><input type="file" name="FileAttachment1" id="FileAttachment" class="cat_textbox" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><input type="submit" class="button blue-button right" value="Submit Request" id="btnSubmit" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            <div class="multi-frm-wrap">
+            	<br /><br />
+                <div id="message-board">
+    
+    			</div> 
+            </div>
+        </div>
+    </div>
+    <!--<div id="result">test</div>-->
+    <script src="/support-portal/charts/amcharts.js" type="text/javascript"></script>
+    <script src="/support-portal/charts/themes/light.js" type="text/javascript"></script>
+    <script src="/support-portal/charts/pie.js" type="text/javascript"></script>
+    <script src="/support-portal/charts/serial.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.js"></script>
+    <script src="/support-portal/js/custom-scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+			getTicketDetail(getParameter('ticketid'));	
+			getTicketAudits(getParameter('ticketid'));
+		});
+		
+		function getTicketDetail(ticketid) {
+			//$.getJSON("/support-portal/ticket-details.php?ticketid="+ticketid,function(result) {
+			//  $('#ticketTitle').html(result.audits[0].events[1].value);
+			//});
+		}
+		
+		function getTicketAudits(ticketid) {
+			$.getJSON("/support-portal/ticket-details.php?ticketid="+ticketid,function(result) {
+			  var msgcounter = result.count;
+			  for(i=msgcounter-1;i>=0;i--) {
+				//$('#message-board').append(result.audits[i].events[0].html_body);   
+				if(result.audits[i].events[0].html_body != null) {
+					addMessage(result.audits[i].events[0].author_info.name, result.audits[i].events[0].html_body);
+				} 
+			  }
+			});	
+		}
+		
+		function addMessage(author_name, body_message) {
+			$('#message-board').append("<h3 class=\"author\">" + author_name + "</h3><div class=\"msg\">" + body_message + "</div><div class=\"msg-hr\"></div>");
+		}
+		
+		function checkWebform(theForm) {
+            var why = "";
+            
+            why += isFieldEmpty(theForm.Description.value, 'Description');
+            
+            if(why += "") {
+                alert(why);
+                return false;	
+            } else {
+                //alert('zendesk action');	
+                //return false;
+                theForm.submit();
+            }
+        }
+		
+		function getUrlParameter(sParam)
+		{
+		    var sPageURL = window.location.search.substring(1);
+		    var sURLVariables = sPageURL.split('&');
+		    for (var i = 0; i < sURLVariables.length; i++) 
+		    {
+		        var sParameterName = sURLVariables[i].split('=');
+		        if (sParameterName[0] == sParam) 
+		        {
+		            return sParameterName[1];
+		        }
+		    }
+		} 
+
+		$(document).ready(function(){
+			var userid = getUrlParameter('userid');
+			var ticketid = getUrlParameter('ticketid');
+			$("#userid").val(userid);
+			$("#ticketid").val(ticketid);
+		});
+		
+    </script>
+    </body>
+</html>

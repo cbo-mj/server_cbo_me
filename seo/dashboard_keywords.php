@@ -194,6 +194,13 @@ table tr:nth-of-type(even) { background:#dbdbda; }
 .grank{ color:#1e86e3 !important; font-weight:bold;}
 span img:hover{ cursor:help;}
 table thead{ background:none !important;}
+.date_peiord {
+  background: none repeat scroll 0 0 #f0f0f0;
+  display: inline-block;
+  font-size: 13px;
+  padding: 5px;
+}
+#label_date{ text-transform:capitalize;}
 </style>
 
 <?php include('head_include_keywords2.php');?>
@@ -226,6 +233,7 @@ $(document).ready(function() {
                                         <div class="bg-white">
                                             <a href="javascript:void(0)" id="show-filter-form">Filters <div class="arrow-down1"></div></a>				
                                         </div>
+                                        <div class="date_peiord"><b>Date Period:</b> <span id="label_date">Last 30 days</span></div>
                                         <div class="line"></div>
                                     </div><!-- END FILTER TEXT -->
                                     <div id="filter-form" class="filter-form item-hide">  
@@ -289,6 +297,50 @@ $(document).ready(function() {
                             <div id="filter-form" class="filter-form item-hide"></div>
                             <div class="clearB"></div>
                         </div>	
+                        						<script type="text/javascript">
+                        $(document).ready(function(){
+							<?php 
+								$n = strtotime($from_date);
+								$m = strtotime($to_date);
+							?>
+							var from = '<?php echo date('d-m-Y', $n); ?>';
+							var to = '<?php echo date('d-m-Y', $m); ?>';
+                            var label = '<?php echo $type; ?>';
+							label = label.replace(/[\. ,:-_]+/g, " ");
+							
+							if(label == ''){
+								label = 'Last 30 days';
+								$("#label_date").text(label);
+							}else{
+								if(label == 'date range'){
+									$("#label_date").text('Date Range (' + from + ' - ' + to + ')');
+								}else{
+									$("#label_date").text(label);
+								}
+							}
+						});
+                        </script>
+                         <style>
+						<?php if($type == "date_range"): ?>
+							.filter-form-wrap .filter-text .line {
+							  background: none repeat scroll 0 0 #d4d4d4;
+							  float: right;
+							  height: 1px;
+							  margin-left: 15px;
+							  margin-top: 10px;
+							  width: 61% !important;
+							}
+						<?php else: ?>
+							.filter-form-wrap .filter-text .line {
+							  background: none repeat scroll 0 0 #d4d4d4;
+							  float: right;
+							  height: 1px;
+							  margin-left: 15px;
+							  margin-top: 10px;
+							  width: 73% !important;
+							}	
+						<?php endif; ?>
+						</style>
 	<div id="keywords_container">				
         <table id="call_tracking_record" class="display"  width="100%" style="border-left:1px solid #dbdbda; border-bottom:1px solid #dbdbda;">
      		<thead>
@@ -302,7 +354,7 @@ $(document).ready(function() {
                     <th width="40%"><span class="Keywords" title="Search term used">Keyword</span></th>
                     <th width="20%" class="center"><span class="CurrentRank" title="Position in the organic search results">Current Rank</span></th>
                     <th width="5%" class="center"><span class="Position" title="Change in position over the selected date period">+/-</span></th>
-                    <th width="20%" class="center"><span class="Volume" title="Average monthly searches">Volume</span></th>
+                    <th width="20%" class="center"><span class="Volume" title="Average monthly searches in google.com.au">Volume</span></th>
                     <th width="15%"><span class="ResultType" title="Details about the type of results found in the results page">Result Type</span></th>                                  
                 </tr>
             </thead>

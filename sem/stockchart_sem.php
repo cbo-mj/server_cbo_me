@@ -127,7 +127,10 @@ AmCharts.makeChart("StockChart", {
         axisAlpha: 1,
         inside: false
     },
-	
+	categoryAxesSettings: {
+            minPeriod: "DD",
+			maxSeries: 0
+	},	
 	chartScrollbarSettings: {
 			graph: "g3",
 			position: "bottom",

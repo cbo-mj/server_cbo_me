@@ -1,0 +1,91 @@
+    <html lang="en" class="no-js">
+        <head>
+            <meta charset="utf-8" />
+            <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+            <title>Support Request | Landing Page</title>
+            <link href="/support-portal/css/foundation.css" rel="stylesheet" />
+            <link href="/support-portal/css/style.css" rel="stylesheet" />
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        </head>
+        <body>
+            <div class="wrap modal_content">
+                <h1 class="item-title modal_head">Landing Page</h1>
+                <div class="head_line"></div>
+                <div class="columns large-12">
+                    <div id="message" style="display: none;"></div>
+                    <div class="multi-frm-wrap">
+                        <br /><br />
+                        <!--/support-portal/zendesk/general-support.php-->
+                        <form action="createTicket.php" onsubmit="return checkWebform(this)" enctype="multipart/form-data" method="post" name="FormLandingPage" id="FormLandingPage">
+                            <input type="hidden" name="ticketype" value="Landing Page" />
+                            <table class="webform" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 110px;"><label  class="right" for="FullName">Full Name</label></td>
+                                        <td><input type="text" name="FullName" id="FullName" class="cat_textbox" maxlength="255" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 110px;"><label  class="right" for="EmailAddress">Email</label></td>
+                                        <td><input type="text" class="cat_textbox" id="EmailAddress" name="EmailAddress" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 110px;"><label class="right" for="TicketSubject">Subject</label></td>
+                                        <td>
+                                            <input type="text" class="cat_textbox" id="TicketSubject" name="TicketSubject" maxlength="4000" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" class="lbl-desc" style="width: 110px;"><label class="right" for="description">Description</label></td>
+                                        <td>
+                                            <textarea onkeydown="if(this.value.length&gt;=4000)this.value=this.value.substring(0,3999);" class="cat_listbox" rows="4" cols="10" id="Description" name="Description"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><label for="FileAttachment" style="width: 100%;"><strong>Attachments (max 5mb):</strong></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 110px;"><label class="right" for="FileAttachment">&nbsp;</label></td>
+                                        <td><input type="file" name="FileAttachment" id="FileAttachment" class="cat_textbox" /></td>
+                                    </tr>
+                                     <tr>
+                                        <td style="width: 110px;"><label class="right" for="FileAttachment">&nbsp;</label></td>
+                                        <td><input type="file" name="FileAttachment1" id="FileAttachment" class="cat_textbox" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><input type="submit" class="button blue-button right" value="Submit Request" id="btnSubmit" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </body>
+        <script type="text/javascript" src="/support-portal/js/custom-scripts.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(e) {
+            //var name = getParameter('a');
+            //var email = getParameter('b');
+            //$('#FullName').val(name);
+            //$('#EmailAddress').val(email);
+            //alert(theForm.TicketSubject.value);
+        });
+        
+        function checkWebform(theForm) {
+            var why = "";
+            why += isFieldEmpty(theForm.FullName.value, 'Full Name');
+            why += IsEmailValid(theForm.EmailAddress.value);
+            why += isFieldEmpty(theForm.TicketSubject.value, 'Subject');
+            why += isFieldEmpty(theForm.Description.value, 'Description');
+            
+            if(why += "") {
+                alert(why);
+                return false;	
+            } else {
+                //alert('zendesk action');	
+                //return false;
+                theForm.submit();
+            }
+        }
+        </script>
+    </html>

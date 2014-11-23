@@ -52,43 +52,60 @@ var chart = AmCharts.makeChart("StockChart", {
         $g = implode(",", $b); ?> 
         dataProvider: [ <?php echo $g; ?> ],
 		categoryField: "date",
-		// EVENTS
-		stockEvents: [{
-			date: new Date(2014, 10, 13),
-			type: "sign",
-			backgroundColor: "#999999",
-			graph: "g1",
-			text: "S",
-			description: "Spring Carnival 3 Day Sale"
-		},{
-			date: new Date(2014, 07, 21),
-			type: "sign",
-			backgroundColor: "#999999",
-			graph: "g1",
-			text: "R",
-			description: "3 Day Sale"
-		},{
-			date: new Date(2014, 08, 25),
-			type: "sign",
-			backgroundColor: "#999999",
-			graph: "g1",
-			text: "P",
-			description: "3 Day Sale"
-		},{
-			date: new Date(2014, 09, 08),
-			type: "sign",
-			backgroundColor: "#999999",
-			graph: "g1",
-			text: "Q",
-			description: "4 Day Sale"
-		},{
-			date: new Date(2014, 09, 16),
-			type: "sign",
-			backgroundColor: "#999999",
-			graph: "g1",
-			text: "V",
-			description: "4 Day Sale Extended"
-		}]
+		
+		<?php 
+		//echo "Event Date : Icon Name : Event Type : Description"."</br>";
+		$h = array();
+		foreach($icon_date as $k => $icon_date_value) {
+			$str = $icon_date_value;
+			list($year, $month, $day) = explode("-", $str);
+			$month = $month - 1;
+			$fl = $icon_description[$k];
+			
+			//echo "new Date({$year}, {$month}, {$day}) : ".$icon_name[$k]." : ".$icon_event_type[$k]." : ".$fl[0]."</br>";
+			$h[] = "{date: new Date({$year}, {$month}, {$day}), type:\"{$icon_event_type[$k]}\", backgroundColor: \"#e0e0e0\", graph: \"g1\", text: \"{$fl[0]}\", description: \"{$fl}\"}";
+		}	
+		
+		$output = implode(",", $h);
+		//echo $output;
+		?>	
+		stockEvents: [<?php echo $output; ?>]	
+		//stockEvents: [{
+//			date: new Date(2014, 10, 13),
+//			type: "sign",
+//			backgroundColor: "#999999",
+//			graph: "g1",
+//			text: "S",
+//			description: "Spring Carnival 3 Day Sale"
+//		},{
+//			date: new Date(2014, 07, 21),
+//			type: "sign",
+//			backgroundColor: "#999999",
+//			graph: "g1",
+//			text: "R",
+//			description: "3 Day Sale"
+//		},{
+//			date: new Date(2014, 08, 25),
+//			type: "sign",
+//			backgroundColor: "#999999",
+//			graph: "g1",
+//			text: "P",
+//			description: "3 Day Sale"
+//		},{
+//			date: new Date(2014, 09, 08),
+//			type: "sign",
+//			backgroundColor: "#999999",
+//			graph: "g1",
+//			text: "Q",
+//			description: "4 Day Sale"
+//		},{
+//			date: new Date(2014, 09, 16),
+//			type: "sign",
+//			backgroundColor: "#999999",
+//			graph: "g1",
+//			text: "V",
+//			description: "4 Day Sale Extended"
+//		}]
 	}],
 
 
@@ -132,7 +149,10 @@ var chart = AmCharts.makeChart("StockChart", {
 		graph: "g1",
 		color: "#000000"
 	},
-
+	categoryAxesSettings: {
+            minPeriod: "DD",
+			maxSeries: 0
+	},
 	chartCursorSettings: {
 		valueBalloonsEnabled: true,
 		graphBulletSize: 1,

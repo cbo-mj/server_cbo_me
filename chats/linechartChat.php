@@ -65,6 +65,10 @@ var chart = AmCharts.makeChart("linechartdiv2", {
         "minorGridEnabled": true,
         "position": "top"
     },
+	"categoryAxesSettings": {
+            "minPeriod": "DD",
+			"maxSeries": 0
+	},		
     "legend": {
         "align": "center",
         "marginLeft": 10,

@@ -136,10 +136,15 @@ AmCharts.makeChart("EventsChart",
 			"baseColor": "",
 			"brightnessStep": 163.2,
 			"colorField": "Not set",
+			<?php if($sum_TotalEvent == '' || $sum_TotalEvent == 0): echo "\"colors\": [
+				\"#e6e6e6\",
+				\"#e6e6e6\"
+			],"; else:  ?>
 			"colors": [
 				"#3c84da",
 				"#e6e6e6"
 			],
+			<?php endif; ?>
 			"labelTickAlpha": 0,
 			"maxLabelWidth": 214,
 			"outlineThickness": 7,
@@ -171,7 +176,7 @@ AmCharts.makeChart("EventsChart",
 				
 				{
 					"title": "Clicks",
-					"value": sum_totalEvent
+					"value": <?php if($sum_TotalEvent == '' || $sum_TotalEvent == 0){ echo "100"; }else{ ?> sum_totalEvent <?php } ?>				
 				}
 			]
 		}

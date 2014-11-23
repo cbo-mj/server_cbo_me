@@ -203,6 +203,13 @@ $(document).ready(function() {
 h6 p:hover{ cursor:help;}
 .amChartsPeriodSelector{ display:none;}
 #show-filter-form{ font-size:16px !important; line-height:22.4px !important;}
+.date_peiord {
+  background: none repeat scroll 0 0 #f0f0f0;
+  display: inline-block;
+  font-size: 13px;
+  padding: 5px;
+}
+#label_date{ text-transform:capitalize;}
 </style>
 
 </head>
@@ -222,6 +229,7 @@ h6 p:hover{ cursor:help;}
             <div class="bg-white">
                 <a href="javascript:void(0)" id="show-filter-form">Filters <div class="arrow-down1"></div></a>
             </div>
+            <div class="date_peiord"><b>Date Period:</b> <span id="label_date">Last 30 days</span></div>
             <div class="line"></div>
         </div>
             
@@ -321,8 +329,7 @@ if(isset($_POST["submit"]))
 					 AND ga.date < curdate() - INTERVAL DAYOFWEEK(curdate())- 2 DAY	";
 		}else if($type=="last_month")
 		{	
-			$date_sql = " and YEAR(ga.date) = YEAR(CURRENT_DATE - INTERVAL 1 MONTH)
-					AND MONTH(ga.date) = MONTH(CURRENT_DATE - INTERVAL 1 MONTH)	";
+			$date_sql = " and date(ga.date ) >= now()-interval 1 month	";
 		}else if($type=="last_3_months")
 		{
 			$date_sql = " and date(ga.date ) >= now()-interval 3 month	";
@@ -345,23 +352,27 @@ if(isset($_POST["submit"]))
 		 if($campaign_id!="")
 		 {
 		   if($date_sql==""){
-  $sql =" select gaf.date as date, ifnull(sum(gaf.impressions),0) as impressions, ifnull(sum(gaf.adClicks),0) as adClicks, sum(gaf.CTR) as CTR, ifnull(sum(gaf.totalEvents),0) as totalEvents, 0 as total_call from (select ga.date as date, ifnull(sum(ga.impressions),0) as impressions, ifnull(sum(ga.adClicks),0) as adClicks, sum(ga.CTR) as CTR, ifnull(sum(gaw.totalEvents),0) as totalEvents from ga_adword_campaign_data_30_days ga left join campaign_event_30_day gaw on ga.date = gaw.date and gaw.adwordsCampaignID in($campaign_id) and ga.`adwordsCampaignID` = gaw.adwordsCampaignID where ga.account_id = '$account_id' and ga.profile_id = '$profile_id'  and ga.`adwordsCampaignID` in($campaign_id) group by ga.date) gaf  UNION ALL  
-	select date(c.date) as date, 0 as impressions, 0 as adClicks, 0 as CTR, 0 as totalEvents, count(*) as total_call from call_log c where c.client_id = '$client_id' and date(c.date ) >= now()-interval 1 month group by date order by date";
+$sql = "select g1.date, sum(g1.impressions) as impressions, sum(g1.adClicks) as adClicks, sum(g1.CTR) as CTR, sum(g1.totalEvents) as totalEvents,sum(g1.total_call) as total_call from(select gaf.date1 as date, ifnull(sum(gaf.impressions),0) as impressions, ifnull(sum(gaf.adClicks),0) as adClicks, sum(gaf.CTR) as CTR, ifnull(sum(gaf.totalEvents),0) as totalEvents, 0 as total_call from (select * from (select ga.date as date1, ifnull(sum(ga.impressions),0) as impressions, ifnull(sum(ga.adClicks),0) as adClicks, sum(ga.CTR) as CTR from ga_adword_campaign_data_30_days ga where ga.account_id = '$account_id' and ga.profile_id = '$profile_id' and ga.`adwordsCampaignID` in($campaign_id) and date(ga.date ) >= now()-interval 1 month group by ga.date) ga1 left join (SELECT date, sum(totalEvents) as totalEvents from campaign_event_30_day where adwordsCampaignID in($campaign_id) group by date) gaw on ga1.date1 = gaw.date ) gaf group by date1 UNION ALL select date(c.date) as date, 0 as impressions, 0 as adClicks, 0 as CTR, 0 as totalEvents, count(*) as total_call from call_log c where c.client_id = '$client_id' and date(c.date ) >= now()-interval 1 month group by date(date) ) g1 group by date " ;
 		 
 			 }
 			  else { 
+			  
+
+			  
+	$sql = "select g1.date, sum(g1.impressions) as impressions, sum(g1.adClicks) as adClicks, sum(g1.CTR) as CTR, sum(g1.totalEvents) as totalEvents,sum(g1.total_call) as total_call from
+	(select gaf.date1 as date, ifnull(sum(gaf.impressions),0) as impressions, ifnull(sum(gaf.adClicks),0) as adClicks, sum(gaf.CTR) as CTR, ifnull(sum(gaf.totalEvents),0) as totalEvents, 0 as total_call from (select * from (select ga.date as date1, ifnull(sum(ga.impressions),0) as impressions, ifnull(sum(ga.adClicks),0) as adClicks, sum(ga.CTR) as CTR from ga_adword_campaign_data_history ga where ga.account_id = '$account_id' and ga.profile_id = '$profile_id' and ga.`adwordsCampaignID` in($campaign_id) $date_sql group by ga.date) ga1 left join (SELECT date, sum(totalEvents) as totalEvents from campaign_event_history where adwordsCampaignID in($campaign_id) and account_id = '$account_id' and profile_id = '$profile_id' group by date) gaw on ga1.date1 = gaw.date ) gaf group by date1 UNION ALL select date(ga.date) as date, 0 as impressions, 0 as adClicks, 0 as CTR, 0 as totalEvents, count(*) as total_call from call_log ga where ga.client_id = '$client_id' $date_sql group by date(ga.date)) g1 group by date" ;
 			 
-       $sql = " select gaf.date as date, ifnull(sum(gaf.impressions),0) as impressions, ifnull(sum(gaf.adClicks),0) as adClicks, sum(gaf.CTR) as CTR, ifnull(sum(gaf.totalEvents),0) as totalEvents, sum(gaf.total_call) as total_call from (select ga.date as date, ifnull(sum(ga.impressions),0) as impressions, ifnull(sum(ga.adClicks),0) as adClicks, sum(ga.CTR) as CTR, ifnull(sum(gaw.totalEvents),0) as totalEvents, 0 as total_call from ga_adword_campaign_data_history ga left join campaign_event_history gaw on ga.date = gaw.date and gaw.`adwordsCampaignID` in($campaign_id) and ga.`adwordsCampaignID` = gaw.adwordsCampaignID where ga.account_id = '$account_id' and ga.profile_id = '$profile_id' and ga.adwordsCampaignID in($campaign_id) $date_sql group by ga.date UNION ALL select date(ga.date) as date, 0 as impressions, 0 as adClicks, 0 as CTR, 0 as totalEvents, count(*) as total_call from call_log ga where ga.client_id = '$client_id' $date_sql group by date(ga.date)) gaf
-group by gaf.date " ;
+/*  echo     $sql = " select gaf.date as date, ifnull(sum(gaf.impressions),0) as impressions, ifnull(sum(gaf.adClicks),0) as adClicks, sum(gaf.CTR) as CTR, ifnull(sum(gaf.totalEvents),0) as totalEvents, sum(gaf.total_call) as total_call from (select ga.date as date, ifnull(sum(ga.impressions),0) as impressions, ifnull(sum(ga.adClicks),0) as adClicks, sum(ga.CTR) as CTR, ifnull(sum(gaw.totalEvents),0) as totalEvents, 0 as total_call from ga_adword_campaign_data_history ga left join campaign_event_history gaw on ga.date = gaw.date and gaw.`adwordsCampaignID` in($campaign_id) and ga.`adwordsCampaignID` = gaw.adwordsCampaignID where ga.account_id = '$account_id' and ga.profile_id = '$profile_id' and ga.adwordsCampaignID in($campaign_id) $date_sql group by ga.date UNION ALL select date(ga.date) as date, 0 as impressions, 0 as adClicks, 0 as CTR, 0 as totalEvents, count(*) as total_call from call_log ga where ga.client_id = '$client_id' $date_sql group by date(ga.date)) gaf
+group by gaf.date " ;*/
 			 }
 		 
 		$rs_30_days = mysql_query($sql);
 		if(mysql_num_rows($rs_30_days)>0){
-			 $sum_impression = '';
-			 $sum_adClicks = '';
-			 $sum_TotalEvent = '';
-			 $sum_total_call = '';
-			 $sum_call_click_ratio = '';
+			 $sum_impression = 0;
+			 $sum_adClicks = 0;
+			 $sum_TotalEvent = 0;
+			 $sum_total_call = 0;
+			 $sum_call_click_ratio = 0;
 			while($ga_30_days_detail = mysql_fetch_assoc($rs_30_days)){
 				$date[] = $ga_30_days_detail['date'];
 				$impressions[] = $ga_30_days_detail['impressions'];
@@ -379,86 +390,21 @@ group by gaf.date " ;
 				 $sum_call_click_ratio += number_format((($ga_30_days_detail['total_call']/$ga_30_days_detail['adClicks'])*100),2);
 			}
 			$sum_call_click_ratio = $sum_call_click_ratio / mysql_num_rows($rs_30_days);
-			 }
+			 } 
 		 }
-	
-else if($date_sql!="" and $campaign_id==""){
-		  $sql = "select gaw.date as date, ifnull(sum(gaw.impressions),0) as impressions, ifnull(sum(gaw.adClicks),0) as adClicks, sum(gaw.CTR) as CTR, ifnull(sum(gaw.totalEvents),0) as totalEvents, ifnull(sum(ca.total_call),0) as total_call from
-		  (select ga.date as date, ifnull(sum(ga.impressions),0) as impressions, ifnull(sum(ga.adClicks),0) as adClicks, sum(ga.CTR) as CTR, ifnull(sum(ga.totalEvents),0) as totalEvents  from ga_adword_event_data_history ga  where ga.account_id = '$account_id' and ga.profile_id = '$profile_id'  and ga.`adwordsCampaignID` in($campaign_id) and gaw.adwordsCampaignID in($campaign_id)  $date_sql group by ga.date) gaw 
-		  left join (select c.date, c.client_id, count(*) as total_call from call_log c where c.client_id = '$client_id' group by c.date, c.client_id) ca on gaw.date = date(ca.date) group by gaw.date order by gaw.date";
-		 
-	     	$rs_30_days = mysql_query($sql) or die ( mysql_error() );
-		
-		mysql_num_rows($rs_30_days);
-		if(mysql_num_rows($rs_30_days)>0){
-			 $sum_impression = '';
-			 $sum_adClicks = '';
-			 $sum_TotalEvent = '';
-			 $sum_total_call = '';
-			 $sum_call_click_ratio = '';
-			while($ga_30_days_detail = mysql_fetch_assoc($rs_30_days))
-			{
-				$date[] = $ga_30_days_detail['date'];
-				$impressions[] = $ga_30_days_detail['impressions'];
-				$adClicks[] = $ga_30_days_detail['adClicks'];
-				$CTR[] = $ga_30_days_detail['CTR'];
-				$TotalEvent[] = $ga_30_days_detail['totalEvents'];
-				$total_call[] = $ga_30_days_detail['total_call']; 
-				$call_click_ratio[] = number_format((($ga_30_days_detail['total_call']/$ga_30_days_detail['adClicks'])*100),2);
-				
-				$sum_impression += $ga_30_days_detail['impressions'];
-				$sum_adClicks += $ga_30_days_detail['adClicks'];
-				$sum_TotalEvent += $ga_30_days_detail['totalEvents'];
-				$sum_total_call+= $ga_30_days_detail['total_call'];
-				 
-				$sum_call_click_ratio += number_format((($ga_30_days_detail['total_call']/$ga_30_days_detail['adClicks'])*100),2);
-			}
-			
-			$sum_call_click_ratio = $sum_call_click_ratio / mysql_num_rows($rs_30_days);
-			
-			 }
-			}else if($date_sql=="" and $campaign_id==""){
-		 
-		$sql = "select gaw.date as date, ifnull(sum(gaw.impressions),0) as impressions, ifnull(sum(gaw.adClicks),0) as adClicks, sum(gaw.CTR) as CTR, ifnull(sum(gaw.totalEvents),0) as totalEvents, ifnull(sum(ca.total_call),0) as total_call from
-		  (select ga.date as date, ifnull(sum(ga.impressions),0) as impressions, ifnull(sum(ga.adClicks),0) as adClicks, sum(ga.CTR) as CTR, ifnull(sum(ga.totalEvents),0) as totalEvents  from ga_adword_event_data_30_days ga  where ga.account_id = '$account_id' and ga.profile_id = '$profile_id'  group by ga.date) gaw 
-		  left join (select c.date, c.client_id, count(*) as total_call from call_log c where c.client_id = '$client_id' group by c.date, c.client_id) ca on gaw.date = date(ca.date) group by gaw.date order by gaw.date" ;
-	     $rs_30_days = mysql_query($sql) or die ( mysql_error()  );
-		 
-		if(mysql_num_rows($rs_30_days)>0)
-		{
-			$sum_impression = '';
-			$sum_adClicks = '';
-			$sum_TotalEvent = '';
-			$sum_total_call = '';
-			$sum_call_click_ratio = '';
-			
-			while($ga_30_days_detail = mysql_fetch_assoc($rs_30_days))
-			{
-				$date[] = $ga_30_days_detail['date'];
-				$impressions[] = $ga_30_days_detail['impressions'];
-				$adClicks[] = $ga_30_days_detail['adClicks'];
-				$CTR[] = $ga_30_days_detail['CTR'];
-				$TotalEvent[] = $ga_30_days_detail['totalEvents'];
-				$total_call[] = $ga_30_days_detail['total_call']; 
-				$call_click_ratio[] = number_format((($ga_30_days_detail['total_call']/$ga_30_days_detail['adClicks'])*100),2);
-				
-				$sum_impression += $ga_30_days_detail['impressions'];
-				$sum_adClicks += $ga_30_days_detail['adClicks'];
-				$sum_TotalEvent += $ga_30_days_detail['totalEvents'];
-				$sum_total_call+= $ga_30_days_detail['total_call'];
-				$sum_call_click_ratio += number_format((($ga_30_days_detail['total_call']/$ga_30_days_detail['adClicks'])*100),2);
-			}
-			 $sum_call_click_ratio = $sum_call_click_ratio / mysql_num_rows($rs_30_days);
-			 }
-		}
 	}
 }
 
 if(!isset($_POST["submit"])){
-   $sql =" select gaf.date as date, ifnull(sum(gaf.impressions),0) as impressions, ifnull(sum(gaf.adClicks),0) as adClicks, sum(gaf.CTR) as CTR, ifnull(sum(gaf.totalEvents),0) as totalEvents, 0 as total_call from (select ga.date as date, ifnull(sum(ga.impressions),0) as impressions, ifnull(sum(ga.adClicks),0) as adClicks, sum(ga.CTR) as CTR, ifnull(sum(gaw.totalEvents),0) as totalEvents from ga_adword_campaign_data_30_days ga left join campaign_event_30_day gaw on ga.date = gaw.date and gaw.adwordsCampaignID in($campaign_id) and ga.`adwordsCampaignID` = gaw.adwordsCampaignID where ga.account_id = '$account_id' and ga.profile_id = '$profile_id'  and ga.`adwordsCampaignID` in($campaign_id) group by ga.date) gaf  UNION ALL  
-	select date(c.date) as date, 0 as impressions, 0 as adClicks, 0 as CTR, 0 as totalEvents, count(*) as total_call from call_log c where c.client_id = '$client_id' and date(c.date ) >= now()-interval 1 month group by date order by date"; 
+	
+$sql = "select g1.date as date, sum(g1.impressions) as impressions, sum(g1.adClicks) as adClicks, sum(g1.CTR) as CTR, sum(g1.totalEvents) as totalEvents,sum(g1.total_call) as total_call from(select gaf.date1 as date, ifnull(sum(gaf.impressions),0) as impressions, ifnull(sum(gaf.adClicks),0) as adClicks, sum(gaf.CTR) as CTR, ifnull(sum(gaf.totalEvents),0) as totalEvents, 0 as total_call from (select * from (select ga.date as date1, ifnull(sum(ga.impressions),0) as impressions, ifnull(sum(ga.adClicks),0) as adClicks, sum(ga.CTR) as CTR from ga_adword_campaign_data_30_days ga where ga.account_id = '$account_id' and ga.profile_id = '$profile_id' and ga.`adwordsCampaignID` in($campaign_id) and date(ga.date ) >= now()-interval 1 month group by ga.date) ga1 left join (SELECT date, sum(totalEvents) as totalEvents from campaign_event_30_day where adwordsCampaignID in($campaign_id) and account_id = '$account_id' and profile_id = '$profile_id' group by date) gaw on ga1.date1 = gaw.date ) gaf group by date1 UNION ALL select date(c.date) as date, 0 as impressions, 0 as adClicks, 0 as CTR, 0 as totalEvents, count(*) as total_call from call_log c where c.client_id = '$client_id' and date(c.date ) >= now()-interval 1 month group by date(date) ) g1 group by date " ;
+	
+	
+/*   echo $sql =" select gaf.date as date, ifnull(sum(gaf.impressions),0) as impressions, ifnull(sum(gaf.adClicks),0) as adClicks, sum(gaf.CTR) as CTR, ifnull(sum(gaf.totalEvents),0) as totalEvents, 0 as total_call from (select ga.date as date, ifnull(sum(ga.impressions),0) as impressions, ifnull(sum(ga.adClicks),0) as adClicks, sum(ga.CTR) as CTR, ifnull(sum(gaw.totalEvents),0) as totalEvents from ga_adword_campaign_data_30_days ga left join campaign_event_30_day gaw on ga.date = gaw.date and gaw.adwordsCampaignID in($campaign_id) and ga.`adwordsCampaignID` = gaw.adwordsCampaignID where ga.account_id = '$account_id' and ga.profile_id = '$profile_id'  and ga.`adwordsCampaignID` in($campaign_id) group by ga.date) gaf  UNION ALL  
+	select date(c.date) as date, 0 as impressions, 0 as adClicks, 0 as CTR, 0 as totalEvents, count(*) as total_call from call_log c where c.client_id = '$client_id' and date(c.date ) >= now()-interval 1 month group by date order by date"; */
 
-$sql_d = " select gaf.date as date, ifnull(sum(gaf.impressions),0) as impressions, ifnull(sum(gaf.adClicks),0) as adClicks, sum(gaf.CTR) as CTR, ifnull(sum(gaf.totalEvents),0) as totalEvents,ifnull(sum(ca.total_call),0) as total_call from (select ga.date as date, ifnull(sum(ga.impressions),0) as impressions, ifnull(sum(ga.adClicks),0) as adClicks, sum(ga.CTR) as CTR, ifnull(sum(gaw.totalEvents),0) as totalEvents from ga_adword_campaign_data_history ga left join campaign_event_history gaw on ga.date = gaw.date and gaw.adwordsCampaignID in($campaign_id) and ga.`adwordsCampaignID` = gaw.adwordsCampaignID where ga.account_id = '$account_id' and ga.profile_id = '$profile_id'  and ga.`adwordsCampaignID` in($campaign_id) group by ga.date) gaf left join (select date(c.date) as date, c.client_id, count(*) as total_call from call_log c where c.client_id = '$client_id' group by date(c.date), c.client_id) ca on gaf.date = date(ca.date) group by gaf.date order by gaf.date    " ;
+ $sql_d = " select g1.date, sum(g1.impressions) as impressions, sum(g1.adClicks) as adClicks, sum(g1.CTR) as CTR, sum(g1.totalEvents) as totalEvents,sum(g1.total_call) as total_call from
+	(select gaf.date1 as date, ifnull(sum(gaf.impressions),0) as impressions, ifnull(sum(gaf.adClicks),0) as adClicks, sum(gaf.CTR) as CTR, ifnull(sum(gaf.totalEvents),0) as totalEvents, 0 as total_call from (select * from (select ga.date as date1, ifnull(sum(ga.impressions),0) as impressions, ifnull(sum(ga.adClicks),0) as adClicks, sum(ga.CTR) as CTR from ga_adword_campaign_data_30_days ga where ga.account_id = '$account_id' and ga.profile_id = '$profile_id' and ga.`adwordsCampaignID` in($campaign_id) group by ga.date) ga1 left join (SELECT date, sum(totalEvents) as totalEvents from campaign_event_30_day where adwordsCampaignID in($campaign_id) and account_id = '$account_id' and profile_id = '$profile_id' group by date) gaw on ga1.date1 = gaw.date ) gaf group by date1 UNION ALL select date(ga.date) as date, 0 as impressions, 0 as adClicks, 0 as CTR, 0 as totalEvents, count(*) as total_call from call_log ga where ga.client_id = '$client_id' group by date(ga.date)) g1 group by date " ;
 		  
 		$rs_30_days = mysql_query($sql) or die ( mysql_error()  );
 		$rs_all = mysql_query($sql_d) or die ( mysql_error() );
@@ -505,7 +451,50 @@ $sql_d = " select gaf.date as date, ifnull(sum(gaf.impressions),0) as impression
 }
 ?>
 
-
+<script type="text/javascript">
+$(document).ready(function(){
+	<?php 
+		$n = strtotime($from_date);
+		$m = strtotime($to_date);
+	?>
+	var from = '<?php echo date('d-m-Y', $n); ?>';
+	var to = '<?php echo date('d-m-Y', $m); ?>';
+	var label = '<?php echo $type; ?>';
+	label = label.replace(/[\. ,:-_]+/g, " ");
+	
+	if(label == ''){
+		label = 'Last 30 days';
+		$("#label_date").text(label);
+	}else{
+		if(label == 'date range'){
+			$("#label_date").text('Date Range (' + from + ' - ' + to + ')');
+		}else{
+			$("#label_date").text(label);
+		}
+	}
+});
+</script>  
+<style>
+<?php if($type == "date_range"): ?>
+	.filter-form-wrap .filter-text .line {
+	  background: none repeat scroll 0 0 #d4d4d4;
+	  float: right;
+	  height: 1px;
+	  margin-left: 15px;
+	  margin-top: 10px;
+	  width: 61% !important;
+	}
+<?php else: ?>
+	.filter-form-wrap .filter-text .line {
+	  background: none repeat scroll 0 0 #d4d4d4;
+	  float: right;
+	  height: 1px;
+	  margin-left: 15px;
+	  margin-top: 10px;
+	  width: 73% !important;
+	}	
+<?php endif; ?>
+</style>
 <?php include('piechart_sem.php');?>
 
 <div id="main_container">

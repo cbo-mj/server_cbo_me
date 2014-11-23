@@ -107,6 +107,13 @@ h6 p { display:inline; }
 	.dual { width:50%; }
 	.year { width:81% !important; }
 }
+.date_peiord {
+  background: none repeat scroll 0 0 #f0f0f0;
+  display: inline-block;
+  font-size: 13px;
+  padding: 5px;
+}
+#label_date{ text-transform:capitalize;}
 </style>
 <link rel="stylesheet" href="StyleSheets/style.css">
 <!--[if lt IE 8]><!-->
@@ -137,6 +144,7 @@ $('#v3main').next().next().css('height','2000px');
                                         <div class="bg-white">
                                             <a href="javascript:void(0)" id="show-filter-form">Filters <div class="arrow-down1"></div></a>				
                                         </div>
+                                        <div class="date_peiord"><b>Date Period:</b> <span id="label_date">Last 30 days</span></div>
                                         <div class="line"></div>
                                     </div><!-- END FILTER TEXT -->
                                     <div id="filter-form" class="filter-form item-hide">  
@@ -425,7 +433,50 @@ if(isset($_POST["submit"]))
     $final_heat = implode(",", $heat_arr);
 
 ?>
-
+<script type="text/javascript">
+$(document).ready(function(){
+	<?php 
+		$n = strtotime($from_date);
+		$m = strtotime($to_date);
+	?>
+	var from = '<?php echo date('d-m-Y', $n); ?>';
+	var to = '<?php echo date('d-m-Y', $m); ?>';
+	var label = '<?php echo $type; ?>';
+	label = label.replace(/[\. ,:-_]+/g, " ");
+	
+	if(label == ''){
+		label = 'Last 30 days';
+		$("#label_date").text(label);
+	}else{
+		if(label == 'date range'){
+			$("#label_date").text('Date Range (' + from + ' - ' + to + ')');
+		}else{
+			$("#label_date").text(label);
+		}
+	}
+});
+</script> 
+<style type="text/css">
+<?php if($type == "date_range"): ?>
+.filter-form-wrap .filter-text .line {
+  background: none repeat scroll 0 0 #d4d4d4;
+  float: right;
+  height: 1px;
+  margin-left: 15px;
+  margin-top: 10px;
+  width: 61% !important;
+}
+<?php else: ?>
+.filter-form-wrap .filter-text .line {
+  background: none repeat scroll 0 0 #d4d4d4;
+  float: right;
+  height: 1px;
+  margin-left: 15px;
+  margin-top: 10px;
+  width: 73% !important;
+}	
+<?php endif; ?>
+</style>
 <div style="clear:both;"></div>
 <script type="text/javascript">
 $( document ).ready(function() {

@@ -1,0 +1,211 @@
+[10-Nov-2014 21:28:50 Australia/Melbourne] PHP Fatal error:  Call to a member function curlprocess() on a non-object in /home/cbocpanel/public_html/support-portal/task-list.php on line 10
+[10-Nov-2014 21:29:51 Australia/Melbourne] PHP Fatal error:  Call to a member function curlprocess() on a non-object in /home/cbocpanel/public_html/support-portal/task-list.php on line 10
+[13-Nov-2014 23:42:24 Australia/Melbourne] PHP Fatal error:  Call to a member function curlprocess() on a non-object in /home/cbocpanel/public_html/support-portal/get-users.php on line 10
+[14-Nov-2014 23:24:43 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/ticket-details.php on line 30
+[14-Nov-2014 23:25:31 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/ticket-details.php on line 30
+[17-Nov-2014 13:04:55 Australia/Melbourne] PHP Fatal error:  Problem preparing query (SELECT clientid FROM client) Unknown column 'clientid' in 'field list' in /home/cbocpanel/public_html/support-portal/MysqliDb.php on line 823
+[17-Nov-2014 14:33:34 Australia/Melbourne] PHP Fatal error:  Problem preparing query (SELECT client_id, client_name, Zendesk_company_ID FROM client c  JOIN zendesk_info z on c.Zendesk_company_ID = z.Zendesk_company_ID WHERE   c.client_id = ? ) Column 'Zendesk_company_ID' in field list is ambiguous in /home/cbocpanel/public_html/support-portal/MysqliDb.php on line 824
+[17-Nov-2014 17:22:03 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOzendesk::commentTicket() in /home/cbocpanel/public_html/support-portal/commentTicket.php on line 14
+[19-Nov-2014 14:03:14 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/task-list.php on line 42
+[19-Nov-2014 14:03:41 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/task-list.php on line 42
+[19-Nov-2014 14:32:54 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/task-list.php on line 42
+[19-Nov-2014 14:33:07 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/task-list.php on line 42
+[19-Nov-2014 14:34:26 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/task-list.php on line 42
+[19-Nov-2014 14:34:27 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/task-list.php on line 42
+[19-Nov-2014 14:34:32 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/task-list.php on line 42
+[19-Nov-2014 14:34:39 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/task-list.php on line 42
+[20-Nov-2014 18:43:05 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 35
+[20-Nov-2014 18:43:25 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 35
+[20-Nov-2014 18:43:40 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 35
+[20-Nov-2014 18:44:36 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 36
+[20-Nov-2014 18:44:58 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 36
+[20-Nov-2014 18:45:10 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[20-Nov-2014 18:49:45 Australia/Melbourne] PHP Notice:  Undefined variable: projectID in /home/cbocpanel/public_html/support-portal/get-client.php on line 40
+[20-Nov-2014 18:51:41 Australia/Melbourne] PHP Notice:  Undefined variable: projectID in /home/cbocpanel/public_html/support-portal/get-client.php on line 41
+[20-Nov-2014 18:52:21 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTimelogByProjectID() in /home/cbocpanel/public_html/support-portal/get-client.php on line 43
+[20-Nov-2014 18:57:34 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 18:57:36 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 19:02:14 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 19:02:15 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 19:07:10 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 19:07:11 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 19:32:53 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 19:32:54 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 19:36:46 Australia/Melbourne] PHP Notice:  Undefined variable: projectID in /home/cbocpanel/public_html/support-portal/get-client.php on line 45
+[20-Nov-2014 19:38:02 Australia/Melbourne] PHP Notice:  Undefined variable: projectID in /home/cbocpanel/public_html/support-portal/get-client.php on line 45
+[20-Nov-2014 19:44:34 Australia/Melbourne] PHP Notice:  Undefined property: stdClass::$todo in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:44:34 Australia/Melbourne] PHP Notice:  Use of undefined constant lists - assumed 'lists' in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:44:36 Australia/Melbourne] PHP Notice:  Undefined property: stdClass::$todo in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:44:36 Australia/Melbourne] PHP Notice:  Use of undefined constant lists - assumed 'lists' in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:44:36 Australia/Melbourne] PHP Notice:  Undefined property: stdClass::$todo in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:44:36 Australia/Melbourne] PHP Notice:  Use of undefined constant lists - assumed 'lists' in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:44:36 Australia/Melbourne] PHP Notice:  Undefined property: stdClass::$todo in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:44:36 Australia/Melbourne] PHP Notice:  Use of undefined constant lists - assumed 'lists' in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:45:10 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:46:51 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:47:26 Australia/Melbourne] PHP Notice:  Undefined property: stdClass::$todo in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:47:26 Australia/Melbourne] PHP Notice:  Use of undefined constant lists - assumed 'lists' in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:47:26 Australia/Melbourne] PHP Notice:  Undefined property: stdClass::$todo in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:47:26 Australia/Melbourne] PHP Notice:  Use of undefined constant lists - assumed 'lists' in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:47:26 Australia/Melbourne] PHP Notice:  Undefined property: stdClass::$todo in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:47:26 Australia/Melbourne] PHP Notice:  Use of undefined constant lists - assumed 'lists' in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:47:27 Australia/Melbourne] PHP Notice:  Undefined property: stdClass::$todo in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:47:27 Australia/Melbourne] PHP Notice:  Use of undefined constant lists - assumed 'lists' in /home/cbocpanel/public_html/support-portal/get-client.php on line 47
+[20-Nov-2014 19:56:33 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[20-Nov-2014 19:59:45 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[20-Nov-2014 20:08:52 Australia/Melbourne] PHP Notice:  Undefined index: project-name in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:08:52 Australia/Melbourne] PHP Warning:  Illegal string offset 'project-name' in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:08:52 Australia/Melbourne] PHP Notice:  Undefined index: project-name in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:08:52 Australia/Melbourne] PHP Warning:  Illegal string offset 'project-name' in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:08:52 Australia/Melbourne] PHP Notice:  Undefined index: project-name in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:08:52 Australia/Melbourne] PHP Warning:  Illegal string offset 'project-name' in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:08:52 Australia/Melbourne] PHP Notice:  Undefined index: project-name in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:08:52 Australia/Melbourne] PHP Warning:  Illegal string offset 'project-name' in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:09:46 Australia/Melbourne] PHP Notice:  Undefined index: project-name in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:09:46 Australia/Melbourne] PHP Warning:  Illegal string offset 'project-name' in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:09:47 Australia/Melbourne] PHP Notice:  Undefined index: project-name in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:09:47 Australia/Melbourne] PHP Warning:  Illegal string offset 'project-name' in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:09:47 Australia/Melbourne] PHP Notice:  Undefined index: project-name in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:09:47 Australia/Melbourne] PHP Warning:  Illegal string offset 'project-name' in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:09:48 Australia/Melbourne] PHP Notice:  Undefined index: project-name in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:09:48 Australia/Melbourne] PHP Warning:  Illegal string offset 'project-name' in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:20:01 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 50
+[20-Nov-2014 20:22:02 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 51
+[20-Nov-2014 20:22:57 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 51
+[20-Nov-2014 20:32:21 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 51
+[20-Nov-2014 20:33:35 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 52
+[20-Nov-2014 20:34:54 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 51
+[20-Nov-2014 20:43:32 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByProjectID() in /home/cbocpanel/public_html/support-portal/get-client.php on line 46
+[20-Nov-2014 20:46:12 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 51
+[20-Nov-2014 20:46:12 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 52
+[20-Nov-2014 20:46:13 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 51
+[20-Nov-2014 20:46:13 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 52
+[20-Nov-2014 20:46:13 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 51
+[20-Nov-2014 20:46:13 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 52
+[20-Nov-2014 20:46:14 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 51
+[20-Nov-2014 20:46:14 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 52
+[20-Nov-2014 20:49:43 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[20-Nov-2014 20:49:57 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 20:49:58 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 20:50:57 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 20:51:03 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 21:16:44 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 21:16:45 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 22:00:31 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 22:01:37 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 22:20:44 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 22:23:37 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 22:24:03 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 22:41:39 Australia/Melbourne] PHP Fatal error:  Call to undefined method CBOteamWork::getTaskListByID() in /home/cbocpanel/public_html/support-portal/getTicket-list-byGroup.php on line 45
+[20-Nov-2014 23:16:02 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[20-Nov-2014 23:21:57 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[20-Nov-2014 23:22:48 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[20-Nov-2014 23:24:13 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[20-Nov-2014 23:24:18 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[20-Nov-2014 23:24:21 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[20-Nov-2014 23:24:49 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[20-Nov-2014 23:25:16 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[20-Nov-2014 23:28:19 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[21-Nov-2014 00:32:54 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[21-Nov-2014 14:52:21 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[21-Nov-2014 15:26:07 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:26:07 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:26:08 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:26:08 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:26:08 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:26:08 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:26:09 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:26:09 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:26:50 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:26:51 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:26:51 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:26:52 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:29:23 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:41:08 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 51
+[21-Nov-2014 15:41:09 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 51
+[21-Nov-2014 15:41:09 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 51
+[21-Nov-2014 15:41:10 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 51
+[21-Nov-2014 15:44:22 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:44:23 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:44:23 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:44:23 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:49:46 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:49:47 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:49:48 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:49:48 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:49:52 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:49:53 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:49:54 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:49:54 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:50:29 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:50:30 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:50:31 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:50:31 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:52:36 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:55:17 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:55:58 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:55:58 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:55:58 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:55:58 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:58:21 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:58:21 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:58:21 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 15:58:21 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/cbocpanel/public_html/support-portal/get-client.php on line 53
+[21-Nov-2014 16:02:07 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 54
+[21-Nov-2014 16:02:08 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 54
+[21-Nov-2014 16:02:08 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 54
+[21-Nov-2014 16:02:09 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 54
+[21-Nov-2014 16:02:41 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 54
+[21-Nov-2014 16:03:58 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 54
+[21-Nov-2014 16:03:58 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 54
+[21-Nov-2014 16:03:58 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 54
+[21-Nov-2014 16:03:58 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 54
+[21-Nov-2014 16:31:13 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:31:13 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:31:13 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:31:13 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 58
+[21-Nov-2014 16:32:31 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:32:31 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:32:31 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:32:31 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 58
+[21-Nov-2014 16:32:33 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:32:33 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:32:33 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:32:33 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 58
+[21-Nov-2014 16:33:08 Australia/Melbourne] PHP Warning:  Illegal string offset 'projects' in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:33:08 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:33:08 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:33:08 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 58
+[21-Nov-2014 16:34:52 Australia/Melbourne] PHP Warning:  Illegal string offset 'projects' in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:37:18 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:41:28 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:41:28 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:51:35 Australia/Melbourne] PHP Notice:  Undefined variable: key3 in /home/cbocpanel/public_html/support-portal/get-client.php on line 58
+[21-Nov-2014 16:51:35 Australia/Melbourne] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cbocpanel/public_html/support-portal/get-client.php on line 58
+[21-Nov-2014 16:52:27 Australia/Melbourne] PHP Notice:  Undefined property: stdClass::$projects in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:52:27 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:52:27 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:52:28 Australia/Melbourne] PHP Notice:  Undefined property: stdClass::$projects in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:52:28 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:52:28 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:52:29 Australia/Melbourne] PHP Notice:  Undefined property: stdClass::$projects in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:52:29 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:52:29 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:52:30 Australia/Melbourne] PHP Notice:  Undefined property: stdClass::$projects in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:52:30 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 16:52:30 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/cbocpanel/public_html/support-portal/get-client.php on line 57
+[21-Nov-2014 19:38:32 Australia/Melbourne] PHP Fatal error:  Class 'CBOzendesk' not found in /home/cbocpanel/public_html/support-portal/ticket-details.php on line 13
+[22-Nov-2014 12:55:35 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[22-Nov-2014 12:55:52 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[22-Nov-2014 12:56:50 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[22-Nov-2014 12:59:00 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[22-Nov-2014 12:59:18 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[22-Nov-2014 12:59:22 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[22-Nov-2014 13:01:58 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[22-Nov-2014 13:02:52 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[22-Nov-2014 16:37:29 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[23-Nov-2014 13:52:14 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[23-Nov-2014 13:53:23 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[23-Nov-2014 13:53:50 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[23-Nov-2014 13:54:03 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37
+[23-Nov-2014 13:56:23 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/cbocpanel/public_html/support-portal/get-client.php on line 37

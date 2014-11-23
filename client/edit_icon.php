@@ -31,7 +31,7 @@ if(isset($_POST["submit"]))
 	$date = $_POST["date"];
 	$client_id = $_POST["client_id"];
 	
-	
+	$event_type = $_POST["event_type"];
 	
 	if($icon_name=="")
 	{
@@ -40,8 +40,13 @@ if(isset($_POST["submit"]))
 		
 	}
 	
-
-		
+	if($event_type=="")
+		{
+			
+			$error["event_type"] = "Please select event type !";	
+			
+		}
+			
 	
 	if(empty($error))
 	{
@@ -56,8 +61,8 @@ if(isset($_POST["submit"]))
 							icon_name = '$icon_name',
 							date = '$date',
 							client_id = '$client_id',
-							description = '$description' 
-							
+							description = '$description' ,
+							event_type = '$event_type'
 							where 
 							icon_id = '$id'
 							
@@ -182,6 +187,67 @@ $(document).ready(
             <span style="color:blue;"><?php if(isset($error["date"])){ echo $error["date"];}?></span>
             </td>        
         </tr>
+        
+        
+        
+         <tr>
+        	<td valign="top" class="tbl_label">Event Type</td>
+            <td>
+            
+            <?php
+			$event_type_arr = array();
+			$event_type_arr['flag'] = 'flag';
+			$event_type_arr['sign'] = 'sign';
+			$event_type_arr['pin'] = 'pin';
+			$event_type_arr['triangleUp'] = 'triangleUp';
+			$event_type_arr['triangleDown'] = 'triangleDown';
+			$event_type_arr['triangleLeft'] = 'triangleLeft';
+			$event_type_arr['triangleLeft'] = 'triangleRight';
+			$event_type_arr['triangleLeft'] = 'text';
+			$event_type_arr['triangleLeft'] = 'arrowUp';
+			$event_type_arr['triangleLeft'] = 'arrowDown';
+			?>
+            
+            
+            <select name="event_type"  style="border:1px solid #979393;">
+        <option value="">Please select event type</option>        
+     <?php
+	
+	
+	 foreach($event_type_arr as $key=>$value)
+	 {
+		 $selected_event_type = '';
+		 if($value==$_POST['event_type'])
+		 {	
+		 	$selected_event_type = 'selected="selected"';
+			
+		 }else{
+			  if($value==$row['event_type'])
+		 	{	
+		 		$selected_event_type = 'selected="selected"';
+			
+			 }
+			 
+		 }
+		 
+		 
+	?>
+		<option  <?php echo $selected_event_type;?>  value="<?php echo $value;?>"><?php echo $value;?></option>
+	
+    
+    <?php
+	}
+
+	?>	
+    </select>
+    
+     <br/>
+            <span style="color:blue;"><?php if(isset($error["event_type"])){ echo $error["event_type"];}?></span>
+            
+            </td>        
+        </tr>
+        
+        
        
        <tr>
         	<td valign="top">Icon Name</td>

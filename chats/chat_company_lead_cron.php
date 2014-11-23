@@ -147,6 +147,9 @@ print_r($result);*/
 								$notificationState = $result_lead["data"][$i]['notificationState'] ;
 								$sentBy = $result_lead["data"][$i]['sentBy'] ;
 								$username = $result_lead["data"][$i]['username'] ;
+						        $phone = $result_lead["data"][$i]['phone'] ;
+								
+								$phone = mysql_escape_string($phone) ; 
 								
 						        $name = mysql_escape_string($name);	
 					   			$username = mysql_escape_string($username);	
@@ -193,7 +196,8 @@ print_r($result);*/
 								name = '$name',
 								notificationState = '$notificationState',
 								sentBy = '$sentBy',
-								username = '$username'
+								username = '$username',
+								phone = '$phone'
 			
 						
 						";  

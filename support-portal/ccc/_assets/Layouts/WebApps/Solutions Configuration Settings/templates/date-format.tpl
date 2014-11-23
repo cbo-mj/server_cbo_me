@@ -1,0 +1,1 @@
+{tag_[global] date format}

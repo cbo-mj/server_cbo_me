@@ -1,0 +1,52 @@
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Support Portal</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="webform" style="display: none;">
+            
+        </div>
+        
+        <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var islogin = {module_isloggedin};
+                
+                var clients = [{module_webapps,19704,a template="/support-portal/templates/customer-infov2.tpl"}{"a":"-1","b":"last","c":"last"}];
+                
+                var loginform = "<form name=\"catseczoneform19906\" onsubmit=\"return checkWholeForm19906(this)\" method=\"post\" action=\"https://completebusinessonline.worldsecuresystems.com/ZoneProcess.aspx?ZoneID=6796&Referrer={module_siteUrl,true,true}&OID={module_oid}&OTYPE={module_otype}\"> <input class=\"cat_textbox_small\" type=\"text\" name=\"Username\" id=\"SZUsername\" maxlength=\"255\" /> <input class=\"cat_textbox_small\" type=\"password\" name=\"Password\" id=\"SZPassword\" maxlength=\"255\" autocomplete=\"off\" /> <input class=\"cat_button\" type=\"submit\" value=\"Log in\" id=\"btnSubmit\" />";
+                
+                $('#webform').html(loginform);
+                
+                for(i = 0;i < clients.length;i++) {
+                    if(clients[i].a === '3132740') {
+                        //alert('username: ' + clients[i].b + '\n' + 'password: ' + clients[i].c);   
+                        $('#SZUsername').attr('value', clients[i].b);
+                        $('#SZPassword').attr('value', clients[i].c);
+                    }
+                }
+                
+                if(islogin === 1) {
+                    //auto login
+                } else {
+                    window.location.href = "/support-portal/app-pages/dashboard.htm";
+                }
+            });
+            
+            
+            function checkWholeForm19906(theForm){
+                var why = "";
+                if (theForm.Username) why += isEmpty(theForm.Username.value, "Username");
+                if (theForm.Password) why += isEmpty(theForm.Password.value, "Password");
+                if (why != ""){
+                    alert(why);
+                    return false;
+                }theForm.submit();
+                return false;
+            }
+        </script>
+    </body>
+</html>

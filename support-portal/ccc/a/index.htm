@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Solution: CCC</title>
+    <!-- CCC V1.5 -->
+    <link rel="stylesheet" href="/ccc/_assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/ccc/_assets/css/ui.css" />
+    <link rel="stylesheet" href="/ccc/_assets/css/custom.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        body {
+            padding-top: 1em;
+        }
+
+        #settings-form {
+            padding-left: 1.75em;
+        }
+
+            #settings-form .radio {
+                margin-top: 0;
+            }
+    </style>
+</head>
+<body>
+    <div class="container hide" id="ccc-secure">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>Solution: Client Communication Center <small>v1.5</small></h2>
+                <p>The Client Communication Center (CCC) was designed to empower clients by granting them access to account information and giving them an easy way to communicate. This BC Solution allows you to add your own custom BC Solutions giving it endless possibilities.</p>
+                <hr>
+                <h3>Contains <small>(a solution is a combination of multiple features)</small></h3>
+                <ul>
+                    <li>Web App: <a href="/AdminConsole/#!/Admin/CustomContent_ItemList.aspx?CustomContentID=17888" target="_top">[CCC] Solution Tiles</a></li>
+                    <li>Web App: <a href="/AdminConsole/#!/Admin/CustomContent_ItemList.aspx?CustomContentID=17889" target="_top">[CCC] Custom Alerts</a></li>
+                    <li>Web App: Solutions Configuration Settings</li>
+                    <li>Secure Zone: <a id="ccc-secure-zone" href="/AdminConsole/#!/Admin/ZoneManagement_Details.aspx?ZoneID=6431" target="_top">[CCC] Client Zone</a></li>
+                    <li>Web Form: <a href="/AdminConsole/#!/Admin/WebFormsV2_Detail.aspx?WebFormID=43752" target="_top">Register for CCC</a></li>
+                    <li>Template: <a href="/AdminConsole/#!/Admin/Templates.aspx" target="_top">[CCC] Main</a></li>
+                    <li>Files: <a href="/AdminConsole/#!/Admin/WebPagesv3.aspx" target="_top">/ccc/</a></li>
+                </ul>
+                <h3>Settings <small>(configure this solution)</small></h3>
+                <div id="settings-browser" class="alert alert-danger" style="display:none;"><p>To edit this BC Solution, your browser may require you to log in securely. Log in securely by <a href="https://completebusinessonline.worldsecuresystems.com/AdminConsole/#!/ccc/a/" target="_top">clicking here</a>.</p></div>
+                <form id="settings-form"></form>
+            </div><!-- /col -->
+        </div><!-- /row -->
+    </div><!-- /container -->
+    <script src="/ccc/_assets/js/settings.js"></script>
+    <script>setUpForm("[CCC]", "[Global]");</script>
+</body>
+</html>

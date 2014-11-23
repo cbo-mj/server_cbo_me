@@ -1,0 +1,151 @@
+<html lang="en" class="no-js">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Foundation | Welcome</title>
+        <link href="/support-portal/css/foundation.css" rel="stylesheet"
+        />
+        <link href="/support-portal/css/style.css" rel="stylesheet" />
+        <link href="/support-portal/table-sorter/css/style.css" rel="stylesheet" />
+        <link href="/support-portal/colorbox/colorbox.css" rel="stylesheet" />
+        <link href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/support-portal/colorbox/jquery.colorbox.js"></script>
+        <script type="text/javascript">
+			var globalTickets = "";
+            $(document).ready(function() {
+                $(".inline").colorbox({
+                    inline: true,
+                    width: "50%"
+                });
+                $(".iframe").colorbox({
+                    iframe: true,
+                    width: "50%",
+                    height: "90%"
+                });
+                $(".iframe2").colorbox({
+                    iframe: true,
+                    width: "50%",
+                    height: "70%",
+                    scrolling: false
+                });
+            });
+        </script>
+        <script src="/support-portal/js/vendor/modernizr.js"></script>
+    </head>
+    
+    <body>
+        <div class="wrap">
+            <div id="main-menu">
+            	<ul id="nav_1365262">
+                    <li><a href="#" id="dashboard-link">Dashboard</a></li>
+                    <li><a href="/support-portal/support-packages.htm">Support Packages</a></li>
+                 </ul>
+            </div>
+            <div class="columns large-12">
+            	<!--DASHBOARD CONTENT START HERE-->
+                <div class="row packages-content large-8">
+        <div class="column large-4 package-item">
+        <div class="item-head">
+        <h1 class="package-item-title">10 Hours</h1>
+        <span class="package-item-subtitle">Additional Support</span>
+        <h5 class="package-itme-price">$200</h5>
+        </div>
+        <div class="item-body">
+        <p>
+        <span class="color-blue">What we can do in 10 Hrs?</span><br />
+        5 - 8 Homepage Banners<br />
+        2 Animated Email Campaigns<br />
+        3 Landing Pages<br />
+        7 - 10 Blog Posts
+        </p>
+        <!--<a class="button blue-button" href="#">Add Package</a>-->
+        </div>
+        </div>
+        <div class="column large-4 package-item">
+        <div class="most-popular">
+        Most Popular
+        </div>
+        <div class="item-head">
+        <h1 class="package-item-title">20 Hours</h1>
+        <span class="package-item-subtitle">Additional Support</span>
+        <h5 class="package-itme-price">$300</h5>
+        </div>
+        <div class="item-body">
+        <p>
+        <span class="color-blue">What we can do in 20 Hrs?</span><br />
+        10 - 16 Homepage Banners<br />
+        2 - 4 Animated Email Campaigns<br />
+        6 Landing Pages<br />
+        15 - 20 Blog Posts
+        </p>
+        <!--<a class="button blue-button" href="#">Add Package</a>-->
+        </div>
+        </div>
+        <div class="column large-4 package-item">
+        <div class="item-head">
+        <h1 class="package-item-title">30 Hours</h1>
+        <span class="package-item-subtitle">Additional Support</span>
+        <h5 class="package-itme-price">$400</h5>
+        </div>
+        <div class="item-body">
+        <p>
+        <span class="color-blue">What we can do in 30 Hrs?</span><br />
+        15 - 26 Homepage Banners<br />
+        4 - 8 Animated Email Campaigns<br />
+        12 Landing Pages<br />
+        25 - 30 Blog Posts
+        </p>
+        <!--<a class="button blue-button" href="#">Add Package</a>-->
+        </div>
+        </div>
+        <div class="clearB"></div>
+        </div>
+        <div class="packages-content bot-content large-8">
+        <p class="note">
+        <strong>Note:</strong><br />
+        Please note the task listed are an approximation only and are there to provide an indication of the different support requests that are available. If you have any questions please do not hesitate to contact our support team...
+        </p>
+        </div>
+                
+                <!--DASHBOARD CONTENT ENDS HERE-->
+            </div>
+        </div>
+        
+        
+        <div id="cboxOverlay" style="display: none;"></div>
+        <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
+            <div id="cboxWrapper">
+                <div>
+                    <div id="cboxTopLeft" style="float: left;"></div>
+                    <div id="cboxTopCenter" style="float: left;"></div>
+                    <div id="cboxTopRight" style="float: left;"></div>
+                </div>
+                <div style="clear: left;">
+                    <div id="cboxMiddleLeft" style="float: left;"></div>
+                    <div id="cboxContent" style="float: left;">
+                        <div id="cboxTitle" style="float: left;"></div>
+                        <div id="cboxCurrent" style="float: left;"></div>
+                        <button type="button" id="cboxPrevious"></button>
+                        <button type="button" id="cboxNext"></button>
+                        <button id="cboxSlideshow"></button>
+                        <div id="cboxLoadingOverlay" style="float: left;"></div>
+                        <div id="cboxLoadingGraphic" style="float: left;"></div>
+                    </div>
+                    <div id="cboxMiddleRight" style="float: left;"></div>
+                </div>
+                <div style="clear: left;">
+                    <div id="cboxBottomLeft" style="float: left;"></div>
+                    <div id="cboxBottomCenter" style="float: left;"></div>
+                    <div id="cboxBottomRight" style="float: left;"></div>
+                </div>
+            </div>
+            <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+            <script type="text/javascript">
+			$('#dashboard-link').attr('href', sessionStorage.getItem("dashboard"));
+			</script>
+        </div>
+    </body>
+
+</html>

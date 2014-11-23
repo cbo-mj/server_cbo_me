@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Client Communication Center Login</title>
+
+
+
+
+
+<!-- CCC V1.5 -->
+<meta name="robots" content="noindex, nofollow">
+<style>
+.navbar-collapse ul, .breadcrumb, .navbar button {
+	display: none;
+}
+</style>
+
+
+
+</head>
+<body>
+  
+    <h2>Register</h2>
+    <p class="lead">Complete form to gain access to the {module_webapps,17890,i,2936711 template="/ccc/_assets/Layouts/WebApps/Solutions Configuration Settings/templates/title.tpl"}.</p>
+    
+    <div class="alert-messages">
+      <div id="login-required" class="alert alert-danger hide">Please complete the entire form.</div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6">
+    <form name="catwebformform34634" method="post" onsubmit="return checkWholeForm34634(this)" enctype="multipart/form-data" action="https://completebusinessonline.worldsecuresystems.com/FormProcessv2.aspx?WebFormID=43752&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;EID={module_eid}&amp;CID={module_cid}&amp;CC={module_urlcountrycode}&amp;Referrer=http://www.cbo.me&amp;SWE=False&amp;PageID=http://www.cbo.me/ccc/main.htm">
+    
+          <div class="form-group">
+            	<label for="EmailAddress">Email Address</label>
+            	<input type="text" name="EmailAddress" id="EmailAddress" class="form-control" maxlength="255" onblur="document.getElementById('Username').value=this.value;" >
+          </div>
+          <div class="form-group hidden">
+          		<label for="Username">Username</label>
+    			<input type="text" name="Username" id="Username" class="form-control" maxlength="255">
+          </div>
+          <div class="form-group">
+          		<label for="Password">Password</label>
+          		<input type="password" name="Password" id="Password" class="form-control" maxlength="255" autocomplete="off">
+          </div>
+          <div class="form-group">
+          		<label for="PasswordConfirm">Confirm Password</label>
+              <input type="password" name="PasswordConfirm" id="PasswordConfirm" class="form-control" maxlength="255" autocomplete="off" />
+          </div>
+          <div class="checkbox hidden">
+            <label>
+              <input type="checkbox" name="RememberMe" id="RememberMe" checked="checked">
+              Remember me
+            </label>
+          </div>
+          
+          <div class="row">
+              <div class="col-xs-6">
+                    <button type="submit" class="btn btn-large btn-success">Sign Me Up</button>
+              </div>
+              <div class="col-xs-6">
+                    <p class="pull-right">Already signed up? <a href="/ccc">Login</a></p>
+              </div>
+          </div>
+          
+    
+    		<script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+    		<script type="text/javascript">
+				//<![CDATA[
+					var submitcount34634 = 0;
+					function checkWholeForm34634(theForm) {
+						var why = "";
+						if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value);
+						if (theForm.Password && theForm.PasswordConfirm) {
+							why += isEmpty(theForm.Password.value, "Password"); why += isEmpty(theForm.PasswordConfirm.value, "Confirm Password");
+							if (theForm.Password.value != theForm.PasswordConfirm.value) why += appendBreak("- Password and its confirmation do not match.");
+							if (theForm.Password.value.length < 6) why += appendBreak("- Password must be 6 characters or longer.");
+						}
+						if(why != "") {
+							alert(why);return false;
+						}
+						if(submitcount34634 == 0) {
+							submitcount34634++;
+							theForm.submit();
+							return false;
+						} else {
+							alert("Form submission is in progress.");
+							return false;
+						}
+					}
+				//]]>
+				
+				$(document).ready(function(){
+					 window.alert = function(message) {
+						var alertMessage = message.split("-");
+					  	$("#login-required").removeClass("hide").text(alertMessage[1]);
+				   }
+				});
+			
+			</script>
+		</form>
+    </div>
+  </div>
+  
+
+
+</body>
+</html>

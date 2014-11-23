@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Untitled page</title>
+        <meta name="description" content="" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <input id="btnclickme" type="button" value="click me" />
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $('#btnclickme').click(function() {
+                var url = 'https://{subdomain}.zendesk.com/api/v2/tickets.json';
+                var data = '{"ticket":{"subject":"My printer is on fire!", "comment": { "body": "The smoke is very colorful." }}}';
+                $.ajax({
+                    url: url,
+                    dataType: 'json',
+                    data: JSON.stringify(data),
+                    type: 'post',
+                    Content-Type: 'application/json', 
+                    Access-Control-Allow-Origin  : '*', 
+                    Access-Control-Allow-Headers : 'Content-Type'
+                });
+            });
+        });
+        </script>
+    </body>
+</html>

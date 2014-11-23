@@ -1,0 +1,106 @@
+<html>
+<head>
+    <title>Solution: Support - Create A Case</title>
+    <!-- CCC V1.5 -->
+    <link rel="stylesheet" href="/ccc/_assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/ccc/_assets/css/ui.css" />
+    <link rel="stylesheet" href="/ccc/_assets/css/custom.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        body {
+            padding-top: 1em;
+        }
+    </style>
+</head>
+<body id="top">
+    <div class="container hide" id="ccc-secure">
+
+        <div class="row">
+            <div class="col-xs-6">
+                <a id="backLink" href="/ccc/support/a/index.htm">Back To Support</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-8">
+
+                <div class="alert-messages">
+                    <div id="submit-error" class="alert alert-danger hide">Please fill out all of the required fields.</div>
+                    <div id="submit-success" class="alert alert-success hide {module_url,message}">Your support request has been sent.</div>
+                </div>
+
+                <h2>Submit a New Support Ticket</h2>
+                <p class="lead">When a client contacts you directly (instead of submitting a ticket) create a new case and submit their request using this form.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8">
+                <form id="hybridForm" name="catwebformform41919" method="post" role="form" onsubmit="return checkWholeForm41919(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=43751&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;EID={module_eid}&amp;SAR=False&amp;PageID=/ccc/support/a/create.htm?message=show">
+                    <input type="hidden" name="FullName" id="FullName" value="-">
+
+                    <div class="form-group">
+                        <label for="EmailAddress">Customer's Email</label>
+                        <input type="text" name="EmailAddress" id="EmailAddress" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CAT_Custom_272323">Title for Support Request</label>
+                        <input type="text" maxlength="4000" name="CAT_Custom_272323" id="CAT_Custom_272323" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CAT_Custom_272324">Details for Support Request</label>
+                        <textarea name="CAT_Custom_272324" id="CAT_Custom_272324" cols="10" rows="4" class="form-control" onkeydown="if(this.value.length&gt;=4000)this.value=this.value.substring(0,3999);"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="FileAttachment">Attach File (250Mb Limit)</label>
+                        <input type="file" name="FileAttachment" id="FileAttachment">
+                    </div>
+
+                    <input class="btn btn-large btn-success pull-right" type="submit" value="Create A New Case" id="catwebformbutton">
+
+                    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        var siteAuthToken = parent.$.cookie('siteAuthToken');
+                        $(".container").removeClass("hide");
+                        var submitcount41919 = 0;
+                        function checkWholeForm41919(theForm) {
+                            var why = "";
+                            if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value);
+                            if (theForm.CAT_Custom_272323) why += isEmpty(theForm.CAT_Custom_272323.value, "Title");
+                            if (theForm.CAT_Custom_272324) why += isEmpty(theForm.CAT_Custom_272324.value, "Description");
+                            if (why != "") {
+                                alert(why);
+                                return false;
+                            }
+                            if (submitcount41919 == 0) {
+                                submitcount41919++;
+                                theForm.submit();
+                                return false;
+                            } else {
+                                alert("Form submission is in progress.");
+                                return false;
+                            }
+                        }
+                        //]]>
+                        window.alert = function(message) {
+                            var alertMessage = message.split("-");
+                            $("#submit-success").addClass("hide").removeClass("show");
+                            $("#submit-error").removeClass("hide").text(alertMessage[1]);
+                            window.location.hash = "#top";
+                        }
+                    </script>
+                </form>
+            </div>
+            <div class="col-md-4">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

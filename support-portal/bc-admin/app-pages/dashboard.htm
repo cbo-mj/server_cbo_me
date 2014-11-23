@@ -1,0 +1,336 @@
+<html lang="en" class="no-js">
+    <head>
+        <title>Support Portal | Dashboard</title> 
+    </head>
+    <body>
+        <div style="display: none;" id="message"></div>
+        <div class="columns large-12 chart-box-wrap">
+            <div class="chart-box">
+                <div class="chart-wrap chart-sp">
+                    <div style="width: 100%; height: 120px; background-color: #ffffff;" id="chartdiv-sp"></div>
+                    <div class="chart-icon-wrap"><img alt="" src="/support-portal/images/icons/chat.png" /></div>
+                    <span class="chart-details"></span>
+                    <h2>Support Provided</h2>
+                </div>
+                <div class="chart-wrap chart-sa">
+                    <div style="width: 100%; height: 120px; background-color: #ffffff;" id="chartdiv-sa"></div>
+                    <div class="chart-icon-wrap"><img alt="" src="/support-portal/images/icons/help.png" /></div>
+                    <span class="chart-details"></span>
+                    <h2>Support Available</h2>
+                </div>
+                <div class="chart-wrap chart-ncs">
+                    <div style="width: 100%; height: 120px; background-color: #ffffff;" id="chartdiv-ncs"></div>
+                    <div class="chart-icon-wrap"><img alt="" src="/support-portal/images/icons/cash.png" /></div>
+                    <span class="chart-details"></span>
+                    <h2>Non-charge Support</h2>
+                </div>
+                <div class="chart-wrap chart-ot">
+                    <div style="width: 100%; height: 120px; background-color: #ffffff;" id="chartdiv-ot"></div>
+                    <div class="chart-icon-wrap"><img alt="" src="/support-portal/images/icons/ticket.png" /></div>
+                    <span class="chart-details"></span>
+                    <h2>Open Tickets</h2>
+                </div>
+            </div>
+        </div>
+        <div class="clearB"></div>
+        <h2 class="contentHeader">
+            <span class="contentTitlewrap">
+                Submit a new request
+            </span>
+        </h2>
+        <div class="columns large-12 request-buttons">
+            <ul class="button-list small-block-grid-3">
+                <li class="gen-support"><a href="//server.cbo.me/support-portal/general-support.htm" class="iframe2">General Support</a></li>
+                <li class="landing-page"><a href="//server.cbo.me/support-portal/landing-page.htm" class="iframe">Landing Page</a></li>
+                <li class="banner"><a href="//server.cbo.me/support-portal/banner.htm" class="iframe2">Banner</a></li>
+                <li class="website-issue"><a href="//server.cbo.me/support-portal/website-issue.htm" class="iframe2">Website Issue</a></li>
+                <li class="email-campaign"><a href="//server.cbo.me/support-portal/email-campaign.htm" class="iframe2">Email Campaign</a></li>
+                <li class="platform-question"><a href="//server.cbo.me/support-portal/platform-question.htm" class="iframe2">Platform Question</a></li>
+            </ul>
+        </div>
+        
+        <script src="/support-portal/charts/amcharts.js" type="text/javascript"></script>
+        <script src="/support-portal/charts/themes/light.js" type="text/javascript"></script>
+        <script src="/support-portal/charts/pie.js" type="text/javascript"></script>
+        <script src="/support-portal/charts/serial.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var sp = 0;
+                var sa = 0;
+                var ncs = 0;
+                var ot = 0;
+                
+                var clients = [{module_webapps,19704,a template="/support-portal/templates/customer-charts.tpl"}{"id":"-1", "supportProvided":"last","supportAvailable":"last","nonChargedSupport":"last","supportOpenTickets":"last","supportHoursAnnually":"last"}];
+                
+                for(i = 0;i < clients.length;i++) {
+                    if(clients[i].id === '3132740') {
+                        sp = isVarEmpty(clients[i].supportProvided,'numeric');
+                        sa = isVarEmpty(clients[i].supportAvailable,'numeric');
+                        ncs = isVarEmpty(clients[i].nonChargedSupport,'numeric');
+                        ot = isVarEmpty(clients[i].supportOpenTickets,'numeric');
+                    }
+                }
+                
+                AmCharts.makeChart("chartdiv-sp", {
+                    "type": "pie",
+                    "pathToImages": "/support-portal/charts/images/",
+                    "balloonText": "",
+                    "innerRadius": "85%",
+                    "labelRadius": 17,
+                    "labelRadiusField": "Number",
+                    "labelText": "",
+                    "minRadius": 8,
+                    "pullOutRadius": "0%",
+                    "radius": 50,
+                    "startRadius": "0%",
+                    "baseColor": "",
+                    "brightnessStep": 163.2,
+                    "colorField": "Not set",
+                    "colors": [
+                        "#1a9bef",
+                        "#e6e6e6"
+                    ],
+                    "labelTickAlpha": 0,
+                    "maxLabelWidth": 214,
+                    "outlineThickness": 7,
+                    "pullOutOnlyOne": true,
+                    "startDuration": 2,
+                    "titleField": "Not set",
+                    "valueField": "Number",
+                    "creditsPosition": "bottom-right",
+                    "fontFamily": "Arial",
+                    "fontSize": 10,
+                    "theme": "default",
+                    "allLabels": [ {
+                        "align": "center",
+                        "id": "Value",
+                        "size": 46,
+                        "text": "",
+                        "x": "0",
+                        "y": "22%"
+                    }],
+                    "balloon": {
+                        "animationDuration": 0.06,
+                        "fadeOutDuration": 0.18,
+                        "fixedPosition": true
+                    },
+                    "titles": [],
+                    "dataProvider": [
+                        {
+                            "Call": "Support Provided",
+                            "Number": sp
+                        }
+                    ]
+                }
+                                  );
+                jQuery(".chart-sp .chart-details").text(sp + " Hrs");
+                
+                AmCharts.makeChart("chartdiv-sa", {
+                    "type": "pie",
+                    "pathToImages": "/support-portal/charts/images/",
+                    "balloonText": "",
+                    "innerRadius": "85%",
+                    "labelRadius": 17,
+                    "labelRadiusField": "Number",
+                    "labelText": "",
+                    "minRadius": 8,
+                    "pullOutRadius": "0%",
+                    "radius": 50,
+                    "startRadius": "0%",
+                    "baseColor": "",
+                    "brightnessStep": 163.2,
+                    "colorField": "Not set",
+                    "colors": [
+                        "#60c481",
+                        "#e6e6e6"
+                    ],
+                    "labelTickAlpha": 0,
+                    "maxLabelWidth": 214,
+                    "outlineThickness": 7,
+                    "pullOutOnlyOne": true,
+                    "startDuration": 2,
+                    "titleField": "Not set",
+                    "valueField": "Number",
+                    "creditsPosition": "bottom-right",
+                    "fontFamily": "Arial",
+                    "fontSize": 10,
+                    "theme": "default",
+                    "allLabels": [
+                        {
+                            "align": "center",
+                            "id": "Value",
+                            "size": 46,
+                            "text": "",
+                            "x": "0",
+                            "y": "22%"
+                        }
+                    ],
+                    "balloon": {
+                        "animationDuration": 0.06,
+                        "fadeOutDuration": 0.18,
+                        "fixedPosition": true
+                    },
+                    "titles": [],
+                    "dataProvider": [
+                        {
+                            "Call": "Support Available",
+                            "Number": sa
+                        },
+                        {
+                            "Call": "Support Available",
+                            "Number": sp
+                        }
+                    ]
+                }
+                                  );
+                jQuery(".chart-sa .chart-details").text(sa + " Hrs");
+                
+                AmCharts.makeChart("chartdiv-ncs", {
+                    "type": "pie",
+                    "pathToImages": "/support-portal/charts/images/",
+                    "balloonText": "",
+                    "innerRadius": "85%",
+                    "labelRadius": 17,
+                    "labelRadiusField": "Number",
+                    "labelText": "",
+                    "minRadius": 8,
+                    "pullOutRadius": "50%",
+                    "radius": 50,
+                    "startRadius": "0%",
+                    "baseColor": "",
+                    "brightnessStep": 163.2,
+                    "colorField": "Not set",
+                    "colors": [
+                        "#e59f3d",
+                        "#e6e6e6"
+                    ],
+                    "labelTickAlpha": 0,
+                    "maxLabelWidth": 214,
+                    "outlineThickness": 7,
+                    "pullOutOnlyOne": true,
+                    "startDuration": 2,
+                    "titleField": "Not set",
+                    "valueField": "Number",
+                    "creditsPosition": "bottom-right",
+                    "fontFamily": "Arial",
+                    "fontSize": 10,
+                    "theme": "default",
+                    "allLabels": [
+                        {
+                            "align": "center",
+                            "id": "Value",
+                            "size": 46,
+                            "text": "",
+                            "x": "0",
+                            "y": "22%"
+                        }
+                    ],
+                    "balloon": {
+                        "animationDuration": 0.06,
+                        "fadeOutDuration": 0.18,
+                        "fixedPosition": true
+                    },
+                    "titles": [],
+                    "dataProvider": [
+                        {
+                            "Call": "Non-charge Support",
+                            "Number": ncs
+                        },
+                        {
+                            "Call": "Support Available",
+                            "Number": sp
+                        }
+                    ]
+                }
+                                  );
+                jQuery(".chart-ncs .chart-details").text(ncs + " Hrs");
+                
+                AmCharts.makeChart("chartdiv-ot", {
+                    "type": "pie",
+                    "pathToImages": "/support-portal/charts/images/",
+                    "balloonText": "",
+                    "innerRadius": "85%",
+                    "labelRadius": 17,
+                    "labelRadiusField": "Number",
+                    "labelText": "",
+                    "minRadius": 8,
+                    "pullOutRadius": "0%",
+                    "radius": 50,
+                    "startRadius": "0%",
+                    "baseColor": "",
+                    "brightnessStep": 163.2,
+                    "colorField": "Not set",
+                    "colors": [
+                        "#e95b5b",
+                        "#e6e6e6"
+                    ],
+                    "labelTickAlpha": 0,
+                    "maxLabelWidth": 214,
+                    "outlineThickness": 7,
+                    "pullOutOnlyOne": true,
+                    "startDuration": 2,
+                    "titleField": "Not set",
+                    "valueField": "Number",
+                    "creditsPosition": "bottom-right",
+                    "fontFamily": "Arial",
+                    "fontSize": 10,
+                    "theme": "default",
+                    "allLabels": [
+                        {
+                            "align": "center",
+                            "id": "Value",
+                            "size": 46,
+                            "text": "",
+                            "x": "0",
+                            "y": "22%"
+                        }
+                    ],
+                    "balloon": {
+                        "animationDuration": 0.06,
+                        "fadeOutDuration": 0.18,
+                        "fixedPosition": true
+                    },
+                    "titles": [],
+                    "dataProvider": [
+                        {
+                            "Call": "Open Ticket",
+                            "Number": ot
+                        },
+                        {
+                            "Call": "Support Available",
+                            "Number": sp
+                        }
+                    ]
+                }
+                                  );
+                jQuery(".chart-ot .chart-details").text(ot);
+            });
+			
+			function isVarEmpty(itemvalue,itemtype) {
+				var returnvalue;
+				if(itemvalue == "") {
+					switch(itemtype) {
+						case "string": { 
+							returnvalue = "";
+							break;
+						} 
+						case "numeric": {
+							returnvalue = 50;
+							break;
+						}
+						case "bool": {
+							returnvalue = 0;
+							break;
+						}
+						default: {
+							break;
+						}
+					}
+					return returnvalue;
+				} else {
+					return "";
+				}
+			}
+        </script>
+    </body>
+</html>

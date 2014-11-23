@@ -44,8 +44,8 @@ include("include/common_function.php");
 			$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";		
 				
 		   echo $message; 
-			$anshuman_email = "anshuman.saraswat@gmail.com,babulalchoudhary56@gmail.com";
-			$shane_email ="arjay@cbo.me,arjay00lumbres@gmail.com,anshuman.saraswat@gmail.com" ;
+			$anshuman_email = "anshuman.saraswat@gmail.com,babulalchoudhary56@gmail.com,makati.devices@cbo.me";
+			$shane_email ="arjay@cbo.me,arjay00lumbres@gmail.com,anshuman.saraswat@gmail.com,makati.devices@cbo.me" ;
 			
 			//@mail($email_id,$subject,$message,$headers);
 			 //@mail($anshuman_email,$subject,$message,$headers);

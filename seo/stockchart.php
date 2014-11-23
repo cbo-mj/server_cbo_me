@@ -4,7 +4,8 @@
         theme: "none",
         pathToImages: "charts/images/",
         categoryAxesSettings: {
-            minPeriod: "mm"
+            minPeriod: "DD",
+			maxSeries: 0
         },
         dataSets: [{
             fieldMappings: [{
@@ -39,11 +40,7 @@
 					$b[] = "{\"date\": '{$d}', \"value\":'{$day_session2[$c]}', \"volume\":'{$day_pageview2[$c]}'}";
 				}
 			}
-				
-				
-				
-				
-				}
+			}
 			
             $g = implode(",", $b); ?> dataProvider: [ <?php echo $g; ?> ],
             categoryField: "date"
@@ -83,7 +80,6 @@
         }],
         chartScrollbarSettings: {
             graph: "g1",
-            usePeriod: "10mm",
             position: "bottom",
 			color: "#000000"
         },

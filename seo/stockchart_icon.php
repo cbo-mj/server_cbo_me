@@ -132,7 +132,10 @@ var chart = AmCharts.makeChart("events_stock_holder", {
 	chartScrollbarSettings: {
 		graph: "g1"
 	},
-
+	categoryAxesSettings: {
+            minPeriod: "DD",
+			maxSeries: 0
+	},
 	chartCursorSettings: {
 		valueBalloonsEnabled: true,
 		graphBulletSize: 1,

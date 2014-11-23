@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Client Communication Center</title>
+
+
+
+
+<!-- CCC V1.5 -->
+        <style>
+            .breadcrumb {
+                display: none;
+            }
+        </style>
+        
+        <script>
+			$(document).ready(function(){
+				 var privateTile;
+				 var privateTiles = [{module_customerfield,98883,272327}];
+				 for (var i="0";i<privateTiles.length;i++)
+				 {
+					privateTile = "#i-" + privateTiles[i];
+				 	$(privateTile).remove();
+				 }
+			});
+		</script>
+        
+
+
+
+</head>
+<body>
+        
+        
+        <div class="prestobc-ccc ccc-secure">
+            <h1>{module_webapps,17890,i,2936711 template="/ccc/_assets/Layouts/WebApps/Solutions Configuration Settings/templates/title.tpl"}</h1>
+            <!-- global messages -->
+            <div class="{module_customerfield,98883,272325}">
+                {module_webapps,17889,i template="/ccc/_assets/Layouts/WebApps/[CCC] Custom Alerts/description.tpl",{module_webapps,17890,i template="/ccc/_assets/Layouts/WebApps/Solutions Configuration Settings/templates/global-alert-id.tpl",2936711},,,,,true}
+                {module_webapps,17889,i template="/ccc/_assets/Layouts/WebApps/[CCC] Custom Alerts/description.tpl",{module_webapps,17890,i template="/ccc/_assets/Layouts/WebApps/Solutions Configuration Settings/templates/global-alert-id-2.tpl",2936711},,,,,true}
+            </div>
+            <!-- custom message -->
+            {module_webapps,17889,i template="/ccc/_assets/Layouts/WebApps/[CCC] Custom Alerts/description.tpl",{module_customerfield,98883,272326},,,,,true}
+            
+            </div>
+            <div class="row ccc-tiles">
+            
+            {module_webapps,17888,a template="/ccc/_assets/Layouts/WebApps/[CCC] Solution Tiles/tile.tpl",,,,,500,true}
+            </div>
+        
+
+
+
+</body>
+</html>

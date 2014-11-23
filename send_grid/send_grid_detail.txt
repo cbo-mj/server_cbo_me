@@ -1,0 +1,28 @@
+
+
+https://sendgrid.com/docs/API_Reference/SMTP_API/index.html
+
+sendgrid : http://sendgrid.com
+cbo / i@1$VufKDL
+
+username : CBO
+software@cbo.me
+
+
+
+
+https://sendgrid.com/docs/API_Reference/Template_Engine_API/smtpapi.html
+
+https://api.sendgrid.com/api/bounces.get.json?api_user=your_sendgrid_username&api_key=your_sendgrid_password&date=1
+
+
+https://sendgrid.com/account/overview
+
+
+
+https://sendgrid.com/templates/9929e7c0-5959-4f35-b13e-0da81da3df14/versions/62b27726-dad8-4486-84dc-3048fc069ec5/edit
+
+
+General Email Template ID: 9929e7c0-5959-4f35-b13e-0da81da3df14
+
+

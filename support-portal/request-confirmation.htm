@@ -1,0 +1,93 @@
+<html lang="en" class="no-js">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Foundation | Welcome</title>
+        <link href="/support-portal/css/foundation.css" rel="stylesheet"
+        />
+        <link href="/support-portal/css/style.css" rel="stylesheet" />
+        <link href="/support-portal/table-sorter/css/style.css" rel="stylesheet" />
+        <link href="/support-portal/colorbox/colorbox.css" rel="stylesheet" />
+        <link href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/support-portal/colorbox/jquery.colorbox.js"></script>
+        <script type="text/javascript">
+			var globalTickets = "";
+            $(document).ready(function() {
+                $(".inline").colorbox({
+                    inline: true,
+                    width: "50%"
+                });
+                $(".iframe").colorbox({
+                    iframe: true,
+                    width: "50%",
+                    height: "90%"
+                });
+                $(".iframe2").colorbox({
+                    iframe: true,
+                    width: "50%",
+                    height: "70%",
+                    scrolling: false
+                });
+            });
+        </script>
+        <script src="/support-portal/js/vendor/modernizr.js"></script>
+    </head>
+    
+    <body>
+        <div class="wrap">
+            <div id="main-menu">
+            	<ul id="nav_1365262">
+                    <li><a href="#" id="dashboard-link">Dashboard</a></li>
+                    <li><a href="/support-portal/support-packages.htm">Support Packages</a></li>
+                 </ul>
+            </div>
+            <div class="columns large-12">
+            	<!--DASHBOARD CONTENT START HERE-->
+                <div class="panel">
+                <h1>Your Support Ticket has been successfully submitted</h1>
+                <p>Our support team will review this ticket shortly</p>
+                <p><a href="#" class="button dashboard-link">Back</a></p>
+                </div>
+                <!--DASHBOARD CONTENT ENDS HERE-->
+            </div>
+        </div>
+        
+        
+        <div id="cboxOverlay" style="display: none;"></div>
+        <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
+            <div id="cboxWrapper">
+                <div>
+                    <div id="cboxTopLeft" style="float: left;"></div>
+                    <div id="cboxTopCenter" style="float: left;"></div>
+                    <div id="cboxTopRight" style="float: left;"></div>
+                </div>
+                <div style="clear: left;">
+                    <div id="cboxMiddleLeft" style="float: left;"></div>
+                    <div id="cboxContent" style="float: left;">
+                        <div id="cboxTitle" style="float: left;"></div>
+                        <div id="cboxCurrent" style="float: left;"></div>
+                        <button type="button" id="cboxPrevious"></button>
+                        <button type="button" id="cboxNext"></button>
+                        <button id="cboxSlideshow"></button>
+                        <div id="cboxLoadingOverlay" style="float: left;"></div>
+                        <div id="cboxLoadingGraphic" style="float: left;"></div>
+                    </div>
+                    <div id="cboxMiddleRight" style="float: left;"></div>
+                </div>
+                <div style="clear: left;">
+                    <div id="cboxBottomLeft" style="float: left;"></div>
+                    <div id="cboxBottomCenter" style="float: left;"></div>
+                    <div id="cboxBottomRight" style="float: left;"></div>
+                </div>
+            </div>
+            <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+        </div>
+        <script type="text/javascript">
+		$('#dashboard-link').attr('href', sessionStorage.getItem("dashboard"));
+		$('.dashboard-link').attr('href', sessionStorage.getItem("dashboard"));
+		</script>
+    </body>
+
+</html>

@@ -122,9 +122,13 @@ function get_today_data_adwordcampaign_event_queryCoreReportingApi($ga,$startDat
 						$adwordsCampaignID = mysql_escape_string($days_30_record['adwordsCampaignID'])  ;
 						$totalEvents = mysql_escape_string($days_30_record['totalEvents'])  ;
 						
+						if($adwordsCampaignID=="(not set)")
+						{
+							$adwordsCampaignID = "0";
+						}
 						
 						
-						if($adwordsCampaignID!="" and $adwordsCampaignID!="(not set)")
+						if($adwordsCampaignID!="") //and $adwordsCampaignID!="(not set)")
 						{
 					 	$insert_ga_detail = "
 											INSERT INTO ga_data_campaign_event SET
@@ -573,6 +577,10 @@ mysql_query($sql_delete_30_days) or die ( mysql_error() ) ;
 						
 						if(isset($eventCategory) and $eventCategory != '')
 						{
+							if($adwordsCampaignID=="(not set)")
+						{
+							$adwordsCampaignID = "0";
+						}
 					 	$update_ga_detail = "update ga_event_category_data_30_days SET
 						                        adwordsCampaignID = '$adwordsCampaignID' WHERE 
 												account_id = '$account_id'  AND
@@ -998,6 +1006,10 @@ mysql_query($sql_delete_365_day) or die ( mysql_error() ) ;
 						
 						if(isset($eventCategory) and $eventCategory != '')
 						{
+							if($adwordsCampaignID=="(not set)")
+						{
+							$adwordsCampaignID = "0";
+						}
 					 	$update_ga_detail = "update ga_event_category_data_365_days SET
 						                        adwordsCampaignID = '$adwordsCampaignID' WHERE 
 												account_id = '$account_id'  AND
@@ -1272,6 +1284,10 @@ function get_history_for_category_event_queryCoreReportingApi($ga,$startDate, $e
 						
 						if(isset($eventCategory) and $eventCategory != '')
 						{
+							if($adwordsCampaignID=="(not set)")
+						{
+							$adwordsCampaignID = "0";
+						}
 					 	$update_ga_detail = "update ga_event_category_history_data SET
 						                        adwordsCampaignID = '$adwordsCampaignID' WHERE 
 												account_id = '$account_id'  AND
@@ -2320,10 +2336,15 @@ mysql_query($sql_delete_30_days) or die ( mysql_error() ) ;
 						$adCost = $days_30_record['adCost']  ;
 						$sessions = $days_30_record['sessions']  ;
 						
-						if($adwordsCampaignID=="" or $adwordsCampaignID=="(not set)")
+						if($adwordsCampaignID=="") // or $adwordsCampaignID=="(not set)")
 					    {
 							continue;
 					    }
+						
+						if($adwordsCampaignID=="(not set)")
+						{
+							$adwordsCampaignID = "0";
+						}
 						
 						
 						
@@ -3008,10 +3029,14 @@ function ga_adword_campaign_data_history($ga,$startDate, $endDate, $startIndex, 
 						$adCost = $days_30_record['adCost']  ;
 						$sessions = $days_30_record['sessions']  ;
 						
-						if($adwordsCampaignID=="" or $adwordsCampaignID=="(not set)")
+						if($adwordsCampaignID=="") // or $adwordsCampaignID=="(not set)")
 					    {
 							continue;
 					    }
+						if($adwordsCampaignID=="(not set)")
+						{
+							$adwordsCampaignID = "0";
+						}
 						
 						
 						$insert_ga_detail = "

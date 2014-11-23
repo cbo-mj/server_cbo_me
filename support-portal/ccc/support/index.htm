@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>Support</title>
+
+
+
+        
+        <!-- CCC V1.5 -->
+    
+
+</head>
+<body>
+        <h2>Support</h2>
+        <p>Submit a new request or review your support history.</p>
+        <hr />
+        <div class="alert-messages">
+        <div id="submit-success" class="alert alert-success hide {module_url,message}">Your support request has been sent.</div>
+        <div id="submit-error" class="alert alert-danger hide">Please fill out all of the required fields.</div>
+        </div>
+        <h3>Submit A New Request</h3>
+        <div class="row">
+        <div class="col-md-8">
+        <div class="well">
+        <form name="catwebformform41919" method="post" role="form" onsubmit="return checkWholeForm41919(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=43751&amp;PageID=%2fccc%2fsupport?message=show&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;EID={module_eid}">
+            <div class="form-group">
+            <label for="CAT_Custom_272323" class="control-label"><strong>Subject</strong></label>
+            <input type="text" maxlength="4000" name="CAT_Custom_272323" id="CAT_Custom_272323" class="form-control" />
+            </div>
+            <div class="form-group">
+            <label for="CAT_Custom_272324" class="control-label"><strong>Please enter the details of your request.</strong></label>
+            <textarea name="CAT_Custom_272324" id="CAT_Custom_272324" cols="10" rows="4" class="form-control" onkeydown="if(this.value.length&gt;=4000)this.value=this.value.substring(0,3999);"></textarea>
+            </div>
+            <input type="hidden" name="FullName" id="FullName" value="{module_fullname}" />
+            <input type="hidden" name="EmailAddress" id="EmailAddress" value="{module_emailaddress}" />
+            <div class="row">
+            <div class="col-xs-6">
+            <div class="form-group">
+            <label for="FileAttachment">Attach File (250Mb Limit)</label>
+            <input type="file" name="FileAttachment" id="FileAttachment" class="cat_textbox" />
+            </div>
+            </div>
+            <div class="col-xs-6">
+            <input class="btn btn-large btn-success pull-right" type="submit" value="Send My Request" id="catwebformbutton" />
+            </div>
+            </div>
+            <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+            <script type="text/javascript">
+                            //<![CDATA[
+                                var submitcount41919 = 0;
+                                function checkWholeForm41919(theForm) {
+                                    var why = "";
+                                    if (theForm.FullName) why += isEmpty(theForm.FullName.value, "First Name");
+                                    if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value);
+                                    if (theForm.CAT_Custom_272323) why += isEmpty(theForm.CAT_Custom_272323.value, "the subject");
+                                    if (theForm.CAT_Custom_272324) why += isEmpty(theForm.CAT_Custom_272324.value, "the details of your request");
+                                    if (why != "") {
+                                        alert(why);
+                                        return false;
+                                    }
+                                    if (submitcount41919 == 0) {
+                                        submitcount41919++;
+                                        theForm.submit();
+                                        return false;
+                                    } else {
+                                        alert("Form submission is in progress.");
+                                        return false;
+                                    }
+                                }
+                            //]]>					
+                        </script>
+        </form>
+        </div>
+        <!-- well -->
+        </div>
+        <!-- /col -->
+        </div>
+        <!-- /row -->
+        <h3>Support History</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Ticket</th>
+                    <th>Subject</th>
+                    <th>Requested</th>
+                    <th>Updated</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+        {module_case,a,,Default template="/ccc/_assets/Layouts/CustomerCases/ccc/list.tpl"}
+            </tbody>
+        </table>
+        <ol class="hide">
+            <li id="case-date">{module_webapps,0,i template="/ccc/_assets/Layouts/WebApps/Solutions Configuration Settings/templates/date-format.tpl",2936711}</li>
+        </ol>
+        <script>
+			$(document).ready(function(){
+				$(".case-subject a").each(function(){
+					var webFormName = "Customer Support Ticket (CCC)";
+					if ($(this).text() == webFormName) {
+						var subjectLink = $(this).attr("href");
+						var detailLink = "/ccc/support/requests.htm";
+						var caseNumber = $(this).parent().parent().find("td:first").html();
+						
+						$(this).load(subjectLink + " #customfields td:first", function() {
+							var subjectContent = $(this).text().replace('Title', '');
+							if (subjectContent == "") subjectContent = "No Subject";							
+							$(this).replaceWith('<a href="' + detailLink + '?num=' + caseNumber + '">' + subjectContent + '</a>');
+						});
+					} else {
+						$(this).parent().parent().remove();
+					}
+                })
+                
+				$(".case-item").each(function(){
+                    
+                    $(this).find(".case-date").each(function() {
+                        
+                        var caseDate = $(this).text();
+                        var caseDateFormat = $("#case-date").text();
+                        /* Convert date to North American format if selected in webapp (also done for each code comment)*/
+                        if (caseDateFormat == "Month Day Year") {
+                            var caseDateParts = caseDate.split("-");
+                            caseDate = caseDateParts[1] + " " + caseDateParts[0] + " " + caseDateParts[2];
+                        } else {
+                            var caseDateParts = caseDate.split("-");
+                            caseDate = caseDateParts[0] + " " + caseDateParts[1] + " " + caseDateParts[2];
+                        }
+                        $(this).text(caseDate);
+                	})
+                
+                    
+				});
+				
+							   window.alert = function(message) {
+								  var alertMessage = message.split("-");
+								  $("#submit-success").addClass("hide").removeClass("show");
+								  $("#submit-error").removeClass("hide").text(alertMessage[1]);
+								  window.location.hash = "#top";
+							   }	
+			});
+        </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<html>
+<head>
+<title>Profile Settings</title>
+
+
+
+        <!-- CCC V1.5 -->
+    
+
+</head>
+<body>
+        
+        <div class="top">
+        	<h1>Profile Settings</h1>
+        	<p class="lead">Update your profile or change your password.</p>
+        </div>
+        
+        <div class="alert-messages">
+        	<div id="submit-error" class="alert alert-danger hide">Please fill out all of the required fields.</div>
+        	<div id="submit-success" class="alert alert-success hide {module_url,message}">Your profile was updated successfully.</div>
+        </div>
+        
+        <hr>
+                    
+		<span class="label label-danger pull-right">* Required</span>
+        
+        <form name="catupdatedetailsformform48716" id="profile-form" method="post" enctype="multipart/form-data" role="form" onsubmit="return checkWholeForm48716(this)" action="/MemberProcess.aspx?PageID=/ccc/settings.htm?message=show">
+            
+                <div class="row">
+                    
+                    <div class="col-sm-4" id="profile-image-group">
+                        <h3>Profile Image</h3>
+                        <img id="loading-indicator" src="/ccc/_assets/img/loading-indicator.gif">
+                        <img id="profile-image-large" src="/ccc/_assets/img/support/profile.png" class="img-responsive img-thumbnail" style="display:none;">
+                        <div class="clearfix"></div>
+                         <div class="fileinput-button btn btn-info form-group clearfix">
+                                <!--<i class="glyphicon glyphicon-plus-sign"> </i>-->
+                                <span>Change My Image</span>
+                                <input type="file" name="CAT_Custom_272328_98884" id="CAT_Custom_272328_98884" class="form-control">
+                         </div>
+                    </div><!-- /col-md-4 -->
+                    
+                    <div class="col-sm-8">
+                        <h3>Contact Information</h3>
+                        
+                        <p>Keeping your information current will help us provide better service.</p>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="FirstName">First Name <span class="req">*</span></label>
+                                <input type="text" name="FirstName" id="FirstName" class="form-control" value="{module_firstname}">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="LastName">Last Name <span class="req">*</span></label>
+                                <input type="text" name="LastName" id="LastName" class="form-control" value="{module_lastname}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="EmailAddress">Email Address <span class="req">*</span></label>
+                                <input type="text" name="EmailAddress" id="EmailAddress" class="form-control" value="{module_emailaddress}">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="Company">Company</label>
+                                <input type="text" name="Company" id="Company" value="{module_company}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="WorkPhone">Work Phone Number</label>
+                                <input type="text" name="WorkPhone" id="WorkPhone" value="{module_workphone}" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="CellPhone">Cell Phone Number</label>
+                                <input type="text" name="CellPhone" id="CellPhone" value="{module_cellphone}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="WebAddress">Primary Website</label>
+                                <input type="text" name="WebAddress" id="WebAddress" value="{module_webaddress}" class="form-control">
+                            </div>
+                        </div>
+                        
+                        <!-- BILLING -->
+                        <h3>Company Address</h3>
+                        <p>This address information is used on invoices.</p>
+                        
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="WorkAddress">Work Address</label>
+                                <input type="text" name="WorkAddress" id="WorkAddress" value="{module_workaddress}" class="form-control">
+                            </div>
+                        </div><!-- /row -->
+                        
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="WorkCity">City</label>
+                                <input type="text" name="WorkCity" id="WorkCity" value="{module_workcity}" class="form-control">
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <label for="WorkState">State</label>
+                                <input type="text" name="WorkState" id="WorkState" value="{module_workstate}" class="form-control">
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <label for="WorkZip">Zip Code</label>
+                                <input type="text" name="WorkZip" id="WorkZip" value="{module_workzip}" class="form-control">
+                            </div>
+                        </div><!-- /row -->
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="WorkCountry">Country</label>
+                                <select name="WorkCountry" id="WorkCountry" class="form-control">
+                                    <option value=" ">-- Select Country --</option>
+                                    <option value="AU">AUSTRALIA</option>
+                                    <option value="CA">CANADA</option>
+                                    <option value="GB">UNITED KINGDOM</option>
+                                    <option value="US" selected="selected">UNITED STATES</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">&nbsp;</div>
+                        </div><!-- /row -->
+                
+                		  <!-- PASSWORD INFORMATION -->
+                        <h3>Password Information</h3>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="Username">Username <span class="req">*</span></label>
+                                <input type="text" name="Username" id="Username" value="{module_username}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="Password">Password <span class="req">*</span></label>
+                                <input type="password" name="Password" id="Password" value="{module_password}" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="PasswordConfirm">Confirm Password <span class="req">*</span></label>
+                                <input type="password" name="PasswordConfirm" id="PasswordConfirm" value="{module_password}" class="form-control">
+                            </div>
+                        </div>
+                        <input type="hidden" name="FormID" id="FormID" value="98884">
+                        <input class="btn btn-success btn-large" type="submit" value="Update My Settings" id="catupdatedetailsformbutton">
+                        <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+                        <script type="text/javascript" src="/CatalystScripts/Java_DatePicker.js"></script>
+                        <script type="text/javascript">
+                            //<![CDATA[
+                            
+                            if (document.getElementById('WorkCountry') != null) document.getElementById('WorkCountry').value = '{module_workcountry}';
+                            var submitcount48716 = 0;
+                            
+                            function checkWholeForm48716(theForm) {
+                                var why = "";
+                                if (theForm.FirstName) why += isEmpty(theForm.FirstName.value, "First Name");
+                                if (theForm.LastName) why += isEmpty(theForm.LastName.value, "Last Name");
+                                if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value);
+                                if (theForm.Password && theForm.PasswordConfirm) {
+                                    if (theForm.Password.value.length > 0 || theForm.PasswordConfirm.value.length > 0) {
+                                        if (theForm.Password.value != theForm.PasswordConfirm.value) why += appendBreak("- Password and its confirmation do not match.");
+                                        if (theForm.Password.value.length < 6) why += appendBreak("- Password must be 6 characters or longer.");
+                                    }
+                                }
+                                
+                                if (why != "") {
+                                    alert(why);
+                                    return false;
+                                }
+                                
+                                if (submitcount48716 == 0) {
+                                    submitcount48716++;
+                                    
+										$("#profile-image-large").hide();
+										$("#loading-indicator").show();
+                                    theForm.submit();
+													
+                                    return false;
+                                } else {
+                                    alert("Form submission is in progress.");
+                                    return false;
+                                }
+                            }
+                            //]]>
+                        </script>
+                    </div>
+                </div>
+        </form>
+        
+		<script>
+            $(document).ready(function() {
+                var largeCustomerProfileImageSrc = $("#customer-profile-image img").attr("src");
+                if (largeCustomerProfileImageSrc != "?Action=thumbnail&Width=450&Height=450&algorithm=fill_proportional") {
+					  $("#profile-image-large").attr("src",largeCustomerProfileImageSrc);
+					  $("#profile-image-large").load(function()
+					  {
+						  $("#loading-indicator").hide();
+						  $("#profile-image-large").show();
+					  });
+                } else {
+					  $("#loading-indicator").hide();
+					  $("#profile-image-large").show();
+                }
+                    
+				  $('input[type=file]').click(function() {
+					  var control = $('#CAT_Custom_272328_98884');
+					  control.wrap('<form>').closest('form').get(0).reset();
+					  control.unwrap();
+				  });
+                    
+				  $('input[type=file]').change(function() {
+					  var action = $("#profile-form").attr("action");
+					  var formURL = action.split("?message=show");
+					  $("#profile-form").attr("action",formURL[0]);
+					  $("#catupdatedetailsformbutton").submit();
+				  });
+				  
+				   window.alert = function(message) {
+					  var alertMessage = message.split("-");
+					  $("#submit-success").addClass("hide").removeClass("show");
+					  $("#submit-error").removeClass("hide").text(alertMessage[1]);
+					  window.location.hash = "#top";
+				   }
+			});
+        </script>
+        
+    
+
+</body>
+</html>

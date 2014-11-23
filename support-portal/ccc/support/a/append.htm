@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>Solution: Support - Append A Case</title>
+    <!-- CCC V1.5 -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="/ccc/_assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/ccc/_assets/css/ui.css" />
+    <link rel="stylesheet" href="/ccc/_assets/css/custom.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            padding-top: 1em;
+        }
+    </style>
+</head>
+<body id="top">
+    <div class="container hide" id="ccc-secure">
+        <div class="row">
+            <div class="col-xs-6">
+                <a id="backLink" href="/ccc/support/a/index.htm">Back To Support</a>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-8">
+
+                <div class="alert-messages">
+                    <div id="submit-error" class="alert alert-danger hide">Please fill out all of the required fields.</div>
+                    <div id="submit-success" class="alert alert-success hide {module_url,message}">Your support request has been sent.</div>
+                </div>
+
+                <h2>Add Customer's Reply To An Existing Support Request</h2>
+                <p class="lead">When a client contacts you directly (instead of using a support ticket) transfer their reply to the existing case by using this form.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label for="CaseNumber">Case Number</label>
+                    <input type="text" name="CaseNumber" id="CaseNumber" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="CustomerEmail">Customer's Email</label>
+                    <input type="text" name="CustomerEmail" id="CustomerEmail" class="form-control">
+                </div>
+                <form id="hybridForm" class="reply-form" name="catwebformform73895" method="post" role="form" onsubmit="return checkWholeForm73895(this)" enctype="multipart/form-data" action="/Default.aspx?A=Form&PageID=/ccc/support/a/append.htm?message=show">
+
+                    <div class="form-group">
+                        <label class="control-label" for="Message">Customer's Reply To Be Added To Case</label>
+                        <textarea name="Message" id="Message" cols="10" rows="4" class="form-control" value="" onkeydown="if(this.value.length>=1024)this.value=this.value.substring(0,1023);"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-large btn-success pull-right" id="catwebformbutton">Append To Existing Case</button>
+
+                    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+                    <script type="text/javascript">
+                        //<![CDATA[
+
+                        var siteAuthToken = parent.$.cookie('siteAuthToken');
+                        $(".container").removeClass("hide");
+                        var submitcount73895 = 0;
+                        function checkWholeForm73895(theForm) {
+                            var why = "";
+                            var caseNumber = $("#CaseNumber").val();
+                            var customerEmail = $("#CustomerEmail").val();
+                            if (caseNumber == "") why += isEmpty(caseNumber, "an existing case number");
+                            if (customerEmail == "") why += isEmpty(customerEmail, "the client's email address");
+                            if (theForm.Message) why += isEmpty(theForm.Message.value, "your client's reply");
+                            if (why != "") {
+                                alert(why);
+                                return false;
+                            }
+
+                            var caseEmail = $("#case-email").html();
+                            var emails = "&Email=" + caseEmail + "&EmailFrom=" + customerEmail;
+                            var totalURL = "&Subject=[OBNW" + caseNumber + "]" + emails;
+
+                            $(".reply-form").attr("action", $(".reply-form").attr("action") + totalURL);
+
+                            if (submitcount73895 == 0) {
+                                submitcount73895++;
+                                theForm.submit();
+                                return false;
+                            } else {
+                                alert("Form submission is in progress.");
+                                return false;
+                            }
+                        }
+                        //]]>
+                        window.alert = function (message) {
+                            var alertMessage = message.split("-");
+                            $("#submit-success").addClass("hide").removeClass("show");
+                            $("#submit-error").removeClass("hide").text(alertMessage[1]);
+                            window.location.hash = "#top";
+                        }
+
+                    </script>
+                </form>
+            </div><!-- /col -->
+            <div class="col-sm-4 testing">&nbsp;</div><!-- /col -->
+        </div><!-- /row -->
+        <ol class="hide">
+            <li id="case-email">{module_webapps,0,i template="/ccc/_assets/Layouts/WebApps/Solutions Configuration Settings/templates/email.tpl",2936711}</li>
+        </ol>
+    </div><!-- /container -->
+
+</body>
+</html>
