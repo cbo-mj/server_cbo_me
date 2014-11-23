@@ -149,6 +149,8 @@ print_r($result);*/
 								$username = $result_lead["data"][$i]['username'] ;
 						        $phone = $result_lead["data"][$i]['phone'] ;
 								
+								$phone = str_replace("-","",$phone);
+								
 								$phone = mysql_escape_string($phone) ; 
 								
 						        $name = mysql_escape_string($name);	
