@@ -308,7 +308,6 @@ margin: 0;
     height: 107px;
     line-height: 107px;
     margin: 0 40px 40px 0;
-    padding-left: 130px;
     width: 30% !important;
 	box-shadow:  0px 0px 5px #f4f4f4;
 	-webkit-box-shadow:  0px 0px 5px #f4f4f4;
@@ -322,8 +321,10 @@ margin: 0;
 	cursor: pointer;
 }
 .request-buttons ul.button-list li a {
-    color: #333;
-    font-weight: 600;
+  color: #333;
+  display: block;
+  font-weight: 600;
+  padding-left: 130px;
 }
 .request-buttons ul.button-list li a:hover {
     color: #008cba;
