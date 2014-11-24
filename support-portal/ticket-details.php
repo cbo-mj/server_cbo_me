@@ -34,6 +34,11 @@ if (isset($_GET['ticketid']) == true) {
 		
 	}
 
+	$url2 = 'https://cbosupport.zendesk.com//api/v2/tickets/'.$ticketid.'.json?'; //per ticket details
+	$res2 = $Showticket->curlprocess($url2, $data = array(), $actiontype = 'getTicketDetails');
+
+	$res->ticket_more_info = $res2;
+
 	echo json_encode($res);
 	
 }else{

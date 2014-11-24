@@ -187,7 +187,7 @@ class CBOzendesk{
     }
 
 
-    function commentTicket($postdata, $attachDetails, $status ='open'){
+    function commentTicket($postdata, $attachDetails, $status){
         
         extract($postdata);
 

@@ -161,14 +161,23 @@
 		
 		function getTicketDetail(ticketid) {
 			$.getJSON("/support-portal/ticket-details.php?ticketid="+ticketid,function(result) {
-			  $('#ticketTitle').html(result.audits[0].events[1].value);
-              if(result.audits[0].events[4].value == 'open'){
-                $("#ticket_status label").html("Mark as Solved - Current Status OPEN");
-                $("#task_status").val("solved");
-              }else if(result.audits[0].events[4].value == 'solved'){
-                $("#ticket_status label").html("Re-open Ticket - Current Status SOLVED");
-                $("#task_status").val("open");
-              }
+                //update by Abaam as of 11/24/2014
+                /* This will auto detect last event that the ticket status has been updated
+                */
+                 $('#ticketTitle').html(result.audits[0].events[1].value);
+                
+                   if(result.ticket_more_info.ticket.status== 'open'){
+
+                        $("#ticket_status label").html("Mark as Solved - Current Status OPEN");
+                        $("#task_status").val("solved");
+
+                    }else if(result.ticket_more_info.ticket.status == 'solved'){
+
+                        $("#ticket_status label").html("Re-open Ticket - Current Status SOLVED");
+                        $("#task_status").val("open");
+                    }
+               
+              console.log(result.ticket_more_info.ticket.status);
 			});
 		}
 		

@@ -17,8 +17,10 @@ if(isset($_POST['mark_as_resolved']) == TRUE){
 		$status = $_POST['ticket_status'];
 	}
 }else{
-	$status = 'open';
+	$status = '';
 }
+
+
 
 $attachDetails = $ticket->uploadAttachment($postData2);
 
