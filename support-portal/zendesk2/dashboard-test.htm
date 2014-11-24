@@ -1,0 +1,754 @@
+<html lang="en" class="no-js">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Complete Business Online | Dashboard</title>
+        <link href="/support-portal/css/foundation.css" rel="stylesheet" />
+        <link href="/support-portal/css/style.css" rel="stylesheet" />
+        <link href="/support-portal/table-sorter/css/style.css" rel="stylesheet" />
+        <link href="/support-portal/colorbox/colorbox.css" rel="stylesheet" />
+        <link href="/support-portal/css/datatable.css" rel="stylesheet" type="text/css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/support-portal/colorbox/jquery.colorbox.js"></script>
+        <script type="text/javascript">
+			var globalTickets = "";
+            $(document).ready(function() {
+                $(".inline").colorbox({
+                    inline: true,
+                    width: "50%"
+                });
+                $(".iframe").colorbox({
+                    iframe: true,
+                    width: "50%",
+                    height: "90%"
+                });
+                $(".iframe2").colorbox({
+                    iframe: true,
+                    width: "50%",
+                    height: "70%",
+                    scrolling: false
+                });
+				
+				
+            });
+        </script>
+        <script src="/support-portal/js/vendor/modernizr.js"></script>
+    </head>
+    
+    <body>
+    	<div id="cover"><img src="/support-portal/images/loading.gif" class="loading" /></div>
+        <div class="wrap">
+            <div id="main-menu">
+            	<ul id="nav_1365262">
+                    <li><a href="#" id="dashboard-link">Dashboard</a></li>
+                    <li><a href="/support-portal/support-packages.htm">Support Packages</a></li>
+                 </ul>
+            </div>
+            <div class="columns large-12">
+            	<!--DASHBOARD CONTENT START HERE-->
+                <div style="display: none;" id="message"></div>
+                <div class="columns large-12 chart-box-wrap">
+                    <div class="chart-box">
+                    	<div class="chart-wrap chartdiv-purchased">
+                            <div style="width: 100%; height: 120px; background-color: #ffffff;" id="chartdiv-purchased"></div>
+                            <div class="chart-icon-wrap"><img alt="" src="/support-portal/images/icons/support-purchased.png" /></div>
+                            <span class="chart-details"></span>
+                            <h2>Support Purchased</h2>
+                        </div>
+                        <div class="chart-wrap chart-sa">
+                            <div style="width: 100%; height: 120px; background-color: #ffffff;" id="chartdiv-sa"></div>
+                            <div class="chart-icon-wrap"><img alt="" src="/support-portal/images/icons/help.png" /></div>
+                            <span class="chart-details"></span>
+                            <h2>Support Available</h2>
+                        </div>                        
+                        <div class="chart-wrap chart-sp">
+                            <div style="width: 100%; height: 120px; background-color: #ffffff;" id="chartdiv-sp"></div>
+                            <div class="chart-icon-wrap"><img alt="" src="/support-portal/images/icons/chat.png" /></div>
+                            <span class="chart-details"></span>
+                            <h2>Support Provided</h2>
+                        </div>
+                        <div class="chart-wrap chart-ncs">
+                            <div style="width: 100%; height: 120px; background-color: #ffffff;" id="chartdiv-ncs"></div>
+                            <div class="chart-icon-wrap"><img alt="" src="/support-portal/images/icons/cash.png" /></div>
+                            <span class="chart-details"></span>
+                            <h2>Non-charge Support</h2>
+                        </div>
+                        <div class="chart-wrap chart-ot">
+                            <div style="width: 100%; height: 120px; background-color: #ffffff;" id="chartdiv-ot"></div>
+                            <div class="chart-icon-wrap"><img alt="" src="/support-portal/images/icons/ticket.png" /></div>
+                            <span class="chart-details"></span>
+                            <h2>Open Tickets</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearB"></div>
+                <h2 class="contentHeader">
+                    <span class="contentTitlewrap">
+                        Submit a new request
+                    </span>
+                </h2>
+                <div class="columns large-12 request-buttons">
+                    <ul class="button-list small-block-grid-3">
+                        <li class="gen-support"><a href="/support-portal/general-support.htm" class="iframe">General Support</a></li>
+                        <li class="landing-page"><a href="/support-portal/landing-page.htm" class="iframe">Landing Page</a></li>
+                        <li class="banner"><a href="/support-portal/banner.htm" class="iframe2">Banner</a></li>
+                        <li class="website-issue"><a href="/support-portal/website-issue.htm" class="iframe">Website Issue</a></li>
+                        <li class="email-campaign"><a href="/support-portal/email-campaign.htm" class="iframe">Email Campaign</a></li>
+                        <li class="platform-question"><a href="/support-portal/platform-question.htm" class="iframe">Platform Question</a></li>
+                    </ul>
+                </div>
+                <div class="columns large-12" id="ticket-list">
+                	<table cellspacing="0" cellpadding="0" class="history-table table-hover tablesorter" id="myTable">
+                        <thead>
+                            <tr>
+                                <th id="btnStatus">Status</th>
+                                <th>Ticket Number</th>
+                                <th>Ticket Type</th>
+                                <th>Subject</th>
+                                <th>Time Requested</th>
+                                <th>Last Updated</th>
+                                <th>Billable</th>
+                                <th>Non-Billable</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resulting-tickets">
+                        </tbody>
+                    </table>
+                </div>
+                <!--<div id="result">test</div>-->
+                <script src="/support-portal/charts/amcharts.js" type="text/javascript"></script>
+                <script src="/support-portal/charts/themes/light.js" type="text/javascript"></script>
+                <script src="/support-portal/charts/pie.js" type="text/javascript"></script>
+                <script src="/support-portal/charts/serial.js"></script>
+                <script type="text/javascript" charset="utf8" src="/support-portal/js/jquery.dataTables.js"></script>
+                <script type="text/javascript" src="/support-portal/js/common_function2.js"></script>
+                
+                <script src="/support-portal/js/custom-scripts.js" type="text/javascript"></script>
+                <script type="text/javascript">
+					var arrMonthNumeric = ["01","02","03","04","05","06","07","08","09","10","11","12"]
+					var globalSupportPurchased = 0;
+					var globalSupportAvailable = 0;
+                    $(document).ready(function() {
+						sessionStorage.setItem("dashboard",window.location);
+						$('#dashboard-link').attr('href', window.location);
+						
+						var clientid = getParameter('clientid');
+						
+						$.when(
+							initClient(clientid)
+						).done(function() {
+							
+						});
+							
+						//var sp0 = 50;
+                        //var sp = 50;
+                        //var sa = 50;
+                        //var ncs = 50;
+                        //var ot = 50;
+                        
+                        /*var clients = [{module_webapps,19704,a template="/support-portal/templates/customer-charts.tpl"}{"id":"-1", "supportProvided":"last","supportAvailable":"last","nonChargedSupport":"last","supportOpenTickets":"last","supportHoursAnnually":"last"}];
+                        
+                        for(i = 0;i < clients.length;i++) {
+                            if(clients[i].id === '3132740') {
+                                sp = isVarEmpty(clients[i].supportProvided,'numeric');
+                                sa = isVarEmpty(clients[i].supportAvailable,'numeric');
+                                ncs = isVarEmpty(clients[i].nonChargedSupport,'numeric');
+                                ot = isVarEmpty(clients[i].supportOpenTickets,'numeric');
+                            }
+                        }*/
+                        
+                        
+                    });
+                    
+                    function isVarEmpty(itemvalue,itemtype) {
+                        var returnvalue;
+                        if(itemvalue == "") {
+                            switch(itemtype) {
+                                case "string": { 
+                                    returnvalue = "";
+                                    break;
+                                } 
+                                case "numeric": {
+                                    returnvalue = 50;
+                                    break;
+                                }
+                                case "bool": {
+                                    returnvalue = 0;
+                                    break;
+                                }
+                                default: {
+                                    break;
+                                }
+                            }
+                            return returnvalue;
+                        } else {
+                            return "";
+                        }
+                    }
+					/*
+					$.when(
+							
+							})	
+						).done(function() {
+							
+						});
+						*/
+					function InitTickets(orgid,support_available) {
+						var opened_tickets_count = 0;
+						var ticketurl = "/support-portal/getTicket-list-byOrg.php?orgid=" + orgid;				
+						$.when(
+							$.getJSON(ticketurl,function(result) {
+								var users_count = result.length;
+								for(i1=0;i1<users_count;i1++) {
+									var tickets_count = result[i1].tickets.tickets.length;
+									for(i2=0;i2<tickets_count;i2++) {
+										
+										var current_ticket = result[i1].tickets.tickets[i2];
+										
+										if((result[i1].tickets.tickets[i2].status != "closed") && (result[i1].tickets.tickets[i2].status != "solved")) { opened_tickets_count++; }
+										
+										var iD = current_ticket.id;	
+										var sTatus = current_ticket.status;
+										var tIcketnum = current_ticket.id;
+										var tIckettype = current_ticket.custom_fields[0].value == null ? "Other" : current_ticket.custom_fields[0].value;
+										var cAsesubject = current_ticket.subject;
+										var tImerequest = current_ticket.created_at;
+										var lAstupdate = current_ticket.updated_at;
+										var tImespent = "";
+										var tImenonbillable = "";
+										
+										if(current_ticket.tags != "") {
+											if(current_ticket.tags[0] == "closed_by_merge") {
+												tImespent = 0;
+												tImenonbillable = 0;	
+											} else if(current_ticket.tags[0] == "onbehalf") {
+												tImespent = 0;
+												tImenonbillable = 0;
+											} else {
+												try {
+													tImespent = parseInt(current_ticket.timelogs.projects[0].tasklist.task['time-totals']['billable-mins-sum'] / 60);
+													tImenonbillable = parseInt(current_ticket.timelogs.projects[0].tasklist.task['time-totals']['non-billable-mins-sum'] / 60);
+												} catch(ex) {
+													tImespent = 0;
+													tImenonbillable = 0;
+												}
+											}
+										} else {
+											tImespent = 0;
+											tImenonbillable = 0;
+										}
+										
+										appendTicket(iD, sTatus, tIcketnum, tIckettype, cAsesubject, tImerequest, lAstupdate, tImespent, tImenonbillable);
+										
+									}
+								}
+							})
+						).done(function() {
+							InitOpenedTickets(opened_tickets_count,support_available);
+							$("#myTable").DataTable({
+								"pageLength": 100,
+								"order": [ 5, 'desc' ]
+							});
+							$('#cover').addClass('disable');
+							/*
+							var ticketmod = ticketcount % 100; 
+							var ticketpack = ticketcount - ticketmod;
+							var ticketlistcount = ticketpack / 100; 
+							if(ticketmod > 0) { ticketlistcount++; }
+							if(ticketcount < 100) {
+								getTicketPack(ticketurl,0,ticketmod,0,1)
+							} else {
+								for(a=0;a<ticketlistcount;a++) {
+									$.when(
+										getTicketPack(ticketurl,a,ticketpack,ticketlistcount,0)
+									).done(function() {
+										if(a == ticketlistcount) { 
+											$("#myTable").DataTable({ 
+												"initComplete": function(settings, json) {
+													alert('test');
+													$('#btnStatus').trigger('click');
+												  }
+											}); 
+										}		
+									});
+								}	
+							}
+							*/
+								
+						});
+					}
+					 
+					function getTicketPack(url,pagenum,pageamount,maxpage,istable) {
+						var a1 = pagenum != maxpage ? 100 : pageamount;
+						$.when(
+							$.getJSON(url + pagenum + "&withclose=1",function(result){
+							//var x = result.count >= 100 ? 100 : result.count;
+							for(i=0;i<a1;i++) {
+									var iD = result.tickets[i].id;	
+									var sTatus = result.tickets.status;
+									var tIcketnum = result.tickets[i].id;
+									var tIckettype = result.tickets[i].custom_fields[0].value == null ? "Other" : result.tickets[i].custom_fields[0].value;
+									var cAsesubject = result.tickets[i].subject;
+									var tImerequest = result.tickets[i].created_at;
+									var lAstupdate = result.tickets[i].updated_at;
+									var tImespent = "";
+									var tImenonbillable = "";
+									
+									
+									if(result.tickets[i].tags != "") {
+										if(result.tickets[i].tags[0] == "closed_by_merge") {
+											tImespent = 0;
+											tImenonbillable = 0;	
+										} else if(result.tickets[i].tags[0] == "onbehalf") {
+											tImespent = 0;
+											tImenonbillable = 0;
+										} else {
+											tImespent = result.tickets[i].timelogs.projects[0].tasklist.task['time-totals']['billable-bours-sum'];
+											tImenonbillable = result.tickets[i].timelogs.projects[0].tasklist.task['time-totals']['non-billable-hours-sum'];
+										}
+									} else {
+										tImespent = 0;
+										tImenonbillable = 0;
+									}
+									
+									var ts = tImespent > 10 ? tImespent : "0" + tImespent;
+									var tn = tImenonbillable > 10 ? tImenonbillable : "0" + tImenonbillable;
+									
+									appendTicket(iD, sTatus, tIcketnum, tIckettype, cAsesubject, tImerequest, lAstupdate,ts,tn);
+								}
+							})
+						).done(function() {
+							if(istable == 1) { $("#myTable").DataTable(); }
+						});
+						 
+					}
+					
+					function initClient(clientid) {
+						var orgID = 0;
+						var total_support_purchased = 0;
+						var total_support_provided = 0;
+						var total_non_charged_support = 0;
+						var total_support_available = 0;
+						$.when(
+							$.getJSON("/support-portal/get-client.php?clientid=" + clientid,function(result){
+								orgID = result[0].Zendesk_company_ID;
+								var number_of_timelogs = result.timelogs.length;
+								total_support_purchased = result[0].Support_purchased == "" ? 0 : result[0].Support_purchased;
+								total_support_provided = 0;
+								total_non_charged_support = 0;
+								total_support_available = 0;
+								for(i=0;i<number_of_timelogs;i++) {
+									 total_support_provided += parseInt(result.timelogs[i][0].projects[0]['tasklist']['time-totals']['billable-mins-sum']);
+									 total_non_charged_support += parseInt(result.timelogs[i][0].projects[0]['tasklist']['time-totals']['non-billable-mins-sum']);
+								}
+								total_support_available = total_support_purchased - parseInt(total_support_provided / 60); 
+								
+								InitSupportPurchased(total_support_purchased);
+								InitSupportProvided(parseInt(total_support_provided / 60));
+								InitSupportAvailable(total_support_available,parseInt(total_support_provided / 60));
+								InitNonChargeSupport(parseInt(total_non_charged_support / 60), parseInt(total_support_provided / 60));      
+								
+								//globalSupportPurchased = result[0].Support_purchased == "" ? 0 : result[0].Support_purchased;
+								//globalSupportAvailable = result[0].Support_available == "" ? 0 : result[0].Support_available;
+							})	
+						).done(function() {
+							InitTickets(orgID,total_support_available);
+							/*
+							$.getJSON("/support-portal/getTicket-list-byGroup.php?groupid=" + groupID + "&pagenum=0&withclose=1",function(result){
+							  var x =  getParameter('company');
+							  var y = result['time_reference'].projects.length;
+							  for(i=0;i<y;i++) {
+								var companyname = result['time_reference'].projects[i].projects[0].name;
+								if(companyname == x) {
+								  var sp = parseInt(result['time_reference'].projects[i].projects[0].tasklist['time-totals']['billable-mins-sum'] / 60);
+								  var ncs = parseInt(result['time_reference'].projects[i].projects[0].tasklist['time-totals']['non-billable-mins-sum'] / 60);
+								  var sa = globalSupportPurchased;
+								   
+								}
+							  }
+							});
+							*/
+						});	
+					}
+					
+					function appendTicket(id, status, ticketnum, tickettype, casesubject, timerequest, lastupdate, timespent,noncharge) {	
+						//var stritem = "<tr id=\"item" + id + "\" class=\"case-item\"><td class=\"status\"><div class=\"status-legend\"></div>" + status + "</td><td class=\"ticket-no\">#<span class=\"case_number\">" + ticketnum + "</span></td><td class=\"case-subject\"><a href=\"/support-portal/ticket-details.htm?ticketid=" + id + "\" class=\"\">" + casesubject + "</a></td><td class=\"time-request\">" + formatDate(timerequest) + "</td><td class=\"last-update\">" + formatDate(lastupdate) + "</td><td class=\"time-spent\">" + timespent + "</td></tr>";	
+						
+						var stritem = "";
+						stritem += "<tr id=\"item" + id + "\" class=\"case-item\">";
+						stritem += "<td><div class=\"status-legend status-" + status  + "\"></div>" + status + "</td>";
+						stritem += "<td class=\"ticket-no\">#<span class=\"case_number\">" + ticketnum + "</span></td>";
+						stritem += "<td class=\"ticket-type\">" + tickettype + "</td>";
+						stritem += "<td class=\"case-subject\">" + casesubject + "</td>";
+						stritem += "<td class=\"time-request\">" + formatDate(timerequest) + "</td>";
+						stritem += "<td class=\"last-update\">" + formatDate(lastupdate) + "</td>";
+						stritem += "<td class=\"time-spent\">" + formatTime(timespent) + "</td>";
+						stritem += "<td class=\"noncharge\">" + formatTime(noncharge) + "</td>";
+						stritem += "<td class=\"edit\"><a href=\"/support-portal/ticket-details.htm?ticketid=" + id + "\" class=\"\">Open</a></td>";
+						stritem += "</tr>";
+						
+						$('#resulting-tickets').append(stritem);	
+							
+					}
+					
+					function formatHour(num) {
+						return num + "10";
+					}
+					
+					function formatDate(stringdate) {
+						var a = new Date(stringdate);
+						var aMos = a.getMonth();
+						var aDay = (a.getDay() + 1) < 10 ? "0" + (a.getDay() + 1) : (a.getDay() + 1);
+						var aYear = a.getFullYear();
+						var aHours = a.getHours() < 10 ? "0" + a.getHours() : a.getHours();
+						var aMin = a.getMinutes() < 10 ? "0" + a.getMinutes() : a.getMinutes();
+						return arrMonthNumeric[aMos] + "/" + aDay + "/" + aYear + "(" + aHours + ":" + aMin + ")"; /* + "(" + aHours + ":" + aMin + ")" - add hours*/		
+					}
+					
+					function formatTime(time) {
+						var ans = "00:00";
+						a = Math.round(parseFloat(time) * 60);
+						
+						if(a > 60) {
+							var numhour = parseInt(a / 60);
+							var nummin = a % 60;
+							var numhour2 = numhour < 10 ? "0" + numhour.toString() : numhour;
+							var nummin2 = nummin < 10 ? "0" + nummin.toString() : nummin;
+							ans = numhour2 + ":" + nummin2;
+						}else {
+							var nummin = (a % 60) < 10 ? "0" + (a % 60).toString() : (a % 60);	
+							ans = "00:" +  nummin;
+						}
+						return ans + " Hour(s)";
+					}
+					
+					
+					function InitSupportAvailable(sa,sp) {
+						AmCharts.makeChart("chartdiv-sa", {
+							"type": "pie",
+							"pathToImages": "/support-portal/charts/images/",
+							"balloonText": "",
+							"innerRadius": "90%",
+							"labelRadius": 17,
+							"labelRadiusField": "Number",
+							"labelText": "",
+							"minRadius": 8,
+							"pullOutRadius": "0%",
+							"radius": 50,
+							"startRadius": "0%",
+							"baseColor": "",
+							"brightnessStep": 163.2,
+							"colorField": "Not set",
+							"colors": [
+								"#60c481",
+								"#e6e6e6"
+							],
+							"labelTickAlpha": 0,
+							"maxLabelWidth": 214,
+							"outlineThickness": 7,
+							"pullOutOnlyOne": true,
+							"startDuration": 2,
+							"titleField": "Not set",
+							"valueField": "Number",
+							"creditsPosition": "bottom-right",
+							"fontFamily": "Arial",
+							"fontSize": 10,
+							"theme": "default",
+							"allLabels": [{
+								"align": "center",
+								"id": "Value",
+								"size": 46,
+								"text": "",
+								"x": "0",
+								"y": "22%"
+							}],
+							"balloon": {
+								"animationDuration": 0.06,
+								"fadeOutDuration": 0.18,
+								"fixedPosition": true
+							},
+							"titles": [],
+							"dataProvider": [{
+								"Call": "Support Available",
+								"Number": sa
+							}, {
+								"Call": "Support Available",
+								"Number": sp
+							}]
+						});
+						jQuery(".chart-sa .chart-details").text(sa + " Hrs");	
+					}
+					
+					function InitNonChargeSupport(ncs, sp) {
+					AmCharts.makeChart("chartdiv-ncs", {
+						"type": "pie",
+						"pathToImages": "/support-portal/charts/images/",
+						"balloonText": "",
+						"innerRadius": "90%",
+						"labelRadius": 17,
+						"labelRadiusField": "Number",
+						"labelText": "",
+						"minRadius": 8,
+						"pullOutRadius": "50%",
+						"radius": 50,
+						"startRadius": "0%",
+						"baseColor": "",
+						"brightnessStep": 163.2,
+						"colorField": "Not set",
+						"colors": [
+							"#e59f3d",
+							"#e6e6e6"
+						],
+						"labelTickAlpha": 0,
+						"maxLabelWidth": 214,
+						"outlineThickness": 7,
+						"pullOutOnlyOne": true,
+						"startDuration": 2,
+						"titleField": "Not set",
+						"valueField": "Number",
+						"creditsPosition": "bottom-right",
+						"fontFamily": "Arial",
+						"fontSize": 10,
+						"theme": "default",
+						"allLabels": [{
+							"align": "center",
+							"id": "Value",
+							"size": 46,
+							"text": "",
+							"x": "0",
+							"y": "22%"
+						}],
+						"balloon": {
+							"animationDuration": 0.06,
+							"fadeOutDuration": 0.18,
+							"fixedPosition": true
+						},
+						"titles": [],
+						"dataProvider": [{
+							"Call": "Non-charge Support",
+							"Number": ncs
+						}, {
+							"Call": "Support Available",
+							"Number": sp
+						}]
+					});
+					jQuery(".chart-ncs .chart-details").text(ncs + " Hrs");
+				}
+				
+				function InitSupportProvided(sp) {
+					var sp2 = sp == 0 ? 1 : sp;
+					AmCharts.makeChart("chartdiv-sp", {
+						"type": "pie",
+						"pathToImages": "/support-portal/charts/images/",
+						"balloonText": "",
+						"innerRadius": "90%",
+						"labelRadius": 17,
+						"labelRadiusField": "Number",
+						"labelText": "",
+						"minRadius": 8,
+						"pullOutRadius": "0%",
+						"radius": 50,
+						"startRadius": "0%",
+						"baseColor": "",
+						"brightnessStep": 163.2,
+						"colorField": "Not set",
+						"colors": [
+							"#1a9bef",
+							"#e6e6e6"
+						],
+						"labelTickAlpha": 0,
+						"maxLabelWidth": 214,
+						"outlineThickness": 7,
+						"pullOutOnlyOne": true,
+						"startDuration": 2,
+						"titleField": "Not set",
+						"valueField": "Number",
+						"creditsPosition": "bottom-right",
+						"fontFamily": "Arial",
+						"fontSize": 10,
+						"theme": "default",
+						"allLabels": [ {
+							"align": "center",
+							"id": "Value",
+							"size": 46,
+							"text": "",
+							"x": "0",
+							"y": "22%"
+						}],
+						"balloon": {
+							"animationDuration": 0.06,
+							"fadeOutDuration": 0.18,
+							"fixedPosition": true
+						},
+						"titles": [],
+						"dataProvider": [
+							{
+								"Call": "Support Provided",
+								"Number": sp2
+							}
+						]
+					}
+					);
+					jQuery(".chart-sp .chart-details").text(sp + " Hrs");	
+				}
+				
+				function InitSupportPurchased(sp) {
+					AmCharts.makeChart("chartdiv-purchased", {
+						"type": "pie",
+						"pathToImages": "/support-portal/charts/images/",
+						"balloonText": "",
+						"innerRadius": "90%",
+						"labelRadius": 17,
+						"labelRadiusField": "Number",
+						"labelText": "",
+						"minRadius": 8,
+						"pullOutRadius": "0%",
+						"radius": 50,
+						"startRadius": "0%",
+						"baseColor": "",
+						"brightnessStep": 163.2,
+						"colorField": "Not set",
+						"colors": [
+							"#de6ec4",
+							"#e6e6e6"
+						],
+						"labelTickAlpha": 0,
+						"maxLabelWidth": 214,
+						"outlineThickness": 7,
+						"pullOutOnlyOne": true,
+						"startDuration": 2,
+						"titleField": "Not set",
+						"valueField": "Number",
+						"creditsPosition": "bottom-right",
+						"fontFamily": "Arial",
+						"fontSize": 10,
+						"theme": "default",
+						"allLabels": [ {
+							"align": "center",
+							"id": "Value",
+							"size": 46,
+							"text": "",
+							"x": "0",
+							"y": "22%"
+						}],
+						"balloon": {
+							"animationDuration": 0.06,
+							"fadeOutDuration": 0.18,
+							"fixedPosition": true
+						},
+						"titles": [],
+						"dataProvider": [
+							{
+								"Call": "Support Purchased",
+								"Number": sp
+							}
+						]}
+					);
+					jQuery(".chartdiv-purchased .chart-details").text(sp + " Hrs");	
+				}
+				
+				function InitOpenedTickets(ot,sa) {
+					AmCharts.makeChart("chartdiv-ot", {
+                            "type": "pie",
+                            "pathToImages": "/support-portal/charts/images/",
+                            "balloonText": "",
+                            "innerRadius": "90%",
+                            "labelRadius": 17,
+                            "labelRadiusField": "Number",
+                            "labelText": "",
+                            "minRadius": 8,
+                            "pullOutRadius": "0%",
+                            "radius": 50,
+                            "startRadius": "0%",
+                            "baseColor": "",
+                            "brightnessStep": 163.2,
+                            "colorField": "Not set",
+                            "colors": [
+                                "#e95b5b",
+                                "#e6e6e6"
+                            ],
+                            "labelTickAlpha": 0,
+                            "maxLabelWidth": 214,
+                            "outlineThickness": 7,
+                            "pullOutOnlyOne": true,
+                            "startDuration": 2,
+                            "titleField": "Not set",
+                            "valueField": "Number",
+                            "creditsPosition": "bottom-right",
+                            "fontFamily": "Arial",
+                            "fontSize": 10,
+                            "theme": "default",
+                            "allLabels": [
+                                {
+                                    "align": "center",
+                                    "id": "Value",
+                                    "size": 46,
+                                    "text": "",
+                                    "x": "0",
+                                    "y": "22%"
+                                }
+                            ],
+                            "balloon": {
+                                "animationDuration": 0.06,
+                                "fadeOutDuration": 0.18,
+                                "fixedPosition": true
+                            },
+                            "titles": [],
+                            "dataProvider": [
+                                {
+                                    "Call": "Open Ticket",
+                                    "Number": ot
+                                },
+                                {
+                                    "Call": "Support Available",
+                                    "Number": sa
+                                }
+                            ]
+                        }
+                                          );
+                        jQuery(".chart-ot .chart-details").text(ot);	
+				}
+				
+				//function initOpenTickets(
+				</script>
+                
+                
+                <!--DASHBOARD CONTENT ENDS HERE-->
+            </div>
+        </div>
+        
+        
+        <div id="cboxOverlay" style="display: none;"></div>
+        <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
+            <div id="cboxWrapper">
+                <div>
+                    <div id="cboxTopLeft" style="float: left;"></div>
+                    <div id="cboxTopCenter" style="float: left;"></div>
+                    <div id="cboxTopRight" style="float: left;"></div>
+                </div>
+                <div style="clear: left;">
+                    <div id="cboxMiddleLeft" style="float: left;"></div>
+                    <div id="cboxContent" style="float: left;">
+                        <div id="cboxTitle" style="float: left;"></div>
+                        <div id="cboxCurrent" style="float: left;"></div>
+                        <button type="button" id="cboxPrevious"></button>
+                        <button type="button" id="cboxNext"></button>
+                        <button id="cboxSlideshow"></button>
+                        <div id="cboxLoadingOverlay" style="float: left;"></div>
+                        <div id="cboxLoadingGraphic" style="float: left;"></div>
+                    </div>
+                    <div id="cboxMiddleRight" style="float: left;"></div>
+                </div>
+                <div style="clear: left;">
+                    <div id="cboxBottomLeft" style="float: left;"></div>
+                    <div id="cboxBottomCenter" style="float: left;"></div>
+                    <div id="cboxBottomRight" style="float: left;"></div>
+                </div>
+            </div>
+            <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+        </div>
+    </body>
+
+</html>
