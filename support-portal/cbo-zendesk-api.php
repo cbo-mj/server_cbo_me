@@ -202,7 +202,8 @@ class CBOzendesk{
 
         
         $uploadedTokents = array();
-        $status = 'open';
+        
+       
         $comment = array('body' => $commentText, 'uploads'=>$attachmentTokens, 'public'=> true,'author_id'=>(int)$userid);
         
                                             
@@ -213,6 +214,7 @@ class CBOzendesk{
 
         echo json_encode($res);
     }
+
 }//end class
 
 

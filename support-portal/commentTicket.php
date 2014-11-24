@@ -12,8 +12,16 @@ $postdata = $_POST;
 
 $postData2 = $_FILES;
 
+if(isset($_POST['mark_as_resolved']) == TRUE){
+	if ($_POST['mark_as_resolved'] == "on") {
+		$status = $_POST['ticket_status'];
+	}
+}else{
+	$status = 'open';
+}
+
 $attachDetails = $ticket->uploadAttachment($postData2);
 
-$ticket->commentTicket($postdata, $attachDetails = array());
+$ticket->commentTicket($postdata, $attachDetails = array(), $status);
 
 ?>

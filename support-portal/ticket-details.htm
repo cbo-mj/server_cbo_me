@@ -92,6 +92,13 @@
                                         <td style="width: 110px;"><label class="right" for="FileAttachment">&nbsp;</label></td>
                                         <td><input type="file" name="FileAttachment1" id="FileAttachment" class="cat_textbox" /></td>
                                     </tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td id="ticket_status"><input type="checkbox" id="mark_as_resolved" name="mark_as_resolved" /> <label>Mark as Resolved</label>
+                                            <input type="hidden" id="task_status" name="ticket_status" value="">
+                                        </td>
+
+									</tr>
                                     <tr>
                                         <td>&nbsp;</td>
                                         <td><input type="submit" class="button blue-button right" value="Submit Reply" id="btnSubmit" /></td>
@@ -155,6 +162,13 @@
 		function getTicketDetail(ticketid) {
 			$.getJSON("/support-portal/ticket-details.php?ticketid="+ticketid,function(result) {
 			  $('#ticketTitle').html(result.audits[0].events[1].value);
+              if(result.audits[0].events[4].value == 'open'){
+                $("#ticket_status label").html("Mark as Solved - Current Status OPEN");
+                $("#task_status").val("solved");
+              }else if(result.audits[0].events[4].value == 'solved'){
+                $("#ticket_status label").html("Re-open Ticket - Current Status SOLVED");
+                $("#task_status").val("open");
+              }
 			});
 		}
 		
