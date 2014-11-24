@@ -1,28 +1,5 @@
 <script type="text/javascript">
-var chartData = [];
-generateChartData();
-
-function generateChartData() {
-	var firstDate = new Date(2012, 0, 1);
-	firstDate.setDate(firstDate.getDate() - 500);
-	firstDate.setHours(0, 0, 0, 0);
-
-	for (var i = 0; i < 500; i++) {
-		var newDate = new Date(firstDate);
-		newDate.setDate(newDate.getDate() + i);
-
-		var a = Math.round(Math.random() * (40 + i)) + 100 + i;
-		var b = Math.round(Math.random() * 100000000);
-
-		chartData.push({
-			date: newDate,
-			value: a,
-			volume: b
-		});
-	}
-}
-
-var chart = AmCharts.makeChart("events_stock_holder", {
+var chart = AmCharts.makeChart("StockChart", {
 	type: "stock",
     "theme": "none",
     pathToImages: "http://www.amcharts.com/lib/3/images/",
@@ -35,91 +12,115 @@ var chart = AmCharts.makeChart("events_stock_holder", {
 			fromField: "volume",
 			toField: "volume"
 		}],
-		dataProvider: chartData,
+            <?php if($type!='' and isset($type)) {asort($day_date);$b = array();
+			
+			if(empty($day_date[0])){
+				$date = strtotime("yesterday");
+				$date = date("Y-m-d", $date);
+			
+				$b[] = "{\"date\": '{$date}', \"value\":'0', \"volume\":'0'}";
+			}else{
+				foreach($day_date as $c => $d) {
+					$str = $d;
+                    list($year, $month, $day) = explode("-", $str);
+					$month = $month - 1;
+					//'Year: '.$year.' Month: '.$month.' Day: '.$day.'<br/>';
+					//"date": new Date(2014, 09, 16),
+					$b[] = "{\"date\": new Date({$year}, {$month}, {$day}), \"value\":'{$day_session[$c]}', \"volume\":'{$day_pageview[$c]}'}";
+				}
+			} } else {
+				
+				asort($day_date2);$b = array();
+			
+			if(empty($day_date2[0])){
+				$date = strtotime("yesterday");
+				$date = date("Y-m-d", $date);
+			
+				$b[] = "{\"date\": '{$date}', \"value\":'0', \"volume\":'0'}";
+			}else{
+				foreach($day_date2 as $c => $d) {
+					$str = $d;
+                    list($year, $month, $day) = explode("-", $str);
+					$month = $month - 1;
+					
+					$b[] = "{\"date\": new Date({$year}, {$month}, {$day}), \"value\":'{$day_session2[$c]}', \"volume\":'{$day_pageview2[$c]}'}";
+				}
+			}
+				
+		}
+			
+        $g = implode(",", $b); ?> 
+        dataProvider: [ <?php echo $g; ?> ],
 		categoryField: "date",
-		// EVENTS
-		stockEvents: [{
-			date: new Date(2010, 8, 19),
-			type: "sign",
-			backgroundColor: "#85CDE6",
-			graph: "g1",
-			text: "S",
-			description: "This is description of an event"
-		}, {
-			date: new Date(2010, 10, 19),
-			type: "flag",
-			backgroundColor: "#FFFFFF",
-			backgroundAlpha: 0.5,
-			graph: "g1",
-			text: "F",
-			description: "Some longerntext can alson be added"
-		}, {
-			date: new Date(2010, 11, 10),
-			showOnAxis: true,
-			backgroundColor: "#85CDE6",
-			type: "pin",
-			text: "X",
-			graph: "g1",
-			description: "This is description of an event"
-		}, {
-			date: new Date(2010, 11, 26),
-			showOnAxis: true,
-			backgroundColor: "#85CDE6",
-			type: "pin",
-			text: "Z",
-			graph: "g1",
-			description: "This is description of an event"
-		}, {
-			date: new Date(2011, 0, 3),
-			type: "sign",
-			backgroundColor: "#85CDE6",
-			graph: "g1",
-			text: "U",
-			description: "This is description of an event"
-		}, {
-			date: new Date(2011, 1, 6),
-			type: "sign",
-			graph: "g1",
-			text: "D",
-			description: "This is description of an event"
-		}, {
-			date: new Date(2011, 3, 5),
-			type: "sign",
-			graph: "g1",
-			text: "L",
-			description: "This is description of an event"
-		}, {
-			date: new Date(2011, 3, 5),
-			type: "sign",
-			graph: "g1",
-			text: "R",
-			description: "This is description of an event"
-		}, {
-			date: new Date(2011, 5, 15),
-			type: "arrowUp",
-			backgroundColor: "#00CC00",
-			graph: "g1",
-			description: "This is description of an event"
-		}, {
-			date: new Date(2011, 6, 25),
-			type: "arrowDown",
-			backgroundColor: "#CC0000",
-			graph: "g1",
-			description: "This is description of an event"
-		}, {
-			date: new Date(2011, 8, 1),
-			type: "text",
-			graph: "g1",
-			text: "Longer text can\nalso be displayed",
-			description: "This is description of an event"
-		}]
+		
+		<?php 
+		//echo "Event Date : Icon Name : Event Type : Description"."</br>";
+		$h = array();
+		foreach($icon_date as $k => $icon_date_value) {
+			$str = $icon_date_value;
+			list($year, $month, $day) = explode("-", $str);
+			$month = $month - 1;
+			$fl = $icon_description[$k];
+			
+			//echo "new Date({$year}, {$month}, {$day}) : ".$icon_name[$k]." : ".$icon_event_type[$k]." : ".$fl[0]."</br>";
+			$h[] = "{date: new Date({$year}, {$month}, {$day}), type:\"{$icon_event_type[$k]}\", backgroundColor: \"#e0e0e0\", graph: \"g1\", text: \"{$fl[0]}\", description: \"{$fl}\"}";
+		}	
+		
+		$output = implode(",", $h);
+		//echo $output;
+		?>	
+		stockEvents: [<?php echo $output; ?>]	
+		//stockEvents: [{
+//			date: new Date(2014, 10, 13),
+//			type: "sign",
+//			backgroundColor: "#999999",
+//			graph: "g1",
+//			text: "S",
+//			description: "Spring Carnival 3 Day Sale"
+//		},{
+//			date: new Date(2014, 07, 21),
+//			type: "sign",
+//			backgroundColor: "#999999",
+//			graph: "g1",
+//			text: "R",
+//			description: "3 Day Sale"
+//		},{
+//			date: new Date(2014, 08, 25),
+//			type: "sign",
+//			backgroundColor: "#999999",
+//			graph: "g1",
+//			text: "P",
+//			description: "3 Day Sale"
+//		},{
+//			date: new Date(2014, 09, 08),
+//			type: "sign",
+//			backgroundColor: "#999999",
+//			graph: "g1",
+//			text: "Q",
+//			description: "4 Day Sale"
+//		},{
+//			date: new Date(2014, 09, 16),
+//			type: "sign",
+//			backgroundColor: "#999999",
+//			graph: "g1",
+//			text: "V",
+//			description: "4 Day Sale Extended"
+//		}]
 	}],
+
+
 	panels: [{
-		title: "Value",
+		title: "Visits",
 		percentHeight: 70,
 
 		stockGraphs: [{
 			id: "g1",
+            lineColor: "#60c481",
+			valueField: "value",
+            type: "smoothedLine",
+            lineThickness: 2,
+            bullet: "round",            
+            useDataSetColors: !1,
 			valueField: "value"
 		}],
 
@@ -127,10 +128,26 @@ var chart = AmCharts.makeChart("events_stock_holder", {
 			valueTextRegular: " ",
 			markerType: "none"
 		}
-	}],
+	}, {
+            title: "Pageviews",
+            percentHeight: 30,
+            stockGraphs: [{
+                valueField: "volume",
+                type: "column",
+                cornerRadiusTop: 2,
+                fillAlphas: 1,
+                lineColor: "#2c84e2",
+                useDataSetColors: !1
+            }],
+            stockLegend: {
+                valueTextRegular: " ",
+                markerType: "none"
+            }
+        }],
 
 	chartScrollbarSettings: {
-		graph: "g1"
+		graph: "g1",
+		color: "#000000"
 	},
 	categoryAxesSettings: {
             minPeriod: "DD",
@@ -143,14 +160,24 @@ var chart = AmCharts.makeChart("events_stock_holder", {
         valueLineEnabled:true,
         valueLineAlpha:0.5
 	},
+<?php 
 
-	periodSelector: {
+if($type == "last_3_months"){
+	//empty selector
+}elseif($type == "last_6_months"){
+	//empty selector
+}elseif($type == "last_year"){
+	//empty selector
+}else{
+echo 'periodSelector: {
+		position: "bottom",
 		periods: [{
 			period: "DD",
 			count: 10,
 			label: "10 days"
 		}, {
 			period: "MM",
+			selected: true,
 			count: 1,
 			label: "1 month"
 		}, {
@@ -164,43 +191,10 @@ var chart = AmCharts.makeChart("events_stock_holder", {
 			period: "MAX",
 			label: "MAX"
 		}]
-	},
-
-	panelsSettings: {
-		usePrefixes: true
-	}
-});
+	},';	
+} ?>	
+        panelsSettings: {
+            usePrefixes: true
+        }
+    });
 </script>
-<?php 
-//if($type == "last_3_months"){
-//	//empty selector
-//}elseif($type == "last_6_months"){
-//	//empty selector
-//}elseif($type == "last_year"){
-//	//empty selector
-//}else{
-//echo 'periodSelector: {
-//		position: "bottom",
-//		periods: [{
-//			period: "DD",
-//			count: 10,
-//			label: "10 days"
-//		}, {
-//			period: "MM",
-//			selected: true,
-//			count: 1,
-//			label: "1 month"
-//		}, {
-//			period: "YYYY",
-//			count: 1,
-//			label: "1 year"
-//		}, {
-//			period: "YTD",
-//			label: "YTD"
-//		}, {
-//			period: "MAX",
-//			label: "MAX"
-//		}]
-//	},';	
-//} 
-?>

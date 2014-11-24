@@ -104,7 +104,9 @@ $(document).ready(
 );
 
 </script>
-
+<style type="text/css">
+	.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {font-size: 12px !important;}
+</style>
 
 
 </head>

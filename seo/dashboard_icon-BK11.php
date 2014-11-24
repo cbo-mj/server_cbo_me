@@ -28,13 +28,6 @@ include("include/common_function.php");
 }
 span.AvgPagesViewed:hover,span.AvgTime:hover,span.BounceRate:hover,span.NewVisitors:hover,span.PageViews:hover,span.TotalVisitors:hover{cursor:help}.arrow-down1{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #1e85e3;position:absolute;right:21px;top:7px}.arrow-down2{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #1e85e3;position:absolute;right:7px;top:13px}.bg-white{position:relative}
 .amChartsPeriodSelector{ display:none;}
-.date_peiord {
-  background: none repeat scroll 0 0 #f0f0f0;
-  display: inline-block;
-  font-size: 13px;
-  padding: 5px;
-}
-#label_date{ text-transform:capitalize;}
 </style>
 <?php include('head_include.php');?>
 
@@ -59,7 +52,6 @@ AmCharts.themes.none = {};
                                         <div class="bg-white">
                                             <a href="javascript:void(0)" id="show-filter-form">Filters <div class="arrow-down1"></div></a>				
                                         </div>
-                                        <div class="date_peiord"><b>Date Period:</b> <span id="label_date">Last 30 days</span></div>
                                         <div class="line"></div>
                                     </div><!-- END FILTER TEXT -->
                                     <div id="filter-form" class="filter-form item-hide">  
@@ -179,32 +171,32 @@ AmCharts.themes.none = {};
                                 $profile_id = $_POST['webproperty-dd'];
                                 if($date_sql==""){
                                     $sql = "select * from ga_data_30_days where account_id = '$account_id' and 	profile_id = '$profile_id' union all select * from ga_todays_data where account_id = '$account_id' and 	profile_id = '$profile_id'";
-                                    $sql_d = "select * from ga_data_365_days where account_id = '$account_id' and 	profile_id = '$profile_id'  $date_sql2";
+                                    $sql_d = "select * from ga_data_365_days  left join ga_icon_display on ga_data_30_days.date = ga_icon_display.date and ga_icon_display.client_id='$client_id' where account_id = '$account_id' and 	profile_id = '$profile_id'  $date_sql2";
                                     $sql_device =  "select ga_deviceCategory,SUM(`ga_users`) as total from ga_data_platform_30_days where account_id = '$account_id' and 	profile_id = '$profile_id' and ga_deviceCategory !='' group by ga_deviceCategory";
                                     $sql_session =    "SELECT concat(MONTHNAME(STR_TO_DATE(MONTH(date), '%m')),'-',YEAR(date)) as yearmonth, sum(`ga_sessions`) as      totalsession FROM  `ga_data_365_days` where account_id = '$account_id' and 	profile_id = '$profile_id' group by yearmonth order by date asc" ;
                         
-                                    $rs_30_days = mysql_query($sql);
-                                    $rs_all = mysql_query($sql_d);
-                                    $rs_device_30_days = mysql_query($sql_device);
-                                    $rs_year_session = mysql_query($sql_session);
+                                    $rs_30_days = mysql_query($sql) or die(mysql_error());
+                                    $rs_all = mysql_query($sql_d) or die(mysql_error());
+                                    $rs_device_30_days = mysql_query($sql_device) or die(mysql_error());
+                                    $rs_year_session = mysql_query($sql_session) or die(mysql_error());
                                 
                                  }else{
                                     if($type=="yesterday") { 
                                         $sql = "select * from ga_data_30_days where account_id = '$account_id' and 	profile_id = '$profile_id'  $date_sql union all
                                         select * from ga_todays_data where account_id = '$account_id' and 	profile_id = '$profile_id' $date_sql ";
-                                        $sql_d = "select * from ga_data_365_days where account_id = '$account_id' and 	profile_id = '$profile_id'  $date_sql2";
+                                        $sql_d = "select ga_data_365_days.*, ga_icon_display.icon_name as icon_name, ga_icon_display.description as description from ga_data_365_days left join ga_icon_display on ga_data_365_days.date = ga_icon_display.date and ga_icon_display.client_id='$client_id' where account_id = '$account_id' and 	profile_id = '$profile_id'  $date_sql2";
                                     }else {
-                                        $sql = "select * from ga_data_365_days where account_id = '$account_id' and 	profile_id = '$profile_id'  $date_sql ";
-                                        $sql_d = "select * from ga_data_365_days where account_id = '$account_id' and 	profile_id = '$profile_id'  $date_sql2";
+                                        $sql = "select * from ga_data_365_days  where account_id = '$account_id' and 	profile_id = '$profile_id'  $date_sql ";
+                                        $sql_d = "select ga_data_365_days.*, ga_icon_display.icon_name as icon_name, ga_icon_display.description as description from ga_data_365_days left join ga_icon_display on ga_data_365_days.date = ga_icon_display.date and ga_icon_display.client_id='$client_id' where account_id = '$account_id' and 	profile_id = '$profile_id'  $date_sql2";
                                     }
                                 
                                     $sql_device =  "select ga_deviceCategory,SUM(`ga_users`) as total from all_ga_data_platform_history where account_id = '$account_id' and 	profile_id = '$profile_id' and ga_deviceCategory !=''  $date_sql group by ga_deviceCategory";
                                     $sql_session =    "SELECT concat(MONTHNAME(STR_TO_DATE(MONTH(date), '%m')),'-',YEAR(date)) as yearmonth, sum(`ga_sessions`) as      totalsession FROM  `ga_data_365_days` where account_id = '$account_id' and 	profile_id = '$profile_id' group by yearmonth order by date asc" ; 
                         
-                                    $rs_30_days = mysql_query($sql);
-                                    $rs_all = mysql_query($sql_d);
-                                    $rs_device_30_days = mysql_query($sql_device);
-                                    $rs_year_session = mysql_query($sql_session);
+                                    $rs_30_days = mysql_query($sql) or die(mysql_error());
+                                    $rs_all = mysql_query($sql_d) or die(mysql_error());
+                                    $rs_device_30_days = mysql_query($sql_device) or die(mysql_error());
+                                    $rs_year_session = mysql_query($sql_session) or die(mysql_error());
                                 }
                                 
                                 if(mysql_num_rows($rs_year_session)>0){   
@@ -215,11 +207,22 @@ AmCharts.themes.none = {};
                                 }
                                 if(mysql_num_rows($rs_all)>0){
                                     while($ga_all_days_detail = mysql_fetch_assoc($rs_all)){
+										$day_icon_name[] = $ga_all_days_detail['icon_name'];
+										$day_icon_description[] = $ga_all_days_detail['description'];
                                         $day_pageview2[] = $ga_all_days_detail['ga_pageviews'];
                                         $day_date2[] = $ga_all_days_detail['date'];
                                         $day_session2[] = $ga_all_days_detail['ga_sessions'];
                                     }
+									$i = 0;
+									foreach($day_icon_name as $value)
+									{ 
+									   if($value!=''){
+											echo $value." : ".":".$day_date2[$i]." :".$day_icon_description[$i] ;
+											}
+											$i++;
+										}
                                 }
+									
                                 if(mysql_num_rows($rs_30_days)>0){
                                     while($ga_30_days_detail = mysql_fetch_assoc($rs_30_days)){
                                         $day_pageview[] = $ga_30_days_detail['ga_pageviews'];
@@ -248,8 +251,8 @@ AmCharts.themes.none = {};
                              }
                              
                         }else{
-                            $sql = "select * from ga_data_30_days where account_id = '$account_id' and 	profile_id = '$profile_id' ";
-                           $sql_d = "select * from ga_data_365_days where account_id = '$account_id' and 	profile_id = '$profile_id'";
+                            $sql = "select * from ga_data_30_days left join ga_icon_display on ga_data_30_days.date = ga_icon_display.date and ga_icon_display.client_id='$client_id' where account_id = '$account_id' and 	profile_id = '$profile_id' ";
+                       $sql_d = "select ga_data_365_days.*, ga_icon_display.icon_name as icon_name, ga_icon_display.description as description from ga_data_365_days left join ga_icon_display on ga_data_365_days.date = ga_icon_display.date  and ga_icon_display.client_id='$client_id' where account_id = '$account_id' and 	profile_id = '$profile_id'";
                             $sql_device =  "select ga_deviceCategory,SUM(`ga_users`) as total from ga_data_platform_30_days where account_id = '$account_id' and 	profile_id = '$profile_id' and ga_deviceCategory !='' group by ga_deviceCategory";
                             $sql_session =    "SELECT concat(MONTHNAME(STR_TO_DATE(MONTH(date), '%m')),'-',YEAR(date)) as yearmonth, sum(`ga_sessions`) as      totalsession
                         FROM  `ga_data_365_days` where account_id = '$account_id' and 	profile_id = '$profile_id'
@@ -270,6 +273,8 @@ AmCharts.themes.none = {};
                             }
                             if(mysql_num_rows($rs_all)>0){
                                 while($ga_all_days_detail = mysql_fetch_assoc($rs_all)){
+									$day_icon_name[] = $ga_all_days_detail['icon_name'];
+									$day_icon_description[] = $ga_all_days_detail['description'];
                                     $day_pageview2[] = $ga_all_days_detail['ga_pageviews'];
                                     $day_date2[] = $ga_all_days_detail['date'];
                                     $day_session2[] = $ga_all_days_detail['ga_sessions'];
@@ -277,7 +282,14 @@ AmCharts.themes.none = {};
                         /*			print_r("<pre>");
                                     print_r($ga_all_days_detail) ; die;*/
                                 }
-                            }
+								$i = 0;
+								foreach($day_icon_name as $value){ 
+								   if($value!=''){
+										//echo $value." : ".":".$day_date2[$i]." :".$day_icon_description[$i] ;
+									}
+									$i++;
+								}
+								}
                             if(mysql_num_rows($rs_30_days)>0){
                                 while($ga_30_days_detail = mysql_fetch_assoc($rs_30_days)){
                                     $day_pageview[] = $ga_30_days_detail['ga_pageviews'];
@@ -305,169 +317,23 @@ AmCharts.themes.none = {};
                         }
                         
                         ?>
-                        <script type="text/javascript">
-                        $(document).ready(function(){
-							<?php 
-								$n = strtotime($from_date);
-								$m = strtotime($to_date);
-							?>
-							var from = '<?php echo date('d-m-Y', $n); ?>';
-							var to = '<?php echo date('d-m-Y', $m); ?>';
-                            var label = '<?php echo $type; ?>';
-							label = label.replace(/[\. ,:-_]+/g, " ");
-							
-							if(label == ''){
-								label = 'Last 30 days';
-								$("#label_date").text(label);
-							}else{
-								if(label == 'date range'){
-									$("#label_date").text('Date Range (' + from + ' - ' + to + ')');
-								}else{
-									$("#label_date").text(label);
+                        
+
+					<div id="stock_events" style="max-width:1280px; margin:0 auto;">
+                    	<?php 
+							$i = 0;
+							foreach($day_icon_name as $value){ 
+							   if($value!=''){
+									echo $value." : ".":".$day_date2[$i]." :".$day_icon_description[$i] ;
 								}
+								$i++;
 							}
-						});
-                        </script> 
-                        <style>
-						<?php if($type == "date_range"): ?>
-							.filter-form-wrap .filter-text .line {
-							  background: none repeat scroll 0 0 #d4d4d4;
-							  float: right;
-							  height: 1px;
-							  margin-left: 15px;
-							  margin-top: 10px;
-							  width: 61% !important;
-							}
-						<?php else: ?>
-							.filter-form-wrap .filter-text .line {
-							  background: none repeat scroll 0 0 #d4d4d4;
-							  float: right;
-							  height: 1px;
-							  margin-left: 15px;
-							  margin-top: 10px;
-							  width: 73% !important;
-							}	
-						<?php endif; ?>						
-                            #mobile {
-                            <?php 
-                                 //$mobile = round($total_device_count[0]*100/$total_val);
-                                 $mobile = round($total_device_count[2]*100/$total_val) + round($total_device_count[0]*100/$total_val);
-                                 $mobile2 = ".{$mobile}";
-                                 $mobile3 = 360 * $mobile2;
-                            ?>	
-                                -webkit-transform: rotate(<?php echo $mobile3.'deg'; ?>); /* Safari and Chrome */
-                                -moz-transform: rotate(<?php echo $mobile3.'deg'; ?>);   /* Firefox */
-                                -ms-transform: rotate(<?php echo $mobile3.'deg'; ?>);   /* IE 9 */
-                                -o-transform: rotate(<?php echo $mobile3.'deg'; ?>);   /* Opera */
-                                transform: rotate(<?php echo $mobile3.'deg'; ?>);
-                            }
-                            #tablet {
-                            <?php 
-                                 $tablet = round($total_device_count[0]*100/$total_val);
-                                 $tablet2 = ".{$tablet}";
-                                 $tablet3 = 360 * $tablet2;
-                            ?>	
-                                -webkit-transform: rotate(<?php echo $tablet3.'deg'; ?>); /* Safari and Chrome */
-                                -moz-transform: rotate(<?php echo $tablet3.'deg'; ?>);   /* Firefox */
-                                -ms-transform: rotate(<?php echo $tablet3.'deg'; ?>);   /* IE 9 */
-                                -o-transform: rotate(<?php echo $tablet3.'deg'; ?>);   /* Opera */
-                                transform: rotate(<?php echo $tablet3.'deg'; ?>);
-                            }	
-                        </style>
-                        <?php include('piechart.php');?>
-                        <div id="main_container">
-                            <div class="piechart"> 
-                                <div class="icons content1"></div>
-                                <div id="TotalVisits" class="chart_holder"></div>
-                                <h1><?php $ans = $total_ga_sessions ; $ans2 = number_format($ans); echo $ans2; ?></h1>
-                                <h6><span class="TotalVisitors" title="The total number of people <br />who have been to the site.">Total Visitors</span></h6>
-                            </div>
-                            <div class="piechart"> 
-                                <div class="icons content2"></div>
-                                <div id="PageViews" class="chart_holder"></div>
-                                <h1><?php $total_ga_pageviews; $total_views = number_format($total_ga_pageviews); //echo $total_views; ?><?php echo empty($total_views) ? '0' : $total_views; ?></h1>
-                                <h6><span class="PageViews" title="The number of web pages <br />viewed within your site.">Page Views</span></h6>
-                            </div>
-                            <div class="piechart"> 
-                                <div class="icons content3"></div>
-                                <div id="VisitorsChart" class="chart_holder"></div>
-                                <h1><?php $total_count; $total_c = number_format($total_count); //echo $total_c; ?><?php echo empty($total_c) ? '0' : $total_c; ?></h1>
-                                <h6><span class="NewVisitors" title="A visitor that has not been <br />to your website before.">New Visitors</span></h6>
-                            </div>
-                            <div class="piechart"> 
-                                <div class="icons content4"></div>
-                                <div id="BounceRateChart" class="chart_holder"></div>
-                                <h1><?php //echo $avg_ga_bounce.'%';?><?php echo empty($avg_ga_bounce) ? '0.%' : $avg_ga_bounce.'%'; ?></h1>
-                                <h6><span class="BounceRate" title="The percentage of people who leave the <br />site from the same page they arrived on.">Bounce Rate</span></h6>
-                            </div>
-                            <div class="piechart"> 
-                                <div class="icons content5"></div>
-                                <div id="AvePageViews" class="chart_holder"></div>
-                                <h1><?php echo round($avg_ga_pageviews_day, 2);?></h1>
-                                <h6><span class="AvgPagesViewed" title="The average number of pages a <br />visitors views per session.">Avg. Pages Viewed</span></h6>
-                            </div>
-                            <div class="piechart"> 
-                                <div class="icons content6"></div>
-                                <div id="AveTime" class="chart_holder"></div>
-                                <h1>
-                                <?php 
-                                
-                                    $str = $avg_ga_avgSessionDuration_h_i_s;
-                                    
-                                    list($hour, $minute, $second) = explode(":", $str);
-                                    if($minute == 00 || $minute == '' && $second == 00 || $second == ''){
-                                        echo '00:00';
-                                    }else{
-                                        if($hour != 00){
-                                            echo $hour.':'.$minute.':'.$second;
-                                        } else {
-                                            echo $minute.':'.$second;
-                                        }
-                                    }
-                                        
-                                ?>
-                                </h1>
-                                <h6><span class="AvgTime" title="The average time a users spend<br /> on your website per session.">Avg. Time (min)</span></h6>
-                            </div>
+						
+						?>
+                        <?php include('stockchart_icon.php'); ?>
+                        <div id="events_stock_holder" style="width	: 90%; height	: 500px; margin:0 auto;"></div>
+                    </div>	
                         
-                        
-                        	<div style="clear:both;"></div>
-                        
-							<?php include('stockchart_icon.php'); ?>
-                            <div id="StockChart"></div>	
-                            <br/>
-                            <hr/>
-                            <br/>
-                            
-                            <?php  include('columnchart.php');?>
-                            
-                            <div style="width: 60%; height: 240px; background-color: #FFFFFF; float:left; position:relative; padding-top:20px;">
-                            <h6 style="position:absolute; left:0; top:0;">Sessions by Month</h6>
-                                <div id="ColumnChart" style="width:100%; height:240px;"></div>
-                            </div>	
-                            
-                            <div id="PieChartContainer">
-                                <h6>Devices</h6>
-                                <div class="piechart2"> 
-                                    <div class="icon_dev img1" /></div>
-                                    <div id="desktop" class="chart_holder2"></div>
-                                    <h1><?php echo round($total_device_count[0]*100/$total_val).'%<br/>'; ?></h1>
-                                    <h6 class="device_name">Desktop</h6>
-                                </div>
-                                <div class="piechart2">
-                                    <div class="icon_dev img2" /></div>
-                                    <div id="tablet" class="chart_holder2"></div>
-                                    <h1><?php echo round($total_device_count[2]*100/$total_val).'%<br/>'; ?></h1>
-                                    <h6 class="device_name">Tablet</h6>
-                                </div>
-                                <div class="piechart2"> 
-                                    <div class="icon_dev img3" /></div>
-                                    <div id="mobile" class="chart_holder2"></div>
-                                    <h1><?php echo round($total_device_count[1]*100/$total_val).'%<br/>'; ?></h1>
-                                    <h6 class="device_name">Mobile</h6>
-                                </div>
-                            </div>
-                     	</div> 
                  	</section>
               	</div>
            	</section>
